@@ -1,1 +1,4 @@
 # distinguishedCommunicationsWebsite
+---
+permalink: /index.html
+---
