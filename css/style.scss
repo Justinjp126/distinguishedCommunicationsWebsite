@@ -1,0 +1,144 @@
+/* 
+* Table of Contents *
+1. Variables
+    1.1 Font Weights
+    1.2 Colors
+2. Global Styles
+3. TSA Page
+*/
+
+// * Variables * //
+//Font Weights
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+
+//Colors
+$light-grey: #c9c7c7;
+$dark-grey: #505050;
+$light-black: #121212;
+
+// * Global Styles * //
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Mukta", sans-serif;
+}
+
+::-moz-selection,
+::selection {
+  color: white;
+  background-color: $light-black;
+}
+
+.fp-controlArrow.fp-next {
+  border-width: 24.5px 0 24.5px 33px !important;
+  border-color: transparent transparent transparent $dark-grey !important;
+  transition: border-color 200ms ease-out;
+}
+.fp-controlArrow.fp-prev {
+  border-width: 24.5px 34px 24.5px 0 !important;
+  border-color: transparent $dark-grey transparent transparent !important;
+}
+.fp-controlArrow.fp-next:hover,
+.fp-controlArrow.fp-next:focus {
+  border-color: transparent transparent transparent $light-black !important;
+  transition: border-color 300ms ease-in;
+}
+.fp-controlArrow.fp-prev:hover,
+.fp-controlArrow.fp-prev:focus {
+  border-color: transparent $light-black transparent transparent !important;
+  transition: border-color 300ms ease-in;
+}
+// ** TSA Page ** //
+
+.tsa {
+  .section {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(241, 240, 240, 1) 100%
+    );
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13rem;
+    font-weight: $extra-light;
+    letter-spacing: 3rem;
+    margin-left: 10rem;
+    margin-top: 2rem;
+    line-height: 0.75;
+    color: $light-grey;
+  }
+  .__technology::first-letter,
+  .__student::first-letter,
+  .__association::first-letter {
+    font-weight: $extra-bold;
+    color: $light-black;
+    font-size: 20rem;
+  }
+  .__technology,
+  .__student {
+    margin-left: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tsa {
+    .home {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      font-size: 5rem;
+      letter-spacing: normal;
+      width: 85%;
+    }
+    .__technology::first-letter,
+    .__student::first-letter,
+    .__association::first-letter {
+      font-size: 15rem;
+    }
+    .__technology,
+    .__student {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .tsa {
+    .home {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      font-size: 6rem;
+      letter-spacing: normal;
+      width: 85%;
+    }
+    .__technology::first-letter,
+    .__student::first-letter,
+    .__association::first-letter {
+      font-size: 17rem;
+    }
+    .__technology,
+    .__student {
+      margin-bottom: 1rem;
+    }
+  }
+}
