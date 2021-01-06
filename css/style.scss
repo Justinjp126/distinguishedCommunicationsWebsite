@@ -5,7 +5,7 @@
     1.2 Colors
 2. Mix-Ins
 3. Global Styles
-4. dmc. Page
+4. Navbar
 */
 
 // * Variables * //
@@ -67,6 +67,7 @@ html {
 }
 body {
   font-family: "Mukta", sans-serif;
+  background-color: $main-darkBlue;
 }
 
 ::-moz-selection,
@@ -75,6 +76,31 @@ body {
   background-color: $light-black;
 }
 
-.darkBlue {
-  background-color: $main-darkBlue;
+// * Navbar * //
+#icon {
+  font-weight: $semi-bold;
+  color: white;
+  font-size: 1.2rem;
+  span {
+    color: $main-orange;
+  }
+}
+.nav-item {
+  font-size: 1.1rem !important;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0);
+}
+
+// * Hero * //
+.hero {
+  &__image {
+    margin-right: 3%;
+  }
 }
