@@ -5,7 +5,7 @@
     1.2 Colors
 2. Mix-Ins
 3. Global Styles
-4. TSA Page
+4. dmc Page
 */
 
 // * Variables * //
@@ -70,119 +70,4 @@ body {
 ::selection {
   color: white;
   background-color: $light-black;
-}
-
-.fp-controlArrow.fp-next {
-  border-width: 24.5px 0 24.5px 33px !important;
-  border-color: transparent transparent transparent $dark-grey !important;
-  transition: border-color 200ms ease-out;
-}
-.fp-controlArrow.fp-prev {
-  border-width: 24.5px 34px 24.5px 0 !important;
-  border-color: transparent $dark-grey transparent transparent !important;
-}
-.fp-controlArrow.fp-next:hover,
-.fp-controlArrow.fp-next:focus {
-  border-color: transparent transparent transparent $light-black !important;
-  transition: border-color 300ms ease-in;
-}
-.fp-controlArrow.fp-prev:hover,
-.fp-controlArrow.fp-prev:focus {
-  border-color: transparent $light-black transparent transparent !important;
-  transition: border-color 300ms ease-in;
-}
-.fp-viewing-0-2 {
-  .fp-tableCell {
-    vertical-align: revert !important;
-  }
-}
-
-// ** TSA Page ** //
-
-.tsa {
-  .section {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(241, 240, 240, 1) 100%
-    );
-  }
-  .home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 208px;
-    font-weight: $extra-light;
-    letter-spacing: 48px;
-    margin-left: 160px;
-    margin-top: 32px;
-    line-height: 0.75;
-    color: $light-grey;
-  }
-  .__technology::first-letter,
-  .__student::first-letter,
-  .__association::first-letter {
-    font-weight: $extra-bold;
-    color: $light-black;
-    font-size: 320px;
-  }
-  .__technology,
-  .__student {
-    margin-left: 17.6px;
-  }
-
-  &__text {
-    color: $light-black;
-  }
-  &__image {
-    width: 100%;
-    max-width: 25rem;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .tsa {
-    .home {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: auto;
-      font-size: 80px;
-      letter-spacing: normal;
-      width: 85%;
-    }
-    .__technology::first-letter,
-    .__student::first-letter,
-    .__association::first-letter {
-      font-size: 240px;
-    }
-    .__technology,
-    .__student {
-      margin-bottom: 16px;
-    }
-  }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
-  .tsa {
-    .home {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: auto;
-      font-size: 96px;
-      letter-spacing: normal;
-      width: 85%;
-    }
-    .__technology::first-letter,
-    .__student::first-letter,
-    .__association::first-letter {
-      font-size: 272px;
-    }
-    .__technology,
-    .__student {
-      margin-bottom: 16px;
-    }
-  }
 }
