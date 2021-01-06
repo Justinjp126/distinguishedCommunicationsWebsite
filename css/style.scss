@@ -19,9 +19,12 @@ $bold: 700;
 $extra-bold: 800;
 
 //Colors
-$light-grey: #c9c7c7;
+$light-grey: #dadada;
 $dark-grey: #505050;
 $light-black: #121212;
+$main-darkBlue: #212c4e;
+$main-blue: #6c63ff;
+$main-orange: #ffa62b;
 
 // ** Mix-Ins ** //
 /* Define the mixin */
@@ -70,4 +73,8 @@ body {
 ::selection {
   color: white;
   background-color: $light-black;
+}
+
+.darkBlue {
+  background-color: $main-darkBlue;
 }
