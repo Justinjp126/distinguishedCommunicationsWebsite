@@ -6,6 +6,9 @@
 2. Mix-Ins
 3. Global Styles
 4. Navbar
+5. Home Page
+  5.1. Hero
+  5.2. Quote
 */
 
 // * Variables * //
@@ -165,6 +168,7 @@ body {
 
 @media only screen and (max-width: 800px) {
   .hero {
+    height: calc(max(30rem));
     &__title {
       font-size: 1.75rem;
       margin-left: 1.5rem;
@@ -183,5 +187,22 @@ body {
       right: 0;
       width: 80vh;
     }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .hero {
+    height: 25rem;
+  }
+}
+// * Quote * //
+.quote {
+  border-left: 0.3rem solid $light-grey;
+  height: 100%;
+  &__text {
+    padding-left: 1rem;
+    color: $light-grey;
+    font-size: 1.5rem;
+    font-weight: $medium;
+    text-align: left;
   }
 }
