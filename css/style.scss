@@ -24,7 +24,7 @@ $dark-grey: #505050;
 $light-black: #121212;
 $main-darkBlue: #212c4e;
 $main-blue: #6c63ff;
-$main-orange: #ffa62b;
+$main-orange: #ee910f;
 
 // ** Mix-Ins ** //
 /* Define the mixin */
@@ -101,11 +101,9 @@ body {
 
 // * Hero * //
 .hero {
-  margin: 2.5rem;
   position: relative;
   color: white;
   height: 100vh;
-  margin-top: 3rem;
   &__image {
     position: absolute;
     right: 8%;
@@ -113,27 +111,31 @@ body {
     z-index: -1;
     max-width: calc(min(100vw, 100vh));
     height: auto;
+    margin-top: 5rem;
   }
   &__title {
+    margin-top: 5rem;
     position: absolute;
     left: 0;
     top: 0;
     font-weight: $bold;
     margin-bottom: 1rem;
-    margin-left: 2rem;
+    margin-left: 5rem;
     font-size: 2.5rem;
   }
   &__subtitle {
+    margin-top: 5rem;
     position: absolute;
     left: 0;
     top: 27%;
     font-weight: $medium;
     margin-bottom: 1rem;
     color: $light-grey;
-    margin-left: 2rem;
+    margin-left: 5rem;
     font-size: 2rem;
   }
   &__button {
+    margin-top: 5rem;
     position: absolute;
     left: 0;
     top: 55%;
@@ -147,16 +149,39 @@ body {
     text-align: center;
     outline: none;
     border: none;
-    font-size: 1.5rem;
-    width: 10rem;
+    font-size: 1.75rem;
+    width: 11rem;
     padding: 0.2rem 0;
-    margin-left: 2rem;
+    margin-left: 5rem;
     transition: background-color 200ms ease-out;
   }
   &__button:hover,
   &__button:focus {
     color: white;
-    background-color: darken($main-orange, 15%);
+    background-color: darken($main-orange, 10%);
     transition: background-color 250ms ease-in;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hero {
+    &__title {
+      font-size: 1.75rem;
+      margin-left: 1.5rem;
+    }
+    &__subtitle {
+      font-size: 1.5rem;
+      margin-left: 1.5rem;
+      top: calc(max(13%, 13vh));
+    }
+    &__button {
+      font-size: 1.5rem;
+      margin-left: 1.5rem;
+      top: calc(max(25%, 25vh));
+    }
+    &__image {
+      right: 0;
+      width: 80vh;
+    }
   }
 }
