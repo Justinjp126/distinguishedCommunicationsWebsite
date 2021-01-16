@@ -25,8 +25,10 @@ $extra-bold: 800;
 $light-grey: #dadada;
 $dark-grey: #505050;
 $light-black: #121212;
+$main-darkerBlue: #27345c;
 $main-darkBlue: #212c4e;
 $main-blue: #6c63ff;
+$main-lightBlue: #7c8ec8;
 $main-orange: #ee910f;
 
 // ** Mix-Ins ** //
@@ -80,6 +82,12 @@ body {
   background-color: $light-black;
 }
 
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
 // * Navbar * //
 #icon {
   font-weight: $semi-bold;
@@ -199,10 +207,54 @@ body {
   border-left: 0.3rem solid $light-grey;
   height: 100%;
   &__text {
+    font-style: italic;
     padding-left: 1rem;
     color: $light-grey;
     font-size: 1.5rem;
     font-weight: $medium;
     text-align: left;
+  }
+}
+
+// ** Featured ** //
+.featured {
+  &__title {
+    color: white;
+    font-weight: $medium;
+    margin: 1rem 0;
+  }
+  .col {
+    margin-bottom: 1rem;
+  }
+  .card {
+    background-color: $main-darkerBlue;
+    color: white;
+    border-radius: 1rem;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+    cursor: pointer;
+  }
+  .card:hover,
+  .card:focus {
+    color: white;
+    top: -10px;
+    transition: top ease 0.5s;
+  }
+  .card-title {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+  }
+  .card-text {
+    font-size: 0.85rem;
+    color: white;
+  }
+
+  &__img {
+    width: 1.75rem;
+    margin-left: 0.5rem;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(142deg)
+      brightness(120%) contrast(112%);
   }
 }
