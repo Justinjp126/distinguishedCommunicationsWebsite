@@ -227,6 +227,7 @@ a:hover {
     margin-bottom: 1rem;
   }
   .card {
+    font-weight: $regular;
     background-color: $main-darkerBlue;
     color: white;
     border-radius: 1rem;
@@ -256,5 +257,57 @@ a:hover {
     margin-left: 0.5rem;
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(142deg)
       brightness(120%) contrast(112%);
+  }
+}
+
+// ** Testimonials ** //
+.testimonials {
+  &__title {
+    color: white;
+    font-weight: $medium;
+    margin-top: 1rem;
+  }
+
+  &__text {
+    font-weight: $regular;
+    color: white;
+  }
+}
+
+// ** Briefs ** //
+.darkBackground {
+  background-color: #171d31;
+}
+.briefs {
+  color: white;
+
+  &__title {
+    padding-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: $medium;
+    font-size: 1.75rem;
+  }
+  &__form {
+    margin-bottom: 1rem;
+  }
+  &__button {
+    display: flex;
+    flex-direction: row-reverse;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: $main-blue;
+    color: white;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    border-radius: 100px;
+    padding: 0.05rem 0.5rem;
+    margin-left: 100%;
+  }
+  .form-control {
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
   }
 }
