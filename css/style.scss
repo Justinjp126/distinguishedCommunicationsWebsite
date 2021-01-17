@@ -88,6 +88,7 @@ a:link {
 a:hover {
   text-decoration: none;
 }
+// !! Home Page !! //
 // * Navbar * //
 #icon {
   font-weight: $semi-bold;
@@ -370,5 +371,32 @@ a:hover {
     filter: invert(100%) sepia(2%) saturate(3939%) hue-rotate(172deg)
       brightness(126%) contrast(71%);
     transition: filter 250ms ease-in;
+  }
+}
+
+// !! About Page !! //
+.about {
+  color: white;
+
+  &__title {
+    font-weight: $medium;
+    font-size: 2.25rem;
+  }
+  &__text {
+    font-weight: $regular;
+    font-size: 1.25rem;
+  }
+  &__img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about {
+    &__img {
+      display: none;
+    }
   }
 }
