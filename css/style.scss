@@ -291,8 +291,9 @@ a:hover {
     margin-bottom: 1rem;
   }
   &__button {
-    display: flex;
-    flex-direction: row-reverse;
+    display: inline-block;
+    position: absolute;
+    width: 5rem;
     cursor: pointer;
     text-decoration: none;
     background-color: $main-blue;
@@ -303,7 +304,13 @@ a:hover {
     font-size: 1rem;
     border-radius: 100px;
     padding: 0.05rem 0.5rem;
-    margin-left: 100%;
+    transition: background-color 200ms ease-out;
+  }
+  &__button:hover,
+  &__button:focus {
+    color: white;
+    background-color: darken($main-blue, 5%);
+    transition: background-color 250ms ease-in;
   }
   .form-control {
     -webkit-border-radius: 100px;
