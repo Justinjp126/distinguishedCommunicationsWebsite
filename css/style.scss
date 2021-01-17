@@ -266,16 +266,30 @@ a:hover {
     color: white;
     font-weight: $medium;
     margin-top: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   &__text {
+    line-height: normal;
     font-weight: $regular;
     color: white;
+    font-size: 1.25rem;
+    width: 75%;
+    margin: 0 auto;
+    &-quote {
+      font-style: italic;
+    }
+    &-person {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-right: 0.75rem;
+    }
   }
 }
 
 // ** Briefs ** //
 .darkBackground {
+  margin-top: 1.5rem;
   background-color: #171d31;
 }
 .briefs {
@@ -292,7 +306,6 @@ a:hover {
   }
   &__button {
     display: inline-block;
-    position: absolute;
     width: 5rem;
     cursor: pointer;
     text-decoration: none;
@@ -305,6 +318,8 @@ a:hover {
     border-radius: 100px;
     padding: 0.05rem 0.5rem;
     transition: background-color 200ms ease-out;
+    justify-content: right;
+    margin-bottom: 1.5rem;
   }
   &__button:hover,
   &__button:focus {
@@ -316,5 +331,44 @@ a:hover {
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
+  }
+  &__container {
+    justify-content: right;
+    display: flex;
+  }
+}
+
+.footer {
+  margin-top: 1.5rem;
+  &__text {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: $regular;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  &__insta {
+    margin-right: 0.5rem;
+    width: 2rem;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(142deg)
+      brightness(120%) contrast(112%);
+    transition: filter 200ms ease-out;
+  }
+  &__twitter {
+    margin-left: 0.5rem;
+    width: 2rem;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(142deg)
+      brightness(120%) contrast(112%);
+    transition: filter 200ms ease-out;
+  }
+
+  &__insta:hover,
+  &__insta:focus,
+  &__twitter:hover,
+  &__twitter:focus {
+    filter: invert(100%) sepia(2%) saturate(3939%) hue-rotate(172deg)
+      brightness(126%) contrast(71%);
+    transition: filter 250ms ease-in;
   }
 }
