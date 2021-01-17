@@ -420,3 +420,25 @@ a:hover {
     font-weight: $regular;
   }
 }
+
+.sources {
+  color: white;
+  background-color: $main-darkerBlue;
+  padding-bottom: 1rem;
+  &__title {
+    font-weight: $bold;
+    padding-top: 1rem;
+  }
+  &__subtitle {
+    font-weight: $medium;
+    margin-left: 0.5rem;
+  }
+  &__subtext {
+    font-weight: $regular;
+    margin-left: 1rem;
+  }
+  &__text {
+    font-weight: $light;
+    margin-left: 1.5rem;
+  }
+}
