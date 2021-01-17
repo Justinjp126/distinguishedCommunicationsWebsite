@@ -379,24 +379,44 @@ a:hover {
   color: white;
 
   &__title {
+    margin-top: 1rem;
     font-weight: $medium;
     font-size: 2.25rem;
   }
   &__text {
+    padding-left: 1rem;
     font-weight: $regular;
     font-size: 1.25rem;
   }
   &__img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     margin: auto;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   .about {
     &__img {
       display: none;
     }
+  }
+}
+
+.team {
+  color: white;
+  margin-top: 2rem;
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+  .card {
+    background-color: transparent !important;
+    outline: none;
+    border: none;
+    width: 4rem;
+  }
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: $regular;
   }
 }
