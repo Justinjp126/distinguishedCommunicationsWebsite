@@ -154,100 +154,100 @@ function findSymptoms() {
       if (x == "Diarrhea") {
         concussion += 1;
       }
+      if (x == "Bloating") {
+        concussion += 1;
+      }
       if (x == "Weightloss") {
         concussion += 1;
       }
       if (x == "Recurring Fever") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Sores") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Extreme Fatigue") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Body Aches") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Swollen Lymph Nodes") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Chills") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Muscle Aches") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Joint Pain") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Bull's-eye Rash") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Cold Hands and Feet") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Watery Eyes") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Muscle Pain") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Green/Yellowish Mucus") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Sweating") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Chest Pain") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Abdominal Pain") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Shortness of Breath") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Genital Sores") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Painful Urination") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Burning Urination") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Discharge from Penis") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Unusual Vaginal Discharge") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Scab") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Ulcers") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Pins and Needles") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Jaw Cramping") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Muscle Spasms") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Seizures") {
         concussion += 1;
       }
-      if (x == "Headache") {
+      if (x == "Long Lasting Cough") {
         concussion += 1;
       }
-      if (x == "Headache") {
-        concussion += 1;
-      }
-      if (x == "Headache") {
+      if (x == "Night Sweats") {
         concussion += 1;
       }
     }
