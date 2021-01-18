@@ -44,7 +44,8 @@ function findSymptoms() {
   /***
    * Variables Here
    */
-  var concussion = chicken_Pox = common_Cold = diptheria = escherichia_coli = giardiasis = hIV_or_Aids = infectious_Mononucleosis = influenza = lyme_Disease = malaria = measles = meningitis = pneumonia = salmonella_Infections = severe_Acute_Respiratory_Syndrome_SARS = sexually_Transmitted_Disease_STD = shingles = tetanus = tuberculosis = 0; //jack u can list out all 20 conditions here and separate them with commas like i did for the first two
+  var death = 0;
+  var concussion = (chicken_Pox = common_Cold = diptheria = escherichia_coli = giardiasis = hIV_or_Aids = infectious_Mononucleosis = influenza = lyme_Disease = malaria = measles = meningitis = pneumonia = salmonella_Infections = severe_Acute_Respiratory_Syndrome_SARS = sexually_Transmitted_Disease_STD = shingles = tetanus = tuberculosis = 0); //jack u can list out all 20 conditions here and separate them with commas like i did for the first two
   var commonCold_symptoms = [
     "runny nose",
     "cough",
@@ -68,6 +69,7 @@ function findSymptoms() {
   //loops through all code and locates all the 'input' blocks
   document.querySelectorAll("input").forEach(function (element) {
     if (element.checked) {
+      death += 1;
       // checks if the checkbox is 'checked'
       x = element.value;
       if (x == "Confusion") {
@@ -120,7 +122,7 @@ function findSymptoms() {
       if (x == "High Fever") {
         concussion += 1;
       }
-      if (x == "Swollen Nech Glands") {
+      if (x == "Swollen Neck Glands") {
         concussion += 1;
       }
       if (x == "Difficulty Breathing") {
@@ -138,7 +140,7 @@ function findSymptoms() {
       if (x == "Bloating") {
         concussion += 1;
       }
-      if (x == "Weightloss") {
+      if (x == "Weight Loss") {
         concussion += 1;
       }
       if (x == "Recurring Fever") {
@@ -259,7 +261,7 @@ function findSymptoms() {
     tetanus,
     tuberculosis,
   ];
-  
+
   var mostLikely, likely;
 
   const result = diseases.sort((x, y) => y - x).slice(0, 2);
@@ -267,5 +269,66 @@ function findSymptoms() {
   mostLikely = result[0];
   likely = result[1];
 
-  if(mostLikely == 0 && likely == 0 )
+  console.log(result[0]);
+
+  const varToString = (varObj) => Object.keys(varObj)[0];
+
+  const someVar = 42;
+  const displayName = varToString({ likely });
+  console.log(displayName);
+
+  if (mostLikely == 0 && likely == 0) {
+    Swal.fire({
+      title: "Try Again",
+      text: "Please select at least one box to receive a possible condition ",
+      icon: "error",
+      confirmButtonText: "Continue",
+    }).then((result) => {
+      location.reload();
+    });
+  } else if (death == 53) {
+    Swal.fire({
+      title: "Death!",
+      text: "You are going to die!",
+      icon: "error",
+      confirmButtonText: "Continue",
+    }).then((result) => {
+      location.reload();
+    });
+  } else if (death >= 20) {
+    Swal.fire({
+      title: "Error",
+      text:
+        "Please select fewer symptoms; try be precise and accurate with your symptoms",
+      icon: "error",
+      confirmButtonText: "Continue",
+    }).then((result) => {
+      location.reload();
+    });
+  } else {
+    mostLikelyName = mostLikely;
+    Swal.fire({
+      title: "Most Likely Condition",
+      text:
+        "Based on your selected symptoms, the most likely condition you have is " +
+        mostLikely,
+      icon: "info",
+      confirmButtonText: "Continue",
+    }).then((result) => {
+      if (likely > 0) {
+        Swal.fire({
+          title: "Another Possible Condition",
+          text:
+            "Based on your selected symptoms another possible condition you have is " +
+            likely,
+          icon: "info",
+          confirmButtonText: "Continue",
+        }).then((result) => {
+          location.reload();
+        });
+      } else {
+        location.reload();
+      }
+    });
+  }
 }
