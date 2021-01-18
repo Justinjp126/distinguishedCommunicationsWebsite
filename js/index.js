@@ -37,7 +37,13 @@ function validateEmail(email) {
   return re.test(email);
 }
 
+/**
+ * Main Function to find symptoms and to assign a disease to the user
+ */
 function findSymptoms() {
+  /***
+   * Variables Here
+   */
   var concussion,
     chicken_pox = 0; //jack u can list out all 20 conditions here and separate them with commas like i did for the first two
   var commonCold_symptoms = [
@@ -57,6 +63,9 @@ function findSymptoms() {
     "muscle ache",
   ];
 
+  /**
+   * Main Code Section Here
+   */
   //loops through all code and locates all the 'input' blocks
   document.querySelectorAll("input").forEach(function (element) {
     if (element.checked) {
@@ -64,8 +73,14 @@ function findSymptoms() {
       x = element.value; //This variable would equal like "Bloating" or "Blisters"; it just gives the value we put in the value='' part of the input block
       if (x == "Bloating") {
         //This would be the first of 56 if statements
-        console.log(x);
+        //each if statement should start like (if x == "(symptom)")
+        //in each if statement, add 1 to each of symptoms it matches up to
+        //Ex. concussion += 1; (assuming bloating means that u have a concussion)
       }
     }
   });
+
+  /**
+   * Display Code
+   */
 }
