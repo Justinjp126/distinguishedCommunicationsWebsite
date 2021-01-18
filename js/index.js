@@ -64,7 +64,6 @@ function findSymptoms() {
     Shingles,
     Tetanus,
     Tuberculosis,
-
      = 0; //jack u can list out all 20 conditions here and separate them with commas like i did for the first two
   var commonCold_symptoms = [
     "runny nose",
@@ -90,13 +89,222 @@ function findSymptoms() {
   document.querySelectorAll("input").forEach(function (element) {
     if (element.checked) {
       // checks if the checkbox is 'checked'
-      x = element.value; //This variable would equal like "Bloating" or "Blisters"; it just gives the value we put in the value='' part of the input block
-      if (x == "Bloating") {
-        //This would be the first of 56 if statements
-        //each if statement should start like (if x == "(symptom)")
-        //in each if statement, add 1 to each of symptoms it matches up to
-        //Ex. concussion += 1; (assuming bloating means that u have a concussion)
+      x = element.value; 
+      if (x == "Confusion") {
+        concussion+= 1;
+        meningitis+= 1;
+
       }
+
+      if (x == "Headache") {
+        concussion+= 1;
+
+      }
+       if (x == "Dizziness") {
+        concussion+= 1;
+            
+      }
+       if (x == "Nausea") {
+        concussion+= 1;
+            
+      }
+       if (x == "Vomiting") {
+        concussion+= 1;
+            
+      }
+       if (x == "Fever") {
+        concussion+= 1;
+            
+      }
+       if (x == "Tiredness") {
+        concussion+= 1;
+            
+      }
+       if (x == "Loss of Appetite") {
+        concussion+= 1;
+            
+      }
+       if (x == "Rash") {
+        concussion+= 1;
+            
+      }
+       if (x == "Blisters") {
+        concussion+= 1;
+            
+      }
+       if (x == "Runny Nose") {
+        concussion+= 1;
+            
+      }
+       if (x == "Cough") {
+        concussion+= 1;
+            
+      }
+       if (x == "Fatigue") {
+        concussion+= 1;
+            
+      }
+       if (x == "Sneezing") {
+        concussion+= 1;
+            
+      }
+       if (x == "Sore Throat") {
+        concussion+= 1;
+            
+      }
+       if (x == "High Fever") {
+        concussion+= 1;
+            
+      }
+       if (x == "Swollen Nech Glands") {
+        concussion+= 1;
+            
+      }
+       if (x == "Difficulty Breathing") {
+        concussion+= 1;
+            
+      }
+       if (x == "Difficulty Swallowing") {
+        concussion+= 1;
+            
+      }
+       if (x == "Stomach Cramps") {
+        concussion+= 1;
+            
+      }
+       if (x == "Diarrhea") {
+        concussion+= 1;
+            
+      }
+       if (x == "Weightloss") {
+        concussion+= 1;
+            
+      }
+       if (x == "Recurring Fever") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+       if (x == "Headache") {
+        concussion+= 1;
+            
+      }
+
     }
   });
 
