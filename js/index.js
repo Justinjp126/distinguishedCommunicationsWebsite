@@ -157,7 +157,7 @@ function findSymptoms() {
         measles += 1;
         meningitis += 1;
       }
-      if (x == "Swollen Nech Glands") {
+      if (x == "Swollen Neck Glands") {
         diptheria += 1;
       }
       if (x == "Difficulty Breathing") {
@@ -179,7 +179,7 @@ function findSymptoms() {
       if (x == "Bloating") {
         giardiasis += 1;
       }
-      if (x == "Weightloss") {
+      if (x == "Weight Loss") {
         giardiasis += 1;
         hIV_or_Aids += 1;
       }
@@ -308,20 +308,69 @@ function findSymptoms() {
     tuberculosis,
   ];
 
+  var names = {
+    Concussion: concussion,
+    Chicken_Pox: chicken_Pox,
+    Common_Cold: common_Cold,
+    Diptheria: diptheria,
+    Escherichia_Coli: escherichia_coli,
+    Giardiasis: giardiasis,
+    HIV_or_AIDS: hIV_or_Aids,
+    Infectious_Mononucleosis: infectious_Mononucleosis,
+    Influenza: influenza,
+    Lyme_Disease: lyme_Disease,
+    Malaria: malaria,
+    Measles: measles,
+    Meningitis: meningitis,
+    Pneumonia: pneumonia,
+    Salmonella_Infections: salmonella_Infections,
+    Severe_Acute_Respiratory_Syndrome_SARS: severe_Acute_Respiratory_Syndrome_SARS,
+    Sexually_Transmitted_Disease_STD: sexually_Transmitted_Disease_STD,
+    Shingles: shingles,
+    Tetanus: tetanus,
+    Tuberculosis: tuberculosis,
+  };
+  /**
+ * chicken_Pox: ,
+    common_Cold: "Common Cold",
+    diptheria: "Diptheria",
+    escherichia_coli: "E. Coli",
+    giardiasis: "Giardiasis",
+    hIV_or_Aids: "HIV/AIDS",
+    infectious_Mononucleosis: "Infectious Mononucleosis",
+    influenza: "Influenza",
+    lyme_Disease: "Lyme Disease",
+    malaria: "Malaria",
+    measles: "Measles",
+    meningitis: "Meningitis",
+    pneumonia: "Pneumonia",
+    salmonella_Infections: "Salmonella Infections",
+    severe_Acute_Respiratory_Syndrome_SARS:
+      "Severe Acute Respiratory Syndrome SARS",
+    sexually_Transmitted_Disease_STD: "Sexually Transmitted Disease STD",
+    shingles: "Shingles",
+    tetanus: "Tetanus",
+    tuberculosis: "Tuberculosis",
+ */
   var mostLikely, likely;
 
   const result = diseases.sort((x, y) => y - x).slice(0, 2);
 
   mostLikely = result[0];
   likely = result[1];
+  var mostLikelyName, likelyName;
 
-  console.log(result[0]);
+  for (var propName in names) {
+    if (names[propName] == mostLikely) {
+      mostLikelyName = propName;
+    }
+    if (names[propName] == likely) {
+      likelyName = propName;
+    }
+  }
 
-  const varToString = (varObj) => Object.keys(varObj)[0];
-
-  const someVar = 42;
-  const displayName = varToString({ likely });
-  console.log(displayName);
+  mostLikelyName = mostLikelyName.replace(/[_-]/g, " ");
+  likelyName = likelyName.replace(/[_-]/g, " ");
 
   if (mostLikely == 0 && likely == 0) {
     Swal.fire({
@@ -352,21 +401,20 @@ function findSymptoms() {
       location.reload();
     });
   } else {
-    mostLikelyName = mostLikely;
     Swal.fire({
       title: "Most Likely Condition",
       text:
         "Based on your selected symptoms, the most likely condition you have is " +
-        mostLikely,
+        mostLikelyName,
       icon: "info",
       confirmButtonText: "Continue",
     }).then((result) => {
-      if (likely > 0) {
+      if (likely > 0 && likelyName !== mostLikelyName) {
         Swal.fire({
           title: "Another Possible Condition",
           text:
             "Based on your selected symptoms another possible condition you have is " +
-            likely,
+            likelyName,
           icon: "info",
           confirmButtonText: "Continue",
         }).then((result) => {
