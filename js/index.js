@@ -44,26 +44,7 @@ function findSymptoms() {
   /***
    * Variables Here
    */
-  var concussion,
-    chicken_Pox,
-    common_Cold,
-    diptheria,
-    escherichia_coli,
-    giardiasis,
-    hIV_or_Aids,
-    infectious_Mononucleosis,
-    influenza,
-    lyme_Disease,
-    malaria,
-    measles,
-    meningitis,
-    pneumonia,
-    salmonella_Infections,
-    severe_Acute_Respiratory_Syndrome_SARS,
-    sexually_Transmitted_Disease_STD,
-    shingles,
-    tetanus,
-    tuberculosis = 0; //jack u can list out all 20 conditions here and separate them with commas like i did for the first two
+  var concussion = chicken_Pox = common_Cold = diptheria = escherichia_coli = giardiasis = hIV_or_Aids = infectious_Mononucleosis = influenza = lyme_Disease = malaria = measles = meningitis = pneumonia = salmonella_Infections = severe_Acute_Respiratory_Syndrome_SARS = sexually_Transmitted_Disease_STD = shingles = tetanus = tuberculosis = 0; //jack u can list out all 20 conditions here and separate them with commas like i did for the first two
   var commonCold_symptoms = [
     "runny nose",
     "cough",
@@ -256,4 +237,35 @@ function findSymptoms() {
   /**
    * Display Code
    */
+  var diseases = [
+    concussion,
+    chicken_Pox,
+    common_Cold,
+    diptheria,
+    escherichia_coli,
+    giardiasis,
+    hIV_or_Aids,
+    infectious_Mononucleosis,
+    influenza,
+    lyme_Disease,
+    malaria,
+    measles,
+    meningitis,
+    pneumonia,
+    salmonella_Infections,
+    severe_Acute_Respiratory_Syndrome_SARS,
+    sexually_Transmitted_Disease_STD,
+    shingles,
+    tetanus,
+    tuberculosis,
+  ];
+  
+  var mostLikely, likely;
+
+  const result = diseases.sort((x, y) => y - x).slice(0, 2);
+
+  mostLikely = result[0];
+  likely = result[1];
+
+  if(mostLikely == 0 && likely == 0 )
 }
