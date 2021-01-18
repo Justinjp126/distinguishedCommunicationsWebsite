@@ -442,3 +442,25 @@ a:hover {
     margin-left: 1.5rem;
   }
 }
+
+// !! Services Page !! //
+
+// !! Demo Page !! //
+.demo {
+  margin: 0.5rem;
+  color: white;
+  &__title {
+    font-weight: $medium;
+    font-size: 1.75rem;
+  }
+  &__text {
+    font-weight: $regular;
+    margin-left: 0.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+.boxes {
+  color: white;
+  font-size: 1.25rem;
+}
