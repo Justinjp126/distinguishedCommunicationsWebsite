@@ -45,7 +45,27 @@ function findSymptoms() {
    * Variables Here
    */
   var concussion,
-    chicken_pox = 0; //jack u can list out all 20 conditions here and separate them with commas like i did for the first two
+    chicken_Pox,
+    common_Cold,
+    diptheria,
+    escherichia_coli,
+    giardiasis,
+    hIV_or_Aids,
+    infectious_Mononucleosis, 
+    influeza,
+    lyme_Disease,
+    malaria,
+    measles,
+    meningitis,
+    pneumonia,
+    salmenella_Infections,
+    severe_Acute_Respiratory_Syndrome_SARS,
+    sexually_Transmitted_Disease_STD,
+    Shingles,
+    Tetanus,
+    Tuberculosis,
+
+     = 0; //jack u can list out all 20 conditions here and separate them with commas like i did for the first two
   var commonCold_symptoms = [
     "runny nose",
     "cough",
