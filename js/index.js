@@ -8,6 +8,7 @@ function checkValid() {
       text: "Your daily briefing will be in you inbox every day",
       icon: "success",
       confirmButtonText: "Thank You",
+      confirmButtonColor: "#7C8EC8",
     }).then((result) => {
       document.getElementById("name").value = "";
       document.getElementById("email").value = "";
@@ -20,6 +21,7 @@ function checkValid() {
         text: "Please fill out your name",
         icon: "error",
         confirmButtonText: "Continue",
+        confirmButtonColor: "#7C8EC8",
       });
     } else if (!validateEmail(email)) {
       Swal.fire({
@@ -27,6 +29,7 @@ function checkValid() {
         text: "Please enter valid email address",
         icon: "error",
         confirmButtonText: "Continue",
+        confirmButtonColor: "#7C8EC8",
       });
     }
   }
@@ -330,28 +333,7 @@ function findSymptoms() {
     Tetanus: tetanus,
     Tuberculosis: tuberculosis,
   };
-  /**
- * chicken_Pox: ,
-    common_Cold: "Common Cold",
-    diptheria: "Diptheria",
-    escherichia_coli: "E. Coli",
-    giardiasis: "Giardiasis",
-    hIV_or_Aids: "HIV/AIDS",
-    infectious_Mononucleosis: "Infectious Mononucleosis",
-    influenza: "Influenza",
-    lyme_Disease: "Lyme Disease",
-    malaria: "Malaria",
-    measles: "Measles",
-    meningitis: "Meningitis",
-    pneumonia: "Pneumonia",
-    salmonella_Infections: "Salmonella Infections",
-    severe_Acute_Respiratory_Syndrome_SARS:
-      "Severe Acute Respiratory Syndrome SARS",
-    sexually_Transmitted_Disease_STD: "Sexually Transmitted Disease STD",
-    shingles: "Shingles",
-    tetanus: "Tetanus",
-    tuberculosis: "Tuberculosis",
- */
+
   var mostLikely, likely;
 
   const result = diseases.sort((x, y) => y - x).slice(0, 2);
@@ -378,6 +360,7 @@ function findSymptoms() {
       text: "Please select at least one box to receive a possible condition ",
       icon: "error",
       confirmButtonText: "Continue",
+      confirmButtonColor: "#7C8EC8",
     }).then((result) => {
       location.reload();
     });
@@ -387,6 +370,7 @@ function findSymptoms() {
       text: "You are going to die!",
       icon: "error",
       confirmButtonText: "Continue",
+      confirmButtonColor: "#7C8EC8",
     }).then((result) => {
       location.reload();
     });
@@ -397,6 +381,7 @@ function findSymptoms() {
         "Please select fewer symptoms; try be precise and accurate with your symptoms",
       icon: "error",
       confirmButtonText: "Continue",
+      confirmButtonColor: "#7C8EC8",
     }).then((result) => {
       location.reload();
     });
@@ -408,6 +393,7 @@ function findSymptoms() {
         mostLikelyName,
       icon: "info",
       confirmButtonText: "Continue",
+      confirmButtonColor: "#7C8EC8",
     }).then((result) => {
       if (likely > 0 && likelyName !== mostLikelyName) {
         Swal.fire({
@@ -417,6 +403,7 @@ function findSymptoms() {
             likelyName,
           icon: "info",
           confirmButtonText: "Continue",
+          confirmButtonColor: "#7C8EC8",
         }).then((result) => {
           location.reload();
         });
@@ -425,4 +412,40 @@ function findSymptoms() {
       }
     });
   }
+}
+
+function testExplain() {
+  Swal.fire({
+    title: "How Our Test Works",
+    text:
+      "Using your inputs for the symptoms selected, our test gives a likely diagnosis for a possible illness. This is accomplished by associating symptoms with individual diseases and according to the inputed symptoms, the disease most reflecting those symptoms is given. It is also important to be as specific as possible when making selections. For example if you have a fever, is it a low fever? Or could it be further classified as a high fever (ie choices: Fever/High Fever)? This test produces a possible diagnosis, but is not to take the place of a doctor. If something is wrong or worrying, contact your doctor immediately.",
+    icon: "info",
+    confirmButtonText: "Continue",
+    confirmButtonColor: "#7C8EC8",
+  });
+}
+
+function productionChange(obj) {
+  var plan = document.getElementById("planPlus");
+  var construct = document.getElementById("constructPlus");
+  var share = document.getElementById("sharePlus");
+  var text = document.getElementById("prodText");
+  var planText =
+    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ";
+  var constructText =
+    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi ";
+  var shareText =
+    "The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. ";
+  var key = {
+    plantext: planText,
+    constructtext: constructText,
+    sharetext: shareText,
+  };
+  plan.classList.remove("active");
+  construct.classList.remove("active");
+  share.classList.remove("active");
+
+  document.getElementById(obj.id + "Plus").classList.add("active");
+
+  text.innerText = key[obj.id + "text"];
 }

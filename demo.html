@@ -59,11 +59,18 @@
     </nav>
 
     <div class="container demo">
-      <h2 class="demo__title">Symptoms Test Demo</h2>
-      <p class="demo__text">
-        This test would be presented to patients, allowing doctors to easily
-        diagnose their patients.
-      </p>
+      <div class="row">
+        <div class="col-12">
+          <h2 class="demo__title">Symptoms Test Demo</h2>
+          <p class="demo__text">
+            This test would be presented to patients, allowing doctors to easily
+            diagnose their patients. <br />
+            <span class="demo__text-link" onclick="testExplain()"
+              >How Our Test Works</span
+            >
+          </p>
+        </div>
+      </div>
     </div>
 
     <div class="container boxes">
@@ -725,9 +732,15 @@
       </div>
     </div>
 
-    <button type="button" class="btn btn-light" onclick="findSymptoms()">
-      Submit
-    </button>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex flex-row-reverse">
+          <button type="button" class="btn btn-light" onclick="findSymptoms()">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
 
     <div class="footer">
       <div class="row">
@@ -750,5 +763,11 @@
       </div>
       <h3 class="footer__text">Designed JP, JB, NL, JO, and AS</h3>
     </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

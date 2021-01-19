@@ -444,10 +444,220 @@ a:hover {
 }
 
 // !! Services Page !! //
+.services {
+  color: white;
 
+  &__title {
+    margin-top: 1rem;
+    font-weight: $medium;
+    font-size: 2.25rem;
+  }
+  &__text {
+    color: $light-grey;
+    padding-left: 1rem;
+    font-weight: $regular;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+  &__img {
+    max-width: 85%;
+    height: auto;
+    margin: auto;
+  }
+}
+
+.testSection {
+  color: white;
+
+  &__title {
+    margin-top: 1rem;
+    font-weight: $medium;
+    font-size: 2.25rem;
+  }
+  &__text {
+    color: $light-grey;
+    padding-left: 1rem;
+    font-weight: $regular;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+  &__button {
+    font-weight: $medium;
+    border-radius: 100px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: $main-blue;
+    color: white;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 1.25rem;
+    width: auto;
+    padding: 0.2rem 0.7rem;
+    margin: 0 auto;
+    transition: background-color 200ms ease-out;
+  }
+  &__button:hover,
+  &__button:focus {
+    color: white;
+    background-color: darken($main-blue, 3%);
+    transition: background-color 250ms ease-in;
+  }
+  &__textTwo {
+    font-weight: $regular;
+    font-size: 1.1rem;
+    background-color: $main-darkerBlue;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .services {
+    &__img {
+      display: none;
+    }
+  }
+  .testSection {
+    &__button {
+      margin-bottom: 1rem;
+    }
+  }
+  .teleMed {
+    &__img {
+      display: none;
+    }
+  }
+}
+
+.teleMed {
+  color: white;
+  text-align: center;
+
+  &__title {
+    margin-top: 1rem;
+    font-weight: $medium;
+    font-size: 2.25rem;
+  }
+  &__text {
+    color: white;
+    font-weight: $regular;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: $main-darkerBlue;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  &__img {
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+  }
+}
+
+.production {
+  color: white;
+  margin-top: 2rem;
+  &_group {
+    padding-left: 1.5rem;
+  }
+  &__title {
+    font-weight: $medium;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+  &__plan {
+    position: relative;
+    background-color: $main-blue;
+    font-size: 1.5rem;
+    width: 10rem;
+    display: inline-block;
+    border-radius: 5rem;
+    margin-bottom: 1.25rem;
+    padding: 0 0.7rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 200ms ease-out;
+    font-weight: $regular;
+
+    &-plus {
+      position: absolute;
+      right: 0.5rem;
+      color: white;
+      transition: color 750ms ease-out;
+    }
+  }
+
+  &__construct {
+    position: relative;
+    background-color: $main-blue;
+    font-size: 1.5rem;
+    width: 10rem;
+    display: inline-block;
+    border-radius: 5rem;
+    margin-bottom: 1.25rem;
+    padding: 0 0.7rem;
+    cursor: pointer;
+    transition: background-color 200ms ease-out;
+    font-weight: $regular;
+    &-plus {
+      position: absolute;
+      right: 0.5rem;
+      color: white;
+      transition: color 750ms ease-out;
+    }
+  }
+
+  &__share {
+    position: relative;
+    background-color: $main-blue;
+    font-size: 1.5rem;
+    width: 10rem;
+    display: inline-block;
+    border-radius: 5rem;
+    padding: 0 0.7rem;
+    cursor: pointer;
+    transition: background-color 200ms ease-out;
+    font-weight: $regular;
+
+    &-plus {
+      position: absolute;
+      right: 0.5rem;
+      color: white;
+      transition: color 750ms ease-out;
+    }
+  }
+
+  &__plan:hover,
+  &__construct:hover,
+  &__share:hover,
+  &__plan:focus,
+  &__construct:focus,
+  &__share:focus {
+    background-color: darken($main-blue, 3%);
+    transition: background-color 250ms ease-in;
+  }
+
+  .active {
+    color: $main-darkerBlue;
+    transition: color 200ms ease-in;
+  }
+
+  &__text {
+    color: white;
+    font-weight: $regular;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: $main-darkerBlue;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+}
 // !! Demo Page !! //
 .demo {
-  margin: 0.5rem;
   color: white;
   &__title {
     font-weight: $medium;
@@ -457,6 +667,18 @@ a:hover {
     font-weight: $regular;
     margin-left: 0.5rem;
     font-size: 1.25rem;
+    &-link {
+      color: white;
+      text-decoration: underline;
+      font-weight: $light;
+      cursor: pointer;
+      transition: color 200ms ease-out;
+    }
+    &-link:hover,
+    &-link:focus {
+      color: $light-grey;
+      transition: color 250ms ease-in;
+    }
   }
 }
 
