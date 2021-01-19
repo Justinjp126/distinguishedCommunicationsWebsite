@@ -88,6 +88,9 @@ a:link {
 a:hover {
   text-decoration: none;
 }
+p {
+  margin-bottom: 0 !important;
+}
 // !! Home Page !! //
 // * Navbar * //
 #icon {
@@ -697,6 +700,86 @@ a:hover {
     background-color: $main-darkerBlue;
     padding: 1rem;
     border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__demo {
+    background-color: #7c8ec8;
+    padding: 1rem;
+    border-radius: 1.25rem;
+    margin-top: 2rem;
+  }
+  &__info {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  &__img {
+    width: 2.25rem;
+    vertical-align: sub;
+  }
+  .dash_nav {
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .dash-bg {
+    background-color: #8198e3;
+    border-radius: 0.4rem;
+  }
+  &__nav {
+    font-size: 1.1rem;
+    display: inline;
+    padding: 0 0.5rem;
+  }
+  #general {
+    cursor: pointer;
+    color: $light-grey;
+    transition: color 200ms ease;
+  }
+  #medications {
+    cursor: pointer;
+    color: $light-grey;
+    transition: color 200ms ease;
+  }
+  .active {
+    color: white !important;
+    transition: color 250ms ease;
+  }
+  .history,
+  .doctors {
+    color: $dark-grey;
+    cursor: not-allowed;
+  }
+
+  .dashBlocks {
+    margin-top: 1.5rem;
+  }
+  .personalInfo {
+    padding: 0.5rem;
+    background-color: #8198e3;
+    border-radius: 0.5rem;
+    &__title {
+      font-size: 1rem;
+      font-weight: $regular;
+    }
+    &__text {
+      font-size: 0.8rem;
+      font-weight: $regular;
+      margin-bottom: 0;
+      &_text {
+        margin-left: 0.25rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .dashboard .dash_nav {
+    justify-content: left;
+    margin-top: 0.75rem !important;
+  }
+  .personalInfo {
     margin-bottom: 1rem;
   }
 }

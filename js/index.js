@@ -449,3 +449,54 @@ function productionChange(obj) {
 
   text.innerText = key[obj.id + "text"];
 }
+
+function changeDash(obj) {
+  var height = document.getElementById("height");
+  var weight = document.getElementById("weight");
+  var blood = document.getElementById("blood");
+  var peanuts = document.getElementById("peanuts");
+  var tree = document.getElementById("tree");
+  var pollen = document.getElementById("pollen");
+  var docOne = document.getElementById("docOne");
+  var docTwo = document.getElementById("docTwo");
+  var titleOne = document.getElementById("titleOne");
+  var blockOne = document.getElementById("blockOne");
+  var titleTwo = document.getElementById("titleTwo");
+  var blockTwo = document.getElementById("blockTwo");
+  var titleThree = document.getElementById("titleThree");
+  var blockThree = document.getElementById("blockThree");
+
+  if (obj.id == "general") {
+    height.innerText = "Height: 6’3”";
+    weight.innerText = " Weight: 198lbs ";
+    blood.innerText = " Blood Type: AB ";
+    peanuts.innerText = "Peanuts";
+    tree.innerText = "Tree Nuts";
+    pollen.innerText = "Pollen";
+    docOne.innerText = " Dr. Erica Kasparowicz ";
+    docTwo.innerText = " Dr. Sanjay Upadhyay ";
+    titleOne.innerText = " Personal Information: ";
+    titleTwo.innerText = " Known Allergies: ";
+    titleThree.innerText = " General Practitioner:";
+    blockThree.style.display = "block";
+
+    document.getElementById("general").classList.add("active");
+    document.getElementById("medications").classList.remove("active");
+  }
+  if (obj.id == "medications") {
+    height.innerText = "Diabetes";
+    weight.innerText = " Osteoporosis ";
+    blood.innerText = "  ";
+    peanuts.innerText = "Metaformin 50 mg orally ";
+    tree.innerText = "Alandronate 35 mg orally ";
+    pollen.innerText = "";
+    docOne.innerText = " Dr. Erica Kasparowicz ";
+    docTwo.innerText = " Dr. Sanjay Upadhyay ";
+    titleOne.innerText = " Conditions: ";
+    titleTwo.innerText = " Medication: ";
+    blockThree.style.display = "none";
+    titleThree.innerText = " General Practitioner:";
+    document.getElementById("medications").classList.add("active");
+    document.getElementById("general").classList.remove("active");
+  }
+}
