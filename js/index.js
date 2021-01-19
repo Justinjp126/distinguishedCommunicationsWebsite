@@ -431,7 +431,7 @@ function productionChange(obj) {
   var share = document.getElementById("sharePlus");
   var text = document.getElementById("prodText");
   var planText =
-    "We work alongside our clients to help decide how  their topic will be best conveyed. We then select a format of presentation accordingly. Using their topic and format, we work cohesively to organize the information in a logical manner.";
+    "We work alongside our clients to help decide how  their topic will be best conveyed. We then select a format of presentation accordingly. We work cohesively with the client to organize the information in a logical manner.";
   var constructText =
     "Using the organized information and format from the planning phase, the project is put together. We have experienced writers and experts on staff who can help the client produce the best presentation possible for any topic.";
   var shareText =
