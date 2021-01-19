@@ -550,6 +550,7 @@ a:hover {
     background-color: $main-darkerBlue;
     padding: 1rem;
     border-radius: 1rem;
+    margin-bottom: 1rem;
   }
   &__img {
     max-width: 80%;
@@ -654,6 +655,28 @@ a:hover {
     background-color: $main-darkerBlue;
     padding: 1rem;
     border-radius: 1rem;
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .production {
+    text-align: center;
+    &_group {
+      padding-left: 0;
+      margin: 0 auto;
+      width: 80%;
+    }
+    &__plan {
+      text-align: center;
+      width: 80%;
+    }
+    &__construct {
+      width: 80%;
+    }
+    &__share {
+      margin-bottom: 1.25rem;
+      width: 80%;
+    }
   }
 }
 // !! Demo Page !! //
