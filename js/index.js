@@ -431,11 +431,11 @@ function productionChange(obj) {
   var share = document.getElementById("sharePlus");
   var text = document.getElementById("prodText");
   var planText =
-    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ";
+    "We work alongside our clients to help decide how  their topic will be best conveyed. We then select a format of presentation accordingly. Using their topic and format, we work cohesively to organize the information in a logical manner.";
   var constructText =
-    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi ";
+    "Using the organized information and format from the planning phase, the project is put together. We have experienced writers and experts on staff who can help the client produce the best presentation possible for any topic.";
   var shareText =
-    "The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. ";
+    "We aim to not only help our clients create their presentations, but also help them bring their work to the medical community. We work with our clients to show them possible media outlets and which are best for their projects.";
   var key = {
     plantext: planText,
     constructtext: constructText,
