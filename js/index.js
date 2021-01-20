@@ -35,6 +35,52 @@ function checkValid() {
   }
 }
 
+function checkValidContact() {
+  var name = document.getElementById("nameContact").value;
+  var email = document.getElementById("emailContact").value;
+  var message = document.getElementById("messageContact").value;
+
+  if (name !== "" && validateEmail(email) && message !== "") {
+    Swal.fire({
+      title: "Success!",
+      text: "We will respond to your message as soon as possible!",
+      icon: "success",
+      confirmButtonText: "Continue",
+      confirmButtonColor: "#7C8EC8",
+    }).then((result) => {
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      location.reload();
+    });
+  } else {
+    if (name == "") {
+      Swal.fire({
+        title: "Error!",
+        text: "Please fill out your name",
+        icon: "error",
+        confirmButtonText: "Continue",
+        confirmButtonColor: "#7C8EC8",
+      });
+    } else if (message == "") {
+      Swal.fire({
+        title: "Error!",
+        text: "Please fill out your message",
+        icon: "error",
+        confirmButtonText: "Continue",
+        confirmButtonColor: "#7C8EC8",
+      });
+    } else if (!validateEmail(email)) {
+      Swal.fire({
+        title: "Error!",
+        text: "Please enter valid email address",
+        icon: "error",
+        confirmButtonText: "Continue",
+        confirmButtonColor: "#7C8EC8",
+      });
+    }
+  }
+}
+
 function validateEmail(email) {
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
