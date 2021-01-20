@@ -431,9 +431,9 @@ function productionChange(obj) {
   var share = document.getElementById("sharePlus");
   var text = document.getElementById("prodText");
   var planText =
-    "We work alongside our clients to help decide how  their topic will be best conveyed. We then select a format of presentation accordingly. We work cohesively with the client to organize the information in a logical manner.";
+    "We first work alongside our clients to help decide how  their topic will be best conveyed. We then select a format of presentation accordingly. We work cohesively with the client to organize the information in a logical manner.";
   var constructText =
-    "Using the organized information and format from the planning phase, the project is put together. We have experienced writers and experts on staff who can help the client produce the best presentation possible for any topic.";
+    "Using the organized information and format from the planning phase, the project is then put together. We have experienced writers and experts on staff who can help the client produce the best presentation possible for any topic.";
   var shareText =
     "We aim to not only help our clients create their presentations, but also help them bring their work to the medical community. We work with our clients to show them possible media outlets and which are best for their projects.";
   var key = {
@@ -487,8 +487,8 @@ function changeDash(obj) {
     height.innerText = "Diabetes";
     weight.innerText = " Osteoporosis ";
     blood.innerText = "  ";
-    peanuts.innerText = "Metaformin 50 mg orally ";
-    tree.innerText = "Alandronate 35 mg orally ";
+    peanuts.innerText = "Metaformin 50 mg orally";
+    tree.innerText = "Alandronate 35 mg orally";
     pollen.innerText = "";
     docOne.innerText = " Dr. Erica Kasparowicz ";
     docTwo.innerText = " Dr. Sanjay Upadhyay ";

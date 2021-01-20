@@ -526,6 +526,7 @@ p {
   }
   .testSection {
     &__button {
+      margin-top: 1rem;
       margin-bottom: 1rem;
     }
   }
@@ -707,6 +708,13 @@ p {
     padding: 1rem;
     border-radius: 1.25rem;
     margin-top: 2rem;
+    position: relative;
+    &_demoText {
+      position: absolute;
+      color: rgba(#fff, 0.3);
+      bottom: 3%;
+      left: 1rem;
+    }
   }
   &__info {
     display: inline-block;
@@ -753,6 +761,7 @@ p {
   }
 
   .dashBlocks {
+    margin-bottom: 1.5rem;
     margin-top: 1.5rem;
   }
   .personalInfo {
