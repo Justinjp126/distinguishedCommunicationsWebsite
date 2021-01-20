@@ -126,10 +126,9 @@ p {
     z-index: -1;
     max-width: calc(min(100vw, 100vh));
     height: auto;
-    margin-top: 5rem;
   }
   &__title {
-    margin-top: 5rem;
+    margin-top: 0.5rem;
     position: absolute;
     left: 0;
     top: 0;
@@ -139,18 +138,17 @@ p {
     font-size: 2.5rem;
   }
   &__subtitle {
-    margin-top: 5rem;
     position: absolute;
     left: 0;
     top: 27%;
-    font-weight: $medium;
+    font-weight: $regular;
     margin-bottom: 1rem;
     color: $light-grey;
     margin-left: 5rem;
     font-size: 2rem;
   }
   &__button {
-    margin-top: 5rem;
+    margin-top: 2rem;
     position: absolute;
     left: 0;
     top: 55%;
@@ -203,7 +201,7 @@ p {
 }
 @media only screen and (max-width: 500px) {
   .hero {
-    height: 25rem;
+    height: 20rem;
   }
 }
 // * Quote * //
