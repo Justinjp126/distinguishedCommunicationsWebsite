@@ -790,6 +790,37 @@ p {
     margin-bottom: 1rem;
   }
 }
+
+.publication {
+  color: white;
+  &__title {
+    font-weight: $medium;
+    font-size: 2.25rem;
+    margin-top: 2rem;
+  }
+  &__text {
+    color: white;
+    font-weight: $regular;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-left: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  &__textTwo {
+    color: white;
+    font-weight: $regular;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-left: 0.5rem;
+  }
+  &__points {
+    color: white;
+    font-weight: $regular;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin-left: 0.5rem;
+  }
+}
 // !! Demo Page !! //
 .demo {
   color: white;
