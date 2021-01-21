@@ -348,7 +348,6 @@ p {
     font-weight: $regular;
     text-align: center;
     padding-top: 1rem;
-    padding-bottom: 0.5rem;
   }
   &__insta {
     margin-right: 0.5rem;
@@ -372,6 +371,18 @@ p {
     filter: invert(100%) sepia(2%) saturate(3939%) hue-rotate(172deg)
       brightness(126%) contrast(71%);
     transition: filter 250ms ease-in;
+  }
+  &__link {
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: underline !important;
+    padding-bottom: 0.5rem;
+    transition: color 200ms ease-out;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $light-grey;
+    transition: color 250ms ease-in;
   }
 }
 
@@ -422,9 +433,31 @@ p {
   }
 }
 
+.documents {
+  color: white;
+  &__title {
+    font-weight: $bold;
+    padding-top: 1rem;
+  }
+  &__link {
+    color: white;
+    font-weight: $medium;
+    text-decoration: underline !important;
+    display: block;
+    font-size: 1.25rem;
+    transition: color 200ms ease-out;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $light-grey;
+    transition: color 250ms ease-in;
+  }
+}
 .sources {
   color: white;
-  background-color: $main-darkerBlue;
+  background-color: $main-darkBlue;
   padding-bottom: 1rem;
   &__title {
     font-weight: $bold;
@@ -441,6 +474,7 @@ p {
   &__text {
     font-weight: $light;
     margin-left: 1.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 
