@@ -433,9 +433,9 @@ function findSymptoms() {
     });
   } else {
     Swal.fire({
-      title: "Most Likely Condition",
+      title: "Most Likely Diagnosis",
       text:
-        "Based on your selected symptoms, the most likely condition you have is " +
+        "Based on your selected symptoms, the most likely diagnosis is " +
         mostLikelyName,
       icon: "info",
       confirmButtonText: "Continue",
@@ -443,9 +443,9 @@ function findSymptoms() {
     }).then((result) => {
       if (likely > 0 && likelyName !== mostLikelyName) {
         Swal.fire({
-          title: "Another Possible Condition",
+          title: "Another Possible Diagnosis",
           text:
-            "Based on your selected symptoms another possible condition you have is " +
+            "Based on your selected symptoms another possible diagnosis is " +
             likelyName,
           icon: "info",
           confirmButtonText: "Continue",
