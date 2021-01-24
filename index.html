@@ -21,47 +21,47 @@
   </head>
   <body>
     <!-- * Navigation Bar * -->
-      <nav class="navbar navbar-expand-lg navbar-dark px-5">
-        <div class="container-fluid">
-          <a class="navbar-brand" id="icon" href="index.html"
-            >dmc<span>.</span></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarSupportedContent"
-          >
-            <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-dark px-5">
+      <div class="container-fluid">
+        <a class="navbar-brand" id="icon" href="index.html"
+          >dmc<span>.</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    <div class="container-fluid hero">
-      <!-- * Hero Page * -->
+      </div>
+    </nav>
+
+    <!-- <div class="container-fluid hero">
       <h1 class="hero__title">
         Distinguished Medical <br />
         Communications
@@ -73,7 +73,7 @@
         alt="Picture of Two Doctors SVG"
         class="hero__image"
       />
-    </div>
+    </div> -->
 
     <div class="container quote">
       <p class="quote__text">“The greatest wealth is health” - Virgil</p>
@@ -164,13 +164,32 @@
       >
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <p class="testimonials__text"> <span class="testimonials__text-quote"> "dmc has done an excellent job in helping along every step of the way. I would definitely recommend dmc to other doctors" </span><br> <span class="testimonials__text-person">- Research Doctor</span> </p>
+            <p class="testimonials__text">
+              <span class="testimonials__text-quote">
+                "dmc has done an excellent job in helping along every step of
+                the way. I would definitely recommend dmc to other doctors" </span
+              ><br />
+              <span class="testimonials__text-person">- Research Doctor</span>
+            </p>
           </div>
           <div class="carousel-item">
-            <p class="testimonials__text"> <span class="testimonials__text-quote">"My project would not have turned out as professional without Distinguished Medical Communications" </span> <br> <span class="testimonials__text-person"> - KOL</span></p>
+            <p class="testimonials__text">
+              <span class="testimonials__text-quote"
+                >"My project would not have turned out as professional without
+                Distinguished Medical Communications"
+              </span>
+              <br />
+              <span class="testimonials__text-person"> - KOL</span>
+            </p>
           </div>
           <div class="carousel-item">
-            <p class="testimonials__text"> <span class="testimonials__text-quote"> "Many thanks for all the help that I received from dmc to keep me both organized and up to date on medical information" </span><br> <span class="testimonials__text-person">- Author </span> </p>
+            <p class="testimonials__text">
+              <span class="testimonials__text-quote">
+                "Many thanks for all the help that I received from dmc to keep
+                me both organized and up to date on medical information" </span
+              ><br />
+              <span class="testimonials__text-person">- Author </span>
+            </p>
           </div>
         </div>
         <a
@@ -194,6 +213,13 @@
       </div>
     </div>
 
+    <div class="container">
+      <img
+        src="svg/HomePageDoctorsNewSVG.svg"
+        alt="Home Page Doctors and Plant"
+      />
+    </div>
+
     <div class="container-fluid darkBackground">
       <div class="container briefs">
         <div class="row">
@@ -201,37 +227,34 @@
             <h2 class="briefs__title">Sign Up for Daily Briefs</h2>
           </div>
         </div>
-        <form>
-          <div class="row">
-            <div class="col-sm-6 col-12 briefs__form">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Name"
-                aria-label="name"
-                required
-                id="name"
-                value=""
-                autocomplete=""
-              />
-            </div>
-            <div class="col-sm-6 col-12 briefs__form">
-              <input
-                type="email"
-                class="form-control"
-                placeholder="Email"
-                aria-label="email"
-                required
-                id="email"
-                value=""
-                autocomplete=""
-              />
-            </div>
+        <div class="row">
+          <div class="col-sm-6 col-12 briefs__form">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Name"
+              aria-label="name"
+              required
+              id="name"
+              value=""
+              autocomplete=""
+            />
           </div>
-          <div class="briefs__container">
-            <a class="briefs__button" onclick="checkValid()">Sign Up</a>
+          <div class="col-sm-6 col-12 briefs__form">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              aria-label="email"
+              required
+              id="email"
+              value=""
+              autocomplete=""
+            />
           </div>
-        </form>
+        </div>
+        <div class="briefs__container">
+          <a class="briefs__button" onclick="checkValid()">Sign Up</a>
         </div>
       </div>
     </div>
@@ -239,14 +262,28 @@
     <div class="footer">
       <div class="row">
         <div class="col-12 text-center">
-          <a href="https://www.instagram.com/distinguishedcommunications6/" target="_blank"><img src="img/insta.png" alt="Instagram Logo" class="footer__insta"></a>
-          <a href="https://twitter.com/DistinguishedM7" target="_blank"><img src="img/twitter.png" alt="Twitter Logo" class="footer__twitter"></a>
+          <a
+            href="https://www.instagram.com/distinguishedcommunications6/"
+            target="_blank"
+            ><img
+              src="img/insta.png"
+              alt="Instagram Logo"
+              class="footer__insta"
+          /></a>
+          <a href="https://twitter.com/DistinguishedM7" target="_blank"
+            ><img
+              src="img/twitter.png"
+              alt="Twitter Logo"
+              class="footer__twitter"
+          /></a>
         </div>
       </div>
       <h3 class="footer__text">Designed JP, JB, NL, JO, and AS</h3>
       <div class="row">
         <div class="col-12 text-center">
-          <a href="references.html" class="footer__link">References and Sources</a>
+          <a href="references.html" class="footer__link"
+            >References and Sources</a
+          >
         </div>
       </div>
     </div>
