@@ -16,13 +16,28 @@
 <path opacity="0.1" d="M803.402 385.194V542.746H1075.23V385.194H803.402ZM1148.97 728.192L1149.36 603.476H1075.23V547.667H803.402V821.621C825.686 822.548 848.003 822.278 870.259 820.813H870.646C881.276 820.129 891.857 819.157 902.389 817.897H902.628C958.831 811.355 1013.78 796.676 1065.76 774.32" fill="#6C63FF"/>
 <path opacity="0.1" d="M1181.77 547.621H1245.17C1244.62 579.615 1238.2 611.039 1224.13 640.059C1212.45 664.171 1196.2 685.254 1176.98 703.671V603.442H1181.77V547.621Z" fill="#6C63FF"/>
 <path opacity="0.1" d="M1245.22 542.747H1181.77V411.071H1216.1C1233.86 452.563 1245.16 498.122 1245.22 542.747Z" fill="#6C63FF"/>
-<path opacity="0.1" d="M775.793 265.717H737.399V315.478H775.793V265.717Z" fill="#6C63FF"/>
-<path opacity="0.1" d="M775.793 368.861H737.399V380.319H775.793V368.861Z" fill="#6C63FF"/>
-<path opacity="0.1" d="M775.793 385.182H737.399V418.611H775.793V385.182Z" fill="#6C63FF"/>
+<path opacity="0.1" d="M775.793 265.717H737.399V315.478H775.793V265.717Z" fill="#6C63FF">
+    <animate attributeName="fill" dur="2000ms" from="#6C63FF" to="#fff2ab" fill="freeze" begin='0.5s' /> 
+    <animate attributeName="opacity" dur="2000ms" from="0.1" to="0.35" fill="freeze" begin='0.5s' /> 
+</path>
+<path opacity="0.1" d="M775.793 368.861H737.399V380.319H775.793V368.861Z" fill="#6C63FF">
+    <animate attributeName="fill" dur="1500ms" from="#6C63FF" to="#fff2ab" fill="freeze" begin='2.5s' /> 
+    <animate attributeName="opacity" dur="1500ms" from="0.1" to="0.55" fill="freeze" begin='2.5s' /> 
+</path>
+<path opacity="0.1" d="M775.793 385.182H737.399V418.611H775.793V385.182Z" fill="#6C63FF">
+    <animate attributeName="fill" dur="1500ms" from="#6C63FF" to="#fff2ab" fill="freeze" begin='2.5s' /> 
+    <animate attributeName="opacity" dur="1500ms" from="0.1" to="0.55" fill="freeze" begin='2.5s' /> 
+</path>
 <path opacity="0.1" d="M775.793 472.005H737.399V521.767H775.793V472.005Z" fill="#6C63FF"/>
-<path opacity="0.1" d="M775.793 575.15H737.399V624.911H775.793V575.15Z" fill="#6C63FF"/>
+<path opacity="0.1" d="M775.793 575.15H737.399V624.911H775.793V575.15Z" fill="#6C63FF">
+    <animate attributeName="fill" dur="1500ms" from="#6C63FF" to="#EEDD82" fill="freeze" begin='1.5s' /> 
+    <animate attributeName="opacity" dur="1500ms" from="0.1" to="0.55" fill="freeze" begin='1.5s' /> 
+</path>
 <path opacity="0.1" d="M775.793 716.484C776.169 716.484 776.545 716.484 776.932 716.564C776.556 716.564 776.18 716.564 775.793 716.495V728.056H737.399V678.294H775.793V716.484Z" fill="#6C63FF"/>
-<path opacity="0.1" d="M775.793 781.428V819.856C762.946 818.801 750.147 817.324 737.399 815.426V781.428H775.793Z" fill="#6C63FF"/>
+<path opacity="0.1" d="M775.793 781.428V819.856C762.946 818.801 750.147 817.324 737.399 815.426V781.428H775.793Z" fill="#6C63FF">
+    <animate attributeName="fill" dur="1500ms" from="#6C63FF" to="#EEDD82" fill="freeze" begin='4s' /> 
+    <animate attributeName="opacity" dur="1500ms" from="0.1" to="0.35" fill="freeze" begin='4s' /> 
+</path>
 <path opacity="0.1" d="M584.63 539.09H420.084V542.746H584.63V539.09Z" fill="#6C63FF"/>
 <path opacity="0.1" d="M584.63 547.61H420.084V561.619H584.63V547.61Z" fill="#6C63FF"/>
 <path opacity="0.1" d="M584.63 607.542H420.084V630.071H584.63V607.542Z" fill="#6C63FF"/>
@@ -30,30 +45,45 @@
 <path opacity="0.1" d="M584.63 744.434V767.02H571.042C555.757 760.125 540.783 752.612 526.121 744.48L584.63 744.434Z" fill="#6C63FF"/>
 <path opacity="0.1" d="M902.651 400.456H870.259V432.848H902.651V400.456Z" fill="#6C63FF"/>
 <path opacity="0.1" id='left-window-1' d="M201.3 249.532H168.908V281.924H201.3V249.532Z" fill="#6C63FF"> 
-    <animate attributeName="fill" dur="3000ms" from="#6C63FF" to="#EEDD82" fill="freeze" d="left-window-1-start" begin='1s' /> 
-    <animate attributeName="opacity" dur="3000ms" from="0.1" to="0.4" fill="freeze" begin='1s' /> 
+    <animate attributeName="fill" dur="2200ms" from="#6C63FF" to="#EEDD82" fill="freeze" d="left-window-1-start" begin='1s' /> 
+    <animate attributeName="opacity" dur="2200ms" from="0.1" to="0.45" fill="freeze" begin='1s' /> 
 </path>
 <path opacity="0.1" id='left-window-2' d="M201.3 324.772H168.908V357.164H201.3V324.772Z" fill="#6C63FF"/>
 <path opacity="0.1" id='left-window-3' d="M201.3 400.012H168.908V432.404H201.3V400.012Z" fill="#6C63FF">
-    <animate attributeName="fill" dur="2500ms" from="#6C63FF" to="#EEDD82" fill="freeze" d="left-window-3-start" begin='3.5s' /> 
-    <animate attributeName="opacity" dur="2500ms" from="0.1" to="0.35" fill="freeze" begin='1s' /> 
+    <animate attributeName="fill" dur="2000ms" from="#6C63FF" to="#EEDD82" fill="freeze" d="left-window-3-start" begin='3.5s' /> 
+    <animate attributeName="opacity" dur="2000ms" from="0.1" to="0.35" fill="freeze" begin='3.5s' /> 
 </path>
 <path opacity="0.1" id='left-window-4' d="M201.3 475.24H168.908V507.632H201.3V475.24Z" fill="#6C63FF">
-    <animate attributeName="fill" dur="2000ms" from="#6C63FF" to="#EEDD82" fill="freeze" d="left-window-4-start" begin='0.5s' /> 
-    <animate attributeName="opacity" dur="2000ms" from="0.1" to="0.25" fill="freeze" begin='1s' /> 
+    <animate attributeName="fill" dur="1500ms" from="#6C63FF" to="#EEDD82" fill="freeze" d="left-window-4-start" begin='0.5s' /> 
+    <animate attributeName="opacity" dur="1500ms" from="0.1" to="0.45" fill="freeze" begin='0.5s' /> 
 </path>
 <path opacity="0.1" id='left-window-5' d="M201.3 550.48H168.908V582.872H201.3V550.48Z" fill="#6C63FF"/>
-<path opacity="0.1" id='left-window-6' d="M201.3 625.72H168.908V658.112H201.3V625.72Z" fill="#6C63FF"/>
+<path opacity="0.1" id='left-window-6' d="M201.3 625.72H168.908V658.112H201.3V625.72Z" fill="#6C63FF">
+    <animate attributeName="fill" dur="1500ms" from="#6C63FF" to="#fff2ab" fill="freeze" d="left-window-6-start" begin='3s' /> 
+    <animate attributeName="opacity" dur="1500ms" from="0.1" to="0.35" fill="freeze" begin='3s' /> 
+</path>
 <path opacity="0.1" d="M1026.31 400.456H993.916V432.848H1026.31V400.456Z" fill="#6C63FF"/>
-<path opacity="0.1" d="M902.651 480.354H870.259V512.746H902.651V480.354Z" fill="#6C63FF"/>
+<path opacity="0.1" d="M902.651 480.354H870.259V512.746H902.651V480.354Z" fill="#6C63FF">
+    <animate attributeName="fill" dur="2000ms" from="#6C63FF" to="#EEDD82" fill="freeze" d="left-window-6-start" begin='2.5s' /> 
+    <animate attributeName="opacity" dur="2000ms" from="0.1" to="0.35" fill="freeze" begin='2.5s' /> 
+</path>
 <path opacity="0.1" d="M1026.31 480.354H993.916V512.746H1026.31V480.354Z" fill="#6C63FF"/>
-<path opacity="0.1" d="M902.651 560.241H870.259V592.633H902.651V560.241Z" fill="#6C63FF"/>
+<path opacity="0.1" d="M902.651 560.241H870.259V592.633H902.651V560.241Z" fill="#6C63FF">
+    <animate attributeName="fill" dur="1500ms" from="#6C63FF" to="#fff2ab" fill="freeze" d="left-window-6-start" begin='3.5s' /> 
+    <animate attributeName="opacity" dur="1500ms" from="0.1" to="0.35" fill="freeze" begin='3.5s' /> 
+</path>
 <path opacity="0.1" d="M1026.31 560.241H993.916V592.633H1026.31V560.241Z" fill="#6C63FF"/>
-<path opacity="0.1" d="M902.651 640.139H870.259V672.531H902.651V640.139Z" fill="#6C63FF"/>
+<path opacity="0.1" d="M902.651 640.139H870.259V672.531H902.651V640.139Z" fill="#6C63FF">
+    <animate attributeName="fill" dur="1750ms" from="#6C63FF" to="#EEDD82" fill="freeze" d="left-window-6-start" begin='1.5s' /> 
+    <animate attributeName="opacity" dur="1750ms" from="0.1" to="0.55" fill="freeze" begin='1.5s' /> 
+</path>
 <path opacity="0.1" d="M1026.31 640.139H993.916V672.531H1026.31V640.139Z" fill="#6C63FF"/>
 <path opacity="0.1" d="M902.651 720.037H870.259V752.43H902.651V720.037Z" fill="#6C63FF"/>
 <path opacity="0.1" d="M1026.31 720.037H993.916V752.43H1026.31V720.037Z" fill="#6C63FF"/>
-<path opacity="0.1" d="M870.259 820.813V799.924H902.64V817.84L870.259 820.813Z" fill="#6C63FF"/>
+<path opacity="0.1" d="M870.259 820.813V799.924H902.64V817.84L870.259 820.813Z" fill="#6C63FF">
+    <animate attributeName="fill" dur="1750ms" from="#6C63FF" to="#EEDD82" fill="freeze" d="left-window-6-start" begin='3.5s' /> 
+    <animate attributeName="opacity" dur="1750ms" from="0.1" to="0.35" fill="freeze" begin='3.5s' /> 
+</path>
 <path opacity="0.1" d="M7.12988 339.806V358.337H117.974V339.806H7.12988ZM18.1664 357.175H9.05473V340.979H18.1664V357.175ZM29.203 357.175H20.0913V340.979H29.203V357.175ZM40.2168 357.175H31.1051V340.979H40.2168V357.175ZM51.2533 357.175H42.1416V340.979H51.2533V357.175ZM62.2785 357.175H53.1668V340.979H62.2785V357.175ZM73.315 357.175H64.2033V340.979H73.315V357.175ZM84.3516 357.175H75.2399V340.979H84.3516V357.175ZM95.3767 357.175H86.265V340.979H95.3767V357.175ZM106.402 357.175H97.2902V340.979H106.402V357.175ZM117.438 357.175H108.327V340.979H117.438V357.175Z" fill="#6C63FF"/>
 <path opacity="0.1" d="M7.12988 393.747V412.278H117.974V393.747H7.12988ZM18.1664 411.116H9.05473V394.92H18.1664V411.116ZM29.203 411.116H20.0913V394.92H29.203V411.116ZM40.2168 411.116H31.1051V394.92H40.2168V411.116ZM51.2533 411.116H42.1416V394.92H51.2533V411.116ZM62.2785 411.116H53.1668V394.92H62.2785V411.116ZM73.315 411.116H64.2033V394.92H73.315V411.116ZM84.3516 411.116H75.2399V394.92H84.3516V411.116ZM95.3767 411.116H86.265V394.92H95.3767V411.116ZM106.402 411.116H97.2902V394.92H106.402V411.116ZM117.438 411.116H108.327V394.92H117.438V411.116Z" fill="#6C63FF"/>
 <path opacity="0.1" d="M7.12988 447.7V466.22H117.974V447.7H7.12988ZM18.1664 465.046H9.05473V448.85H18.1664V465.046ZM29.203 465.046H20.0913V448.85H29.203V465.046ZM40.2168 465.046H31.1051V448.85H40.2168V465.046ZM51.2533 465.046H42.1416V448.85H51.2533V465.046ZM62.2785 465.046H53.1668V448.85H62.2785V465.046ZM73.315 465.046H64.2033V448.85H73.315V465.046ZM84.3516 465.046H75.2399V448.85H84.3516V465.046ZM95.3767 465.046H86.265V448.85H95.3767V465.046ZM106.402 465.046H97.2902V448.85H106.402V465.046ZM117.438 465.046H108.327V448.85H117.438V465.046Z" fill="#6C63FF"/>

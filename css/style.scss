@@ -92,35 +92,6 @@ p {
   margin-bottom: 0 !important;
 }
 // !! Home Page !! //
-#left-window-1 {
-  fill: orange;
-  animation: dance 2s infinite alternate;
-}
-#left-window-2 {
-  fill: orange;
-  animation: dance 2s infinite alternate;
-}
-#left-window-3 {
-  fill: orange;
-  animation: dance 2s infinite alternate;
-}
-#left-window-4 {
-  fill: orange;
-  animation: dance 2s infinite alternate;
-}
-#left-window-5 {
-  fill: orange;
-  animation: dance 2s infinite alternate;
-}
-#left-window-6 {
-  fill: orange;
-  animation: dance 2s infinite alternate;
-}
-@keyframes dance {
-  100% {
-    transform: rotate(3deg);
-  }
-}
 // * Header * //
 .homeImg {
   width: 100%;
