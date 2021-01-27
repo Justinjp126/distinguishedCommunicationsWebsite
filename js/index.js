@@ -546,3 +546,7 @@ function changeDash(obj) {
     document.getElementById("general").classList.remove("active");
   }
 }
+
+function main() {}
+
+main();
