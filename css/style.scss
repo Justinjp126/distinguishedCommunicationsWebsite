@@ -205,10 +205,17 @@ p {
   border-color: rgba(255, 255, 255, 0);
 }
 
-@media only screen and (max-width: 992px) {
-  .navbar {
-    background-color: $main-darkBlue !important;
-  }
+.navActive {
+  background-color: $main-darkBlue !important;
+  padding-top: 0.3rem !important;
+  padding-bottom: 0.3rem !important;
+  transition: all 300ms ease-in;
+}
+.navbar {
+  background-color: transparent;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition: all 250ms ease-out;
 }
 
 // * Quote * //

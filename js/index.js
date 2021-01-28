@@ -547,6 +547,22 @@ function changeDash(obj) {
   }
 }
 
-function main() {}
+function changeNav() {
+  window.addEventListener("scroll", function () {
+    var nav = document.getElementById("nav");
+    var scrollTop =
+      window.pageYOffset ||
+      (document.documentElement || document.body.parentNode || document.body)
+        .scrollTop;
+    if (scrollTop > 0) {
+      nav.classList.add("navActive");
+    } else {
+      nav.classList.remove("navActive");
+    }
+  });
+}
+function main() {
+  changeNav();
+}
 
 main();
