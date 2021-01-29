@@ -511,8 +511,22 @@ p {
   }
   &__img {
     max-width: 85%;
+    width: 100%;
     height: auto;
-    margin: auto;
+    &-topCircle {
+      transform-origin: 278px 489px;
+      animation: spin 5s infinite linear;
+    }
+
+    @keyframes spin {
+      50% {
+        transform: rotate(180deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   }
 }
 
