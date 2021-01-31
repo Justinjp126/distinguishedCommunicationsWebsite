@@ -561,6 +561,11 @@ function changeNav() {
     }
   });
 }
+
+function changeHam() {
+  var nav = document.getElementById("nav");
+  nav.classList.add("navActive");
+}
 function main() {
   changeNav();
 }
