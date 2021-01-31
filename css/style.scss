@@ -82,11 +82,11 @@ main {
 @keyframes transitionIn {
   from {
     opacity: 0;
-    transform: rotateX(-10deg);
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
-    transform: rotateX(0deg);
+    transform: translateX(0px);
   }
 }
 ::-moz-selection,
