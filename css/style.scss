@@ -404,7 +404,7 @@ p {
 // !! About Page !! //
 .about {
   color: white;
-
+  margin-top: 4rem;
   &__title {
     margin-top: 1rem;
     font-weight: $medium;
@@ -448,8 +448,10 @@ p {
   }
 }
 
+// ! References Page ! //
 .documents {
   color: white;
+  margin-top: 4rem;
   &__title {
     font-weight: $bold;
     padding-top: 1rem;
@@ -496,7 +498,7 @@ p {
 // !! Services Page !! //
 .services {
   color: white;
-
+  margin-top: 4rem;
   &__title {
     margin-top: 1rem;
     font-weight: $medium;
@@ -515,7 +517,7 @@ p {
     height: auto;
     &-topCircle {
       transform-origin: 278px 489px;
-      animation: spin 5s infinite linear;
+      animation: spin 25s infinite linear;
     }
 
     @keyframes spin {
@@ -887,6 +889,7 @@ p {
 // !! Demo Page !! //
 .demo {
   color: white;
+  margin-top: 4rem;
   &__title {
     font-weight: $medium;
     font-size: 1.75rem;
@@ -907,6 +910,29 @@ p {
       color: $light-grey;
       transition: color 250ms ease-in;
     }
+  }
+}
+
+.body {
+  &__head {
+    fill: none;
+    cursor: pointer;
+    transition: fill 200ms ease;
+  }
+  &__head:hover {
+    fill: $main-darkerBlue;
+    transition: fill 200ms ease;
+  }
+  path,
+  rect {
+    fill: transparent;
+  }
+  &__outline {
+    cursor: pointer;
+    fill: white !important;
+  }
+  .active {
+    fill: $main-darkerBlue;
   }
 }
 
@@ -934,7 +960,7 @@ p {
   width: 50%;
   min-width: 19rem;
   margin: 0 auto;
-  margin-top: 0.5rem;
+  margin-top: 4rem;
   border-radius: 30px;
   &__title {
     font-weight: $medium;
