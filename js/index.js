@@ -566,6 +566,17 @@ function changeHam() {
   var nav = document.getElementById("nav");
   nav.classList.add("navActive");
 }
+
+function changeOutline(obj) {
+  var bodyParts = document.getElementsByClassName("body__part");
+  for (var i = 0; i < bodyParts.length; i++) {
+    if (bodyParts[i].id !== obj.id) {
+      bodyParts[i].classList.remove("active");
+    } else {
+      bodyParts[i].classList.add("active");
+    }
+  }
+}
 function main() {
   changeNav();
 }

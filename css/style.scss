@@ -530,7 +530,7 @@ p {
     height: auto;
     &-topCircle {
       transform-origin: 278px 489px;
-      animation: spin 25s infinite linear;
+      animation: spin 30s infinite linear;
     }
 
     @keyframes spin {
@@ -927,25 +927,27 @@ p {
 }
 
 .body {
-  &__head {
-    fill: none;
-    cursor: pointer;
-    transition: fill 200ms ease;
-  }
-  &__head:hover {
-    fill: $main-darkerBlue;
-    transition: fill 200ms ease;
-  }
   path,
   rect {
     fill: transparent;
   }
+  .active {
+    fill: rgba($main-blue, 0.4) !important;
+  }
+
+  &__part {
+    fill: none;
+    cursor: pointer;
+    transition: fill 200ms ease-in;
+  }
+  &__part:hover,
+  &__part:focus {
+    fill: rgba($main-blue, 0.3);
+    transition: fill 250ms ease-out;
+  }
   &__outline {
     cursor: pointer;
     fill: white !important;
-  }
-  .active {
-    fill: $main-darkerBlue;
   }
 }
 
