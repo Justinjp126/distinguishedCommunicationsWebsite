@@ -478,10 +478,10 @@
             <div class="col-12">
               <div class="row">
                 <p class="dashboard__demo_demoText">Demo</p>
-                <div class="col-lg-4 my-auto">
+                <div class="col-lg-4 d-flex align-items-center">
                   <p class="dashboard__info">John Doe <br />#43532</p>
                   <img
-                    src="img/dashboard.png"
+                    src="img/dashboardTest.jpg"
                     alt="Blank Image of Man"
                     class="dashboard__img"
                   />
@@ -502,8 +502,20 @@
                     >
                       Medication
                     </p>
-                    <p class="dashboard__nav history" id="history">History</p>
-                    <p class="dashboard__nav doctors" id="doctors">Doctors</p>
+                    <p
+                      class="dashboard__nav history"
+                      id="history"
+                      onclick="changeDash(this)"
+                    >
+                      History
+                    </p>
+                    <p
+                      class="dashboard__nav doctors"
+                      id="doctors"
+                      onclick="changeDash(this)"
+                    >
+                      Doctors
+                    </p>
                   </div>
                 </div>
               </div>
