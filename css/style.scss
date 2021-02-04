@@ -795,6 +795,11 @@ p {
   &__info {
     display: inline-block;
     margin-bottom: 0;
+    font-size: 0.8rem;
+    color: $light-grey;
+    &-num {
+      font-weight: $light;
+    }
   }
   &__img {
     width: 2.25rem;
@@ -806,7 +811,7 @@ p {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
   }
   .dash-bg {
     background-color: #8198e3;
@@ -839,12 +844,12 @@ p {
     margin-top: 1.5rem;
   }
   .personalInfo {
-    padding: 0.5rem;
+    padding: 0.75rem;
     background-color: #8198e3;
     border-radius: 0.5rem;
     &__title {
       font-size: 1rem;
-      font-weight: $regular;
+      font-weight: $medium;
     }
     &__text {
       font-size: 0.8rem;

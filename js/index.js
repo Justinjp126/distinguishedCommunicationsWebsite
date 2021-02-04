@@ -524,9 +524,12 @@ function changeDash(obj) {
     titleOne.innerText = " Personal Information: ";
     titleTwo.innerText = " Known Allergies: ";
     titleThree.innerText = " General Practitioner:";
+    blockTwo.style.display = "block";
     blockThree.style.display = "block";
 
     document.getElementById("general").classList.add("active");
+    document.getElementById("doctors").classList.remove("active");
+    document.getElementById("history").classList.remove("active");
     document.getElementById("medications").classList.remove("active");
   }
   if (obj.id == "medications") {
@@ -540,9 +543,45 @@ function changeDash(obj) {
     docTwo.innerText = " Dr. Sanjay Upadhyay ";
     titleOne.innerText = " Conditions: ";
     titleTwo.innerText = " Medication: ";
+    blockTwo.style.display = "block";
     blockThree.style.display = "none";
-    titleThree.innerText = " General Practitioner:";
     document.getElementById("medications").classList.add("active");
+    document.getElementById("doctors").classList.remove("active");
+    document.getElementById("history").classList.remove("active");
+    document.getElementById("general").classList.remove("active");
+  }
+  if (obj.id == "history") {
+    height.innerText = "Measles";
+    weight.innerText = "  ";
+    blood.innerText = "  ";
+    peanuts.innerText = "Optimologist";
+    tree.innerText = "Surgeon";
+    pollen.innerText = "Physician";
+    docOne.innerText = "  ";
+    docTwo.innerText = "  ";
+    titleOne.innerText = " Childhood Diseases: ";
+    titleTwo.innerText = " Specialists Visited Last 5 Years: ";
+    blockTwo.style.display = "block";
+    blockThree.style.display = "none";
+    titleThree.innerText = "";
+
+    titleThree.innerText = " General Practitioner:";
+    document.getElementById("history").classList.add("active");
+    document.getElementById("general").classList.remove("active");
+    document.getElementById("medications").classList.remove("active");
+    document.getElementById("doctors").classList.remove("active");
+  }
+  if (obj.id == "doctors") {
+    height.innerText = "Dr. Erica Kasparowicz - eKasperowicz@medCompany.org";
+    weight.innerText = " Dr. Sanjay Upadhyay - sUpadhyay@medCompany.org  ";
+    blood.innerText = "  ";
+
+    titleOne.innerText = " Doctors: ";
+    blockThree.style.display = "none";
+    blockTwo.style.display = "none";
+    document.getElementById("doctors").classList.add("active");
+    document.getElementById("medications").classList.remove("active");
+    document.getElementById("history").classList.remove("active");
     document.getElementById("general").classList.remove("active");
   }
 }
