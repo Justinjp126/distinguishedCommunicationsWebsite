@@ -531,6 +531,10 @@ function changeDash(obj) {
     document.getElementById("doctors").classList.remove("active");
     document.getElementById("history").classList.remove("active");
     document.getElementById("medications").classList.remove("active");
+    document.getElementById("blockOne").classList.add("col-lg-4");
+    document.getElementById("blockOne").classList.remove("col-lg-6");
+    document.getElementById("blockTwo").classList.add("col-lg-4");
+    document.getElementById("blockTwo").classList.remove("col-lg-6");
   }
   if (obj.id == "medications") {
     height.innerText = "Diabetes";
@@ -549,6 +553,10 @@ function changeDash(obj) {
     document.getElementById("doctors").classList.remove("active");
     document.getElementById("history").classList.remove("active");
     document.getElementById("general").classList.remove("active");
+    document.getElementById("blockOne").classList.add("col-lg-6");
+    document.getElementById("blockOne").classList.remove("col-lg-4");
+    document.getElementById("blockTwo").classList.add("col-lg-6");
+    document.getElementById("blockTwo").classList.remove("col-lg-4");
   }
   if (obj.id == "history") {
     height.innerText = "Measles";
@@ -570,6 +578,10 @@ function changeDash(obj) {
     document.getElementById("general").classList.remove("active");
     document.getElementById("medications").classList.remove("active");
     document.getElementById("doctors").classList.remove("active");
+    document.getElementById("blockOne").classList.add("col-lg-6");
+    document.getElementById("blockOne").classList.remove("col-lg-4");
+    document.getElementById("blockTwo").classList.add("col-lg-6");
+    document.getElementById("blockTwo").classList.remove("col-lg-4");
   }
   if (obj.id == "doctors") {
     height.innerText = "Dr. Erica Kasparowicz - eKasperowicz@medCompany.org";
@@ -583,6 +595,8 @@ function changeDash(obj) {
     document.getElementById("medications").classList.remove("active");
     document.getElementById("history").classList.remove("active");
     document.getElementById("general").classList.remove("active");
+    document.getElementById("blockOne").classList.add("col-lg-6");
+    document.getElementById("blockOne").classList.remove("col-lg-4");
   }
 }
 
