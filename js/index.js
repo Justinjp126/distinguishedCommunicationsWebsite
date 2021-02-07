@@ -5,7 +5,7 @@ function checkValid() {
   if (name !== "" && validateEmail(email)) {
     Swal.fire({
       title: "Success!",
-      text: "Your daily briefing will be in you inbox every day",
+      text: "Your daily briefing will be in your inbox every day",
       icon: "success",
       confirmButtonText: "Thank You",
       confirmButtonColor: "#7C8EC8",
@@ -464,7 +464,7 @@ function testExplain() {
   Swal.fire({
     title: "How Our Test Works",
     text:
-      "Using your inputs for the symptoms selected, our test gives a likely diagnosis for a possible illness. This is accomplished by associating symptoms with individual diseases and according to the inputed symptoms, the disease most reflecting those symptoms is given. It is also important to be as specific as possible when making selections. For example if you have a fever, is it a low fever? Or could it be further classified as a high fever (ie choices: Fever/High Fever)? This test produces a possible diagnosis, but is not to take the place of a doctor. If something is wrong or worrying, contact your doctor immediately.",
+      "Using your inputs for the symptoms selected, our test gives a likely diagnosis for a possible illness. This is accomplished by associating symptoms with individual diseases and according to the inputed symptoms, the disease most reflecting those symptoms is given. It is also important to be as specific as possible when making selections. For example, if you have a fever, is it a low fever? Or could it be further classified as a high fever (ie choices: Fever/High Fever)? This test produces a possible diagnosis, but it is not to take the place of a doctor. If something is wrong or worrying, contact your doctor immediately.",
     icon: "info",
     confirmButtonText: "Continue",
     confirmButtonColor: "#7C8EC8",
@@ -477,11 +477,11 @@ function productionChange(obj) {
   var share = document.getElementById("sharePlus");
   var text = document.getElementById("prodText");
   var planText =
-    "We first work alongside our clients to help decide how  their topic will be best conveyed. We then select a format of presentation accordingly. We work cohesively with the client to organize the information in a logical manner.";
+    "We first work alongside our clients to help decide how their topic will be best conveyed. We then select a format of presentation accordingly, such as powerpoint or webinar. We work cohesively with the client to organize the information in a logical manner.";
   var constructText =
     "Using the organized information and format from the planning phase, the project is then put together. We have experienced writers and experts on staff who can help the client produce the best presentation possible for any topic.";
   var shareText =
-    "We aim to not only help our clients create their presentations, but also help them bring their work to the medical community. We work with our clients to show them possible media outlets and which are best for their projects.";
+    "We aim to not only help our clients create their presentations, but also help them bring their work to the medical community. We work with our clients to show them the best possible media outlets for their projects.";
   var key = {
     plantext: planText,
     constructtext: constructText,
