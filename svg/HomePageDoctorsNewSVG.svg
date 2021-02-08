@@ -26,7 +26,7 @@
 </path>
 <path opacity="0.1" d="M775.793 385.182H737.399V418.611H775.793V385.182Z" fill="#6C63FF">
     <animate attributeName="fill" dur="1500ms" from="#6C63FF" to="#fff2ab" fill="freeze" begin='2.5s' /> 
-    <animate attributeName="opacity" dur="1500ms" from="0.1" to="0.55" fill="freeze" begin='2.5s' /> 
+    <animate attributeName="opacity" dur="1500ms" from="0.1" to="0.54" fill="freeze" begin='2.5s' /> 
 </path>
 <path opacity="0.1" d="M775.793 472.005H737.399V521.767H775.793V472.005Z" fill="#6C63FF"/>
 <path opacity="0.1" d="M775.793 575.15H737.399V624.911H775.793V575.15Z" fill="#6C63FF">
