@@ -535,6 +535,7 @@ function changeDash(obj) {
     document.getElementById("blockOne").classList.remove("col-lg-6");
     document.getElementById("blockTwo").classList.add("col-lg-4");
     document.getElementById("blockTwo").classList.remove("col-lg-6");
+    document.getElementById("blockOne").classList.add("mx-auto");
   }
   if (obj.id == "medications") {
     height.innerText = "Diabetes";
@@ -557,6 +558,7 @@ function changeDash(obj) {
     document.getElementById("blockOne").classList.remove("col-lg-4");
     document.getElementById("blockTwo").classList.add("col-lg-6");
     document.getElementById("blockTwo").classList.remove("col-lg-4");
+    document.getElementById("blockOne").classList.add("mx-auto");
   }
   if (obj.id == "history") {
     height.innerText = "Measles";
@@ -582,6 +584,7 @@ function changeDash(obj) {
     document.getElementById("blockOne").classList.remove("col-lg-4");
     document.getElementById("blockTwo").classList.add("col-lg-6");
     document.getElementById("blockTwo").classList.remove("col-lg-4");
+    document.getElementById("blockOne").classList.add("mx-auto");
   }
   if (obj.id == "doctors") {
     height.innerText = "Dr. Erica Kasparowicz - eKasperowicz@medCompany.org";
@@ -597,6 +600,7 @@ function changeDash(obj) {
     document.getElementById("general").classList.remove("active");
     document.getElementById("blockOne").classList.add("col-lg-6");
     document.getElementById("blockOne").classList.remove("col-lg-4");
+    document.getElementById("blockOne").classList.remove("mx-auto");
   }
 }
 
