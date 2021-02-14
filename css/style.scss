@@ -461,8 +461,22 @@ p {
   }
 }
 
-.news {
+.timelineContainer {
   color: white;
+  &__title {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .timeline {
+    margin-top: 2rem;
+    &__content {
+      color: white;
+    }
+  }
+}
+
+.news {
+  color: #ffffff;
   margin-top: 2rem;
   &__title {
     text-align: center;
@@ -489,7 +503,7 @@ p {
     .card-text {
       text-align: left;
       color: $light-grey;
-      font-size: 1.05rem;
+      font-size: 0.95rem;
     }
   }
   &__button-wrapper {
@@ -521,6 +535,13 @@ p {
   }
 }
 
+@media only screen and (max-width: 992px) {
+  .news {
+    .cardBody {
+      margin-bottom: 1rem;
+    }
+  }
+}
 // ! References Page ! //
 .documents {
   color: white;
