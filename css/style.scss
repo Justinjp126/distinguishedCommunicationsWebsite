@@ -461,6 +461,66 @@ p {
   }
 }
 
+.news {
+  color: white;
+  margin-top: 2rem;
+  &__title {
+    text-align: center;
+  }
+  &__articles {
+    margin-top: 1rem;
+
+    .card {
+      background-color: $main-darkerBlue;
+      outline: none;
+      border: none;
+      width: 95%;
+      border-radius: 0.5rem;
+    }
+    .card-title {
+      text-align: left;
+      color: white;
+      font-size: 1.3rem;
+    }
+    .card-subtitle {
+      text-align: left;
+      font-size: 0.85rem;
+    }
+    .card-text {
+      text-align: left;
+      color: $light-grey;
+      font-size: 1.05rem;
+    }
+  }
+  &__button-wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__button {
+    font-weight: $medium;
+    border-radius: 100px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: $main-blue;
+    color: white;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 0.9rem;
+    width: auto;
+    padding: 0.1rem 0.4rem;
+    margin-top: 1rem;
+    transition: background-color 200ms ease-out;
+  }
+  &__button:hover,
+  &__button:focus {
+    color: white;
+    background-color: darken($main-blue, 3%);
+    transition: background-color 250ms ease-in;
+  }
+}
+
 // ! References Page ! //
 .documents {
   color: white;
