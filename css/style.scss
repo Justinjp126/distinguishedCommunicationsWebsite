@@ -948,6 +948,7 @@ p {
   .dashboard .dash_nav {
     justify-content: left;
     margin-top: 0.75rem !important;
+    flex-direction: row;
   }
   .personalInfo {
     margin-bottom: 1rem;
