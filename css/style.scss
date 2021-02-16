@@ -984,6 +984,141 @@ p {
     line-height: 1.5;
     margin-left: 0.5rem;
   }
+
+  &__posterContainer {
+    margin: 1rem 0;
+    &-text {
+      font-size: 1.375rem;
+      font-weight: $medium;
+      margin-bottom: 0.5rem;
+    }
+    &-img {
+      width: 85%;
+      max-width: 20rem;
+      margin: auto;
+      display: block;
+      position: relative;
+      filter: brightness(70%) blur(1px);
+      border-radius: 0.75rem;
+    }
+    &-button {
+      font-weight: $medium;
+      border-radius: 100px;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+      background-color: $main-blue;
+      color: white;
+      text-align: center;
+      outline: none;
+      border: none;
+      font-size: 0.8rem;
+      width: auto;
+      padding: 0.2rem 0.7rem;
+      margin: 0 auto;
+      transition: background-color 200ms ease-out;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    &-button:hover,
+    &-button:focus {
+      color: white;
+      background-color: darken($main-blue, 3%);
+      transition: background-color 250ms ease-in;
+    }
+  }
+  &__presentationContainer {
+    margin: 1rem 0;
+
+    &-text {
+      font-size: 1.375rem;
+      font-weight: $medium;
+      margin-bottom: 0.5rem;
+    }
+    &-img {
+      width: 90%;
+      max-width: 20rem;
+      margin: auto;
+      display: block;
+      position: relative;
+      filter: brightness(70%) blur(1px);
+      border-radius: 0.75rem;
+    }
+    &-button {
+      font-weight: $medium;
+      border-radius: 100px;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+      background-color: $main-blue;
+      color: white;
+      text-align: center;
+      outline: none;
+      border: none;
+      font-size: 0.8rem;
+      width: auto;
+      padding: 0.2rem 0.7rem;
+      margin: 0 auto;
+      transition: background-color 200ms ease-out;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    &-button:hover,
+    &-button:focus {
+      color: white;
+      background-color: darken($main-blue, 3%);
+      transition: background-color 250ms ease-in;
+    }
+  }
+  &__literatureContainer {
+    margin: 1rem 0;
+
+    &-text {
+      font-size: 1.375rem;
+      font-weight: $medium;
+      margin-bottom: 0.5rem;
+    }
+    &-img {
+      width: 85%;
+      max-width: 20rem;
+      margin: auto;
+      display: block;
+      position: relative;
+      filter: brightness(70%) blur(1px);
+      border-radius: 0.75rem;
+    }
+    &-button {
+      font-weight: $medium;
+      border-radius: 100px;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+      background-color: $main-blue;
+      color: white;
+      text-align: center;
+      outline: none;
+      border: none;
+      font-size: 0.8rem;
+      width: auto;
+      padding: 0.2rem 0.7rem;
+      margin: 0 auto;
+      transition: background-color 200ms ease-out;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    &-button:hover,
+    &-button:focus {
+      color: white;
+      background-color: darken($main-blue, 3%);
+      transition: background-color 250ms ease-in;
+    }
+  }
 }
 // !! Demo Page !! //
 .demo {
