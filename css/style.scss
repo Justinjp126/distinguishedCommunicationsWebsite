@@ -543,6 +543,44 @@ p {
     }
   }
 }
+// ! Article Pages ! //
+.article {
+  width: 85%;
+  margin: 4rem auto 0 auto;
+  color: white;
+  background: $main-darkerBlue;
+  padding: 2rem;
+  border-radius: 2rem;
+
+  &__title {
+    font-weight: $medium;
+  }
+  &__date {
+    display: inline-block;
+    font-weight: $light;
+  }
+  &__img {
+    width: 1.5rem;
+    display: inline-block;
+    margin-left: 0.25rem;
+  }
+  &__p1 {
+    padding-top: 1rem;
+  }
+  &__p1,
+  &__p2 {
+    padding-bottom: 1rem;
+    font-weight: $regular;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .article {
+    width: 98%;
+    padding: 1.25rem;
+  }
+}
+
 // ! References Page ! //
 .documents {
   color: white;
