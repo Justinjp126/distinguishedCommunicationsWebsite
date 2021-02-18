@@ -463,15 +463,25 @@ p {
 
 .timelineContainer {
   color: white;
-  &__title {
-    text-align: center;
-    margin-top: 1rem;
-  }
   .timeline {
     margin-top: 2rem;
     &__content {
       color: white;
     }
+  }
+  &__mainTitle {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  &__title {
+    font-weight: $regular;
+    margin: 0;
+    text-align: left;
+    font-size: 1.1rem;
+  }
+  &__text {
+    font-weight: $light;
+    margin-top: 0.25rem;
   }
 }
 
