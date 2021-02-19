@@ -779,8 +779,9 @@ p {
 .production {
   color: white;
   margin-top: 2rem;
-  &_group {
-    padding-left: 1.5rem;
+  .prodContainer {
+    display: flex;
+    justify-content: center;
   }
   &__title {
     font-weight: $medium;
@@ -791,7 +792,7 @@ p {
     position: relative;
     background-color: $main-blue;
     font-size: 1.5rem;
-    width: 10rem;
+    width: 100%;
     display: inline-block;
     border-radius: 5rem;
     margin-bottom: 1.25rem;
@@ -800,6 +801,7 @@ p {
     cursor: pointer;
     transition: background-color 200ms ease-out;
     font-weight: $regular;
+    max-width: 12rem;
 
     &-plus {
       position: absolute;
@@ -813,7 +815,7 @@ p {
     position: relative;
     background-color: $main-blue;
     font-size: 1.5rem;
-    width: 10rem;
+    width: 100%;
     display: inline-block;
     border-radius: 5rem;
     margin-bottom: 1.25rem;
@@ -821,6 +823,8 @@ p {
     cursor: pointer;
     transition: background-color 200ms ease-out;
     font-weight: $regular;
+    max-width: 12rem;
+
     &-plus {
       position: absolute;
       right: 0.5rem;
@@ -833,13 +837,14 @@ p {
     position: relative;
     background-color: $main-blue;
     font-size: 1.5rem;
-    width: 10rem;
+    width: 100%;
     display: inline-block;
     border-radius: 5rem;
     padding: 0 0.7rem;
     cursor: pointer;
     transition: background-color 200ms ease-out;
     font-weight: $regular;
+    max-width: 12rem;
 
     &-plus {
       position: absolute;
@@ -875,24 +880,18 @@ p {
   }
 }
 
-@media only screen and (max-width: 786px) {
+@media only screen and (max-width: 768px) {
   .production {
-    text-align: center;
     &_group {
-      padding-left: 0;
-      margin: 0 auto;
-      width: 80%;
+      display: flex;
+      justify-content: space-evenly;
     }
-    &__plan {
-      text-align: center;
-      width: 80%;
-    }
-    &__construct {
-      width: 80%;
-    }
+
     &__share {
       margin-bottom: 1.25rem;
-      width: 80%;
+    }
+    .prodContainer {
+      flex-grow: 0.2;
     }
   }
 }
