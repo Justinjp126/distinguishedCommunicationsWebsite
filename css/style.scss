@@ -165,7 +165,7 @@ p {
     background-size: contain;
   }
 }
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 769px) {
   .homeImg {
     height: 50vh;
     background-position: left 37vw top 1rem;
@@ -175,7 +175,7 @@ p {
 @media only screen and (max-width: 768px) {
   .homeImg {
     height: 59vh;
-    background-position: left 37vw top 1rem;
+    background-position: left 37vw top 0rem;
     background-size: contain;
     &__title {
       font-size: 3rem;
@@ -236,12 +236,13 @@ p {
   border-left: 0.3rem solid $light-grey;
   height: 100%;
   margin-top: 1vw;
+  margin-bottom: 1rem;
   &__text {
     font-style: italic;
     padding-left: 1rem;
     color: $light-grey;
-    font-size: 1.5rem;
-    font-weight: $medium;
+    font-size: 1.75rem;
+    font-weight: $regular;
     text-align: left;
   }
 }
@@ -713,6 +714,7 @@ p {
     padding: 0.2rem 0.7rem;
     margin: 0 auto;
     transition: background-color 200ms ease-out;
+    box-shadow: 0px 8px 15px rgba($main-darkerBlue, 0.1);
   }
   &__button:hover,
   &__button:focus {
