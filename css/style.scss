@@ -1226,7 +1226,6 @@ p {
     border-radius: 100px;
     padding: 0.05rem 0.5rem;
     transition: background-color 200ms ease-out;
-    justify-content: right;
   }
   &__button:hover,
   &__button:focus {
@@ -1234,8 +1233,42 @@ p {
     background-color: darken($main-blue, 5%);
     transition: background-color 250ms ease-in;
   }
+
   &__body {
     width: 90%;
+  }
+  &__secondaryButton {
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    width: 4rem;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: $main-blue;
+    color: white;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 0.7rem;
+    border-radius: 100px;
+    padding: 0.05rem 0.75rem;
+    transition: background-color 200ms ease-out;
+  }
+  &__secondaryButton:hover,
+  &__secondaryButton:focus {
+    color: white;
+    background-color: darken($main-blue, 5%) !important;
+    transition: background-color 250ms ease-in !important;
+  }
+  #body__skin {
+    left: 0.5rem;
+  }
+  #body__skin .active {
+    fill: none !important;
+    color: white;
+    background-color: red !important;
   }
 }
 .body {

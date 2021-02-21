@@ -105,7 +105,7 @@
 
       <div class="container testDemo">
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-4 position-relative d-flex justify-content-center">
             <svg
               viewBox="0 0 355 854"
               fill="none"
@@ -144,7 +144,7 @@
               <path
                 d="M97.5 437H166V466H188V437L254 435.5L256 476L254 506L239.5 615.5L243 638V664.5L236.5 693.5L226.5 731.5L215 774V810.426L236.5 839L233 846.5L226.5 848.5L213 849.5L204.5 848L200 846.5L194 841L188 833.5L186 818L189.5 790.5L193 777.5L193.5 766.5L189.5 726L186 684.5V658L197.5 630.5L189.5 618.5L186 598.5V549L176.5 512L172 564V596L162 630.5L165 635L172 673L170.5 690.5L163.5 739.5L161.5 767.5L168 794L170.5 818V829.5L165 839L155 848.5L122 845.5V834L139.5 818L143.5 794L127.5 723L116.5 687V651V605.5L101.5 541L95 502V470.5L97.5 437Z"
                 fill="#FFF8F8"
-                class="body__part rArmFix"
+                class="body__part"
                 id="body__legs"
                 onclick="changeOutline(this)"
               />
@@ -191,6 +191,20 @@
                 fill="white"
               />
             </svg>
+            <button
+              onclick="changeOutline(this)"
+              class="body__part testDemo__secondaryButton"
+              id="body__skin"
+            >
+              Skin
+            </button>
+            <button
+              onclick="changeOutline(this)"
+              class="body__part testDemo__secondaryButton"
+              id="body__general"
+            >
+              General
+            </button>
           </div>
           <div class="col-lg-8">
             <h4 class="testDemo__title">Head Symptoms</h4>

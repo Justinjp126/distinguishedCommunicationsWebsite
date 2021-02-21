@@ -628,13 +628,16 @@ var checkedList = [];
 
 function changeOutline(obj) {
   var bodyParts = document.getElementsByClassName("body__part");
+  // if(obj.id == 'body__skin' || obj.id == 'body__general') {
+  //   obj.classList.add('active');
+  // }
   for (var i = 0; i < bodyParts.length; i++) {
     if (bodyParts[i].id !== obj.id) {
       bodyParts[i].classList.remove("active");
     } else {
       bodyParts[i].classList.add("active");
       document.querySelectorAll("input").forEach(function (element) {
-        if (element.checked) {
+        if (element.checked && !checkedList.includes(element.value)) {
           checkedList.push(element.value);
         } else if (!element.checked && checkedList.includes(element.value)) {
           checkedList = checkedList.filter((item) => item !== element.value);
@@ -647,6 +650,7 @@ function changeOutline(obj) {
 
 function updateCheckBoxes(bodyPart, checkedList) {
   if (bodyPart.id == "body__head") {
+    $(".testDemo__title").text("Head Symptoms");
     $(".container .boxes").html(
       '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Confusion" id="symptom_0" /> <label class="form-check-label" for="Confusion"> Confusion </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Headache" id="symptom_0" /> <label class="form-check-label" for="Headache"> Headache </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Dizziness" id="symptom_0" /> <label class="form-check-label" for="Dizziness"> Dizziness </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Nausea" id="symptom_0" /> <label class="form-check-label" for="Nausea"> Nausea </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Swollen Neck Glands" id="symptom_0" /> <label class="form-check-label" for="Swollen Neck Glands"> Swollen Neck Glands </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Fever" id="symptom_0" /> <label class="form-check-label" for="Fever"> Fever </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Runny Nose" id="symptom_0" /> <label class="form-check-label" for="Runny Nose"> Runny Nose </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Fatigue" id="symptom_0" /> <label class="form-check-label" for="Fatigue"> Fatigue </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Sneezing" id="symptom_0" /> <label class="form-check-label" for="Sneezing"> Sneezing </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Sore Throat" id="symptom_0" /> <label class="form-check-label" for="Sore Throat"> Sore Throat </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Difficulty Swallowing" id="symptom_0" /> <label class="form-check-label" for="Difficulty Swallowing"> Difficulty Swallowing </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Recurring Fever" id="symptom_0" /> <label class="form-check-label" for="Recurring Fever"> Recurring Fever </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Swollen Lymph Nodes" id="symptom_0" /> <label class="form-check-label" for="Swollen Lymph Nodes"> Swollen Lymph Nodes </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Watery Eyes" id="symptom_0" /> <label class="form-check-label" for="Watery Eyes"> Watery Eyes </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Jaw Cramping" id="symptom_0" /> <label class="form-check-label" for="Jaw Cramping"> Jaw Cramping </label> </div> </div> </div>'
     );
@@ -657,11 +661,70 @@ function updateCheckBoxes(bodyPart, checkedList) {
         }
       }
     });
-  }
-  if (bodyPart.id == "body__rightArm" || bodyPart.id == "body__leftArm")
+  } else if (
+    bodyPart.id == "body__rightArm" ||
+    bodyPart.id == "body__leftArm"
+  ) {
+    $(".testDemo__title").text("Arm Symptoms");
     $(".container .boxes").html(
       '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Cold Hands" id="symptom_0" /> <label class="form-check-label" for="Cold Hands"> Cold Hands </label> </div> </div> </div>'
     );
+    document.querySelectorAll("input").forEach(function (element) {
+      for (var i = 0; i < checkedList.length; i++) {
+        if (element.value == checkedList[i]) {
+          element.checked = true;
+        }
+      }
+    });
+  } else if (bodyPart.id == "body__legs") {
+    $(".testDemo__title").text("Leg Symptoms");
+    $(".container .boxes").html(
+      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Cold Feet" id="symptom_0" /> <label class="form-check-label" for="Cold Feet"> Cold Feet </label> </div> </div> </div>'
+    );
+    document.querySelectorAll("input").forEach(function (element) {
+      for (var i = 0; i < checkedList.length; i++) {
+        if (element.value == checkedList[i]) {
+          element.checked = true;
+        }
+      }
+    });
+  } else if (bodyPart.id == "body__upperBody") {
+    $(".testDemo__title").text("Upper Torso Symptoms");
+    $(".container .boxes").html(
+      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Difficulty Breathing" id="symptom_0" /> <label class="form-check-label" for="Difficulty Breathing"> Difficulty Breathing </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Chest Pain" id="symptom_0" /> <label class="form-check-label" for="Chest Pain"> Chest Pain </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Shortness of Breath" id="symptom_0" /> <label class="form-check-label" for="Shortness of Breath"> Shortness of Breath </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Cough" id="symptom_0" /> <label class="form-check-label" for="Cough"> Cough </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Long Lasting Cough" id="symptom_0" /> <label class="form-check-label" for="Long Lasting Cough"> Long Lasting Cough </label> </div> </div> </div>'
+    );
+    document.querySelectorAll("input").forEach(function (element) {
+      for (var i = 0; i < checkedList.length; i++) {
+        if (element.value == checkedList[i]) {
+          element.checked = true;
+        }
+      }
+    });
+  } else if (bodyPart.id == "body__lowerBody") {
+    $(".testDemo__title").text("Lower Torso Symptoms");
+    $(".container .boxes").html(
+      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Vomiting" id="symptom_0" /> <label class="form-check-label" for="Vomiting"> Vomiting </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Stomach Cramps" id="symptom_0" /> <label class="form-check-label" for="Stomach Cramps"> Stomach Cramps </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Diarrhea" id="symptom_0" /> <label class="form-check-label" for="Diarrhea"> Diarrhea </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Bloating" id="symptom_0" /> <label class="form-check-label" for="Bloating"> Bloating</label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Abdominal Pain" id="symptom_0" /> <label class="form-check-label" for="Abdominal Pain"> Abdominal Pain </label> </div> </div> </div>'
+    );
+    document.querySelectorAll("input").forEach(function (element) {
+      for (var i = 0; i < checkedList.length; i++) {
+        if (element.value == checkedList[i]) {
+          element.checked = true;
+        }
+      }
+    });
+  } else if (bodyPart.id == "body__genitalia") {
+    $(".testDemo__title").text("Genitalia Symptoms");
+    $(".container .boxes").html(
+      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Genital Sores" id="symptom_0" /> <label class="form-check-label" for="Genital Sores"> Genital Sores </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Painful/Burning Urination" id="symptom_0" /> <label class="form-check-label" for="Painful/Burning Urination"> Painful/Burning Urination </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Discharge from Penis" id="symptom_0" /> <label class="form-check-label" for="Discharge from Penis"> Discharge from Penis </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Unusual Vaginal Discharge" id="symptom_0" /> <label class="form-check-label" for="Unusual Vaginal Discharge"> Unusual Vaginal Discharge </label> </div> </div> </div>'
+    );
+    document.querySelectorAll("input").forEach(function (element) {
+      for (var i = 0; i < checkedList.length; i++) {
+        if (element.value == checkedList[i]) {
+          element.checked = true;
+        }
+      }
+    });
+  }
 }
 
 function main() {
