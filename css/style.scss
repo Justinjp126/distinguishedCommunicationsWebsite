@@ -1204,6 +1204,40 @@ p {
   }
 }
 
+.testDemo {
+  color: white;
+  margin-top: 2rem;
+  &__title {
+    font-weight: $medium;
+    margin-bottom: 1rem;
+  }
+  &__button {
+    margin-top: 1.5rem;
+    display: inline-block;
+    width: 4rem;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: $main-blue;
+    color: white;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    border-radius: 100px;
+    padding: 0.05rem 0.5rem;
+    transition: background-color 200ms ease-out;
+    justify-content: right;
+  }
+  &__button:hover,
+  &__button:focus {
+    color: white;
+    background-color: darken($main-blue, 5%);
+    transition: background-color 250ms ease-in;
+  }
+  &__body {
+    width: 90%;
+  }
+}
 .body {
   path,
   rect {
@@ -1223,10 +1257,20 @@ p {
     fill: rgba($main-blue, 0.3);
     transition: fill 250ms ease-out;
   }
+  .lArm:hover + .rArm {
+    fill: rgba($main-blue, 0.3);
+    transition: fill 250ms ease-out;
+  }
+
   &__outline {
     cursor: pointer;
     fill: white !important;
   }
+}
+
+.bodyHover {
+  fill: rgba($main-blue, 0.3) !important;
+  transition: fill 250ms ease-out;
 }
 
 .boxes {
@@ -1234,14 +1278,6 @@ p {
   font-size: 1.25rem;
   .form-check-label {
     font-size: 0.75rem;
-  }
-}
-
-@media only screen and (max-width: 575px) {
-  .boxes {
-    .form-check-label {
-      font-size: 1.2rem;
-    }
   }
 }
 

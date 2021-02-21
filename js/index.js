@@ -624,6 +624,8 @@ function changeHam() {
   nav.classList.add("navActive");
 }
 
+var checkedList = [];
+
 function changeOutline(obj) {
   var bodyParts = document.getElementsByClassName("body__part");
   for (var i = 0; i < bodyParts.length; i++) {
@@ -631,9 +633,37 @@ function changeOutline(obj) {
       bodyParts[i].classList.remove("active");
     } else {
       bodyParts[i].classList.add("active");
+      document.querySelectorAll("input").forEach(function (element) {
+        if (element.checked) {
+          checkedList.push(element.value);
+        } else if (!element.checked && checkedList.includes(element.value)) {
+          checkedList = checkedList.filter((item) => item !== element.value);
+        }
+      });
+      updateCheckBoxes(bodyParts[i], checkedList);
     }
   }
 }
+
+function updateCheckBoxes(bodyPart, checkedList) {
+  if (bodyPart.id == "body__head") {
+    $(".container .boxes").html(
+      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Confusion" id="symptom_0" /> <label class="form-check-label" for="Confusion"> Confusion </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Headache" id="symptom_0" /> <label class="form-check-label" for="Headache"> Headache </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Dizziness" id="symptom_0" /> <label class="form-check-label" for="Dizziness"> Dizziness </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Nausea" id="symptom_0" /> <label class="form-check-label" for="Nausea"> Nausea </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Swollen Neck Glands" id="symptom_0" /> <label class="form-check-label" for="Swollen Neck Glands"> Swollen Neck Glands </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Fever" id="symptom_0" /> <label class="form-check-label" for="Fever"> Fever </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Runny Nose" id="symptom_0" /> <label class="form-check-label" for="Runny Nose"> Runny Nose </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Fatigue" id="symptom_0" /> <label class="form-check-label" for="Fatigue"> Fatigue </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Sneezing" id="symptom_0" /> <label class="form-check-label" for="Sneezing"> Sneezing </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Sore Throat" id="symptom_0" /> <label class="form-check-label" for="Sore Throat"> Sore Throat </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Difficulty Swallowing" id="symptom_0" /> <label class="form-check-label" for="Difficulty Swallowing"> Difficulty Swallowing </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Recurring Fever" id="symptom_0" /> <label class="form-check-label" for="Recurring Fever"> Recurring Fever </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Swollen Lymph Nodes" id="symptom_0" /> <label class="form-check-label" for="Swollen Lymph Nodes"> Swollen Lymph Nodes </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Watery Eyes" id="symptom_0" /> <label class="form-check-label" for="Watery Eyes"> Watery Eyes </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Jaw Cramping" id="symptom_0" /> <label class="form-check-label" for="Jaw Cramping"> Jaw Cramping </label> </div> </div> </div>'
+    );
+    document.querySelectorAll("input").forEach(function (element) {
+      for (var i = 0; i < checkedList.length; i++) {
+        if (element.value == checkedList[i]) {
+          element.checked = true;
+        }
+      }
+    });
+  }
+  if (bodyPart.id == "body__rightArm" || bodyPart.id == "body__leftArm")
+    $(".container .boxes").html(
+      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Cold Hands" id="symptom_0" /> <label class="form-check-label" for="Cold Hands"> Cold Hands </label> </div> </div> </div>'
+    );
+}
+
 function main() {
   changeNav();
 }
