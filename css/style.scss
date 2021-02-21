@@ -1246,21 +1246,22 @@ p {
     width: 4rem;
     cursor: pointer;
     text-decoration: none;
-    background-color: $main-blue;
-    color: white;
+    background-color: transparent;
+    color: $main-blue;
     text-align: center;
     outline: none;
-    border: none;
+    border: 0.1rem $main-blue solid;
     font-size: 0.7rem;
     border-radius: 100px;
     padding: 0.05rem 0.75rem;
-    transition: background-color 200ms ease-out;
+    transition: background-color 200ms ease-out, color 200ms ease-out !important;
   }
   &__secondaryButton:hover,
   &__secondaryButton:focus {
-    color: white;
-    background-color: darken($main-blue, 5%) !important;
-    transition: background-color 250ms ease-in !important;
+    outline: none;
+    color: white !important;
+    background-color: $main-blue !important;
+    transition: background-color 250ms ease-in, color 250ms ease-in !important;
   }
   #body__skin {
     left: 0.5rem;

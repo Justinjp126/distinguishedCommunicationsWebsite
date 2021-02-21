@@ -628,9 +628,14 @@ var checkedList = [];
 
 function changeOutline(obj) {
   var bodyParts = document.getElementsByClassName("body__part");
-  // if(obj.id == 'body__skin' || obj.id == 'body__general') {
-  //   obj.classList.add('active');
-  // }
+  $("#body__general").css({
+    "background-color": "transparent",
+    color: "#6c63ff",
+  });
+  $("#body__skin").css({
+    "background-color": "transparent",
+    color: "#6c63ff",
+  });
   for (var i = 0; i < bodyParts.length; i++) {
     if (bodyParts[i].id !== obj.id) {
       bodyParts[i].classList.remove("active");
@@ -724,6 +729,44 @@ function updateCheckBoxes(bodyPart, checkedList) {
         }
       }
     });
+  } else if (bodyPart.id == "body__skin") {
+    $(".testDemo__title").text("Skin Symptoms");
+    $(".container .boxes").html(
+      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Rash" id="symptom_0" /> <label class="form-check-label" for="Rash"> Rash </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Blisters" id="symptom_0" /> <label class="form-check-label" for="Blisters"> Blisters </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Sores" id="symptom_0" /> <label class="form-check-label" for="Sores"> Sores </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Bulls-Eye Rash" id="symptom_0" /> <label class="form-check-label" for="Bulls-Eye Rash"> Bulls-Eye Rash </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Scabs" id="symptom_0" /> <label class="form-check-label" for="Scabs"> Scabs </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Sweating" id="symptom_0" /> <label class="form-check-label" for="Sweating"> Sweating </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Ulcers" id="symptom_0" /> <label class="form-check-label" for="Ulcers"> Ulcers </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Pins and Needles" id="symptom_0" /> <label class="form-check-label" for="Pins and Needles"> Pins and Needles </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Night Sweats" id="symptom_0" /> <label class="form-check-label" for="Night Sweats"> Night Sweats </label> </div> </div> </div>'
+    );
+    document.querySelectorAll("input").forEach(function (element) {
+      for (var i = 0; i < checkedList.length; i++) {
+        if (element.value == checkedList[i]) {
+          element.checked = true;
+        }
+      }
+    });
+  } else if (bodyPart.id == "body__general") {
+    $(".testDemo__title").text("General Symptoms");
+    $(".container .boxes").html(
+      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Tiredness" id="symptom_0" /> <label class="form-check-label" for="Tiredness"> Tiredness </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Loss of Appetite" id="symptom_0" /> <label class="form-check-label" for="Loss of Appetite"> Loss of Appetite </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Weight Loss" id="symptom_0" /> <label class="form-check-label" for="Weight Loss"> Weight Loss </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Body Aches" id="symptom_0" /> <label class="form-check-label" for="Body Aches"> Body Aches </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Chills" id="symptom_0" /> <label class="form-check-label" for="Chills"> Chills </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Muscle Aches" id="symptom_0" /> <label class="form-check-label" for="Muscle Aches"> Muscle Aches </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Joint Pain" id="symptom_0" /> <label class="form-check-label" for="Joint Pain"> Joint Pain </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Muscle Pain" id="symptom_0" /> <label class="form-check-label" for="Muscle Pain"> Muscle Pain </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Green/Yellow Mucus" id="symptom_0" /> <label class="form-check-label" for="Green/Yellow Mucus"> Green/Yellow Mucus </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Muscle Spasms" id="symptom_0" /> <label class="form-check-label" for="Muscle Spasms"> Muscle Spasms </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Seizures" id="symptom_0" /> <label class="form-check-label" for="Seizures"> Seizures </label> </div> </div> </div>'
+    );
+    document.querySelectorAll("input").forEach(function (element) {
+      for (var i = 0; i < checkedList.length; i++) {
+        if (element.value == checkedList[i]) {
+          element.checked = true;
+        }
+      }
+    });
+  }
+}
+
+function changeColorButton(obj) {
+  $("#body__general").css({
+    "background-color": "transparent",
+    color: "#6c63ff",
+  });
+  $("#body__skin").css({
+    "background-color": "transparent",
+    color: "#6c63ff",
+  });
+  if (obj.classList.contains("active")) {
+    $(obj).css({ "background-color": "#6c63ff", color: "white" });
   }
 }
 
