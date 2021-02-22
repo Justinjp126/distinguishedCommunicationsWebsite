@@ -1,3 +1,11 @@
+/**
+ * Global Vars
+ */
+var checkedList = [];
+
+/**
+ * Checks if contact form info is valid
+ */
 function checkValid() {
   var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
@@ -35,6 +43,10 @@ function checkValid() {
   }
 }
 
+/**
+ * Checks if contact form info is valid
+ * and uses Sweet Alert for output
+ */
 function checkValidContact() {
   var name = document.getElementById("nameContact").value;
   var email = document.getElementById("emailContact").value;
@@ -81,13 +93,20 @@ function checkValidContact() {
   }
 }
 
+/**
+ * Checks if email is valid
+ */
 function validateEmail(email) {
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
 }
 
 /**
- * Main Function to find symptoms and to assign a disease to the user
+ * Assigns the users selected symptoms
+ * to the respective diseases and
+ * displays the most likely disease
+ * and the second most likely disease
+ * (if possible) using Sweet Alert
  */
 function findSymptoms() {
   /***
@@ -111,229 +130,7 @@ function findSymptoms() {
     "chills",
     "muscle ache",
   ];
-
-  /**
-   * Main Code Section Here
-   */
-  //loops through all code and locates all the 'input' blocks
-  document.querySelectorAll("input").forEach(function (element) {
-    if (element.checked) {
-      death += 1;
-      // checks if the checkbox is 'checked'
-      x = element.value;
-      if (x == "Confusion") {
-        concussion += 1;
-        meningitis += 1;
-      }
-
-      if (x == "Headache") {
-        concussion += 1;
-        chicken_Pox += 1;
-        severe_Acute_Respiratory_Syndrome_SARS += 1;
-      }
-      if (x == "Dizziness") {
-        concussion += 1;
-      }
-      if (x == "Nausea") {
-        concussion += 1;
-        giardiasis += 1;
-        malaria += 1;
-      }
-      if (x == "Vomiting") {
-        concussion += 1;
-        escherichia_coli += 1;
-        malaria += 1;
-        meningitis += 1;
-      }
-      if (x == "Fever") {
-        chicken_Pox += 1;
-        infectious_Mononucleosis += 1;
-        influenza += 1;
-        lyme_Disease += 1;
-        malaria += 1;
-        salmonella_Infections += 1;
-        severe_Acute_Respiratory_Syndrome_SARS += 1;
-        tuberculosis += 1;
-      }
-      if (x == "Tiredness") {
-        chicken_Pox += 1;
-        hIV_or_Aids += 1;
-        malaria += 1;
-      }
-      if (x == "Loss of Appetite") {
-        chicken_Pox += 1;
-        tuberculosis += 1;
-      }
-      if (x == "Rash") {
-        chicken_Pox += 1;
-        infectious_Mononucleosis += 1;
-        measles += 1;
-      }
-      if (x == "Blisters") {
-        chicken_Pox += 1;
-        shingles += 1;
-      }
-      if (x == "Runny Nose") {
-        common_Cold += 1;
-        influenza += 1;
-        measles += 1;
-      }
-      if (x == "Cough") {
-        common_Cold += 1;
-        influenza += 1;
-        measles += 1;
-        pneumonia += 1;
-        severe_Acute_Respiratory_Syndrome_SARS += 1;
-      }
-      if (x == "Fatigue") {
-        common_Cold += 1;
-        giardiasis += 1;
-        influenza += 1;
-        lyme_Disease += 1;
-      }
-      if (x == "Sneezing") {
-        common_Cold += 1;
-        influenza += 1;
-      }
-      if (x == "Sore Throat") {
-        common_Cold += 1;
-        diptheria += 1;
-        infectious_Mononucleosis += 1;
-        influenza += 1;
-      }
-      if (x == "High Fever") {
-        diptheria += 1;
-        measles += 1;
-        meningitis += 1;
-      }
-      if (x == "Swollen Neck Glands") {
-        diptheria += 1;
-      }
-      if (x == "Difficulty Breathing") {
-        diptheria += 1;
-      }
-      if (x == "Difficulty Swallowing") {
-        diptheria += 1;
-      }
-      if (x == "Stomach Cramps") {
-        escherichia_coli += 1;
-        giardiasis += 1;
-      }
-      if (x == "Diarrhea") {
-        escherichia_coli += 1;
-        giardiasis += 1;
-        malaria += 1;
-        salmonella_Infections += 1;
-      }
-      if (x == "Bloating") {
-        giardiasis += 1;
-      }
-      if (x == "Weight Loss") {
-        giardiasis += 1;
-        hIV_or_Aids += 1;
-      }
-      if (x == "Recurring Fever") {
-        hIV_or_Aids += 1;
-      }
-      if (x == "Sores") {
-        hIV_or_Aids += 1;
-      }
-      if (x == "Extreme Fatigue") {
-        infectious_Mononucleosis += 1;
-      }
-      if (x == "Body Aches") {
-        infectious_Mononucleosis += 1;
-      }
-      if (x == "Swollen Lymph Nodes") {
-        infectious_Mononucleosis += 1;
-      }
-      if (x == "Chills") {
-        influenza += 1;
-        malaria += 1;
-        pneumonia += 1;
-        severe_Acute_Respiratory_Syndrome_SARS += 1;
-        tuberculosis += 1;
-      }
-      if (x == "Muscle Aches") {
-        influenza += 1;
-      }
-      if (x == "Joint Pain") {
-        lyme_Disease += 1;
-        meningitis += 1;
-      }
-      if (x == "Bull's-eye Rash") {
-        lyme_Disease += 1;
-      }
-      if (x == "Cold Hands and Feet") {
-        meningitis += 1;
-      }
-      if (x == "Watery Eyes") {
-        measles += 1;
-      }
-      if (x == "Muscle Pain") {
-        meningitis += 1;
-      }
-      if (x == "Green/Yellowish Mucus") {
-        pneumonia += 1;
-      }
-      if (x == "Sweating") {
-        pneumonia += 1;
-        tetanus += 1;
-      }
-      if (x == "Chest Pain") {
-        pneumonia += 1;
-      }
-      if (x == "Abdominal Pain") {
-        salmonella_Infections += 1;
-      }
-      if (x == "Shortness of Breath") {
-        severe_Acute_Respiratory_Syndrome_SARS += 1;
-      }
-      if (x == "Genital Sores") {
-        sexually_Transmitted_Disease_STD += 1;
-      }
-      if (x == "Painful Urination") {
-        sexually_Transmitted_Disease_STD += 1;
-      }
-      if (x == "Burning Urination") {
-        sexually_Transmitted_Disease_STD += 1;
-      }
-      if (x == "Discharge from Penis") {
-        sexually_Transmitted_Disease_STD += 1;
-      }
-      if (x == "Unusual Vaginal Discharge") {
-        sexually_Transmitted_Disease_STD += 1;
-      }
-      if (x == "Scab") {
-        shingles += 1;
-      }
-      if (x == "Ulcers") {
-        shingles += 1;
-      }
-      if (x == "Pins and Needles") {
-        shingles += 1;
-      }
-      if (x == "Jaw Cramping") {
-        tetanus += 1;
-      }
-      if (x == "Muscle Spasms") {
-        tetanus += 1;
-      }
-      if (x == "Seizures") {
-        tetanus += 1;
-      }
-      if (x == "Long Lasting Cough") {
-        tuberculosis += 1;
-      }
-      if (x == "Night Sweats") {
-        tuberculosis += 1;
-      }
-    }
-  });
-
-  /**
-   * Display Code
-   */
+  //list out disease variables in a list
   var diseases = [
     concussion,
     chicken_Pox,
@@ -357,6 +154,7 @@ function findSymptoms() {
     tuberculosis,
   ];
 
+  //javascript object to make diseases match up to their respective variables
   var names = {
     Concussion: concussion,
     Chicken_Pox: chicken_Pox,
@@ -380,14 +178,245 @@ function findSymptoms() {
     Tuberculosis: tuberculosis,
   };
 
+  //variables for final results
   var mostLikely, likely;
-
-  const result = diseases.sort((x, y) => y - x).slice(0, 2);
-
-  mostLikely = result[0];
-  likely = result[1];
   var mostLikelyName, likelyName;
 
+  //Puts the diseases list in greatest to least order
+  const result = diseases.sort((x, y) => y - x).slice(0, 2);
+
+  //Loop through the current page the user is on and add those symptoms
+  document.querySelectorAll("input").forEach(function (element) {
+    if (element.checked && !checkedList.includes(element.value)) {
+      checkedList.push(element.value);
+    } else if (!element.checked && checkedList.includes(element.value)) {
+      checkedList = checkedList.filter((item) => item !== element.value);
+    }
+  });
+
+  /**
+   * Loop through the checkedList (which had all the symptoms pressed)
+   * and line them up to the right condition
+   */
+  for (var i = 0; i < checkedList.length; i++) {
+    x = checkedList[i];
+
+    if (x == "Confusion") {
+      concussion += 1;
+      meningitis += 1;
+    }
+    if (x == "Headache") {
+      concussion += 1;
+      chicken_Pox += 1;
+      severe_Acute_Respiratory_Syndrome_SARS += 1;
+    }
+    if (x == "Dizziness") {
+      concussion += 1;
+    }
+    if (x == "Nausea") {
+      concussion += 1;
+      giardiasis += 1;
+      malaria += 1;
+    }
+    if (x == "Vomiting") {
+      concussion += 1;
+      escherichia_coli += 1;
+      malaria += 1;
+      meningitis += 1;
+    }
+    if (x == "Fever") {
+      chicken_Pox += 1;
+      infectious_Mononucleosis += 1;
+      influenza += 1;
+      lyme_Disease += 1;
+      malaria += 1;
+      salmonella_Infections += 1;
+      severe_Acute_Respiratory_Syndrome_SARS += 1;
+      tuberculosis += 1;
+    }
+    if (x == "Tiredness") {
+      chicken_Pox += 1;
+      hIV_or_Aids += 1;
+      malaria += 1;
+    }
+    if (x == "Loss of Appetite") {
+      chicken_Pox += 1;
+      tuberculosis += 1;
+    }
+    if (x == "Rash") {
+      chicken_Pox += 1;
+      infectious_Mononucleosis += 1;
+      measles += 1;
+    }
+    if (x == "Blisters") {
+      chicken_Pox += 1;
+      shingles += 1;
+    }
+    if (x == "Runny Nose") {
+      common_Cold += 1;
+      influenza += 1;
+      measles += 1;
+    }
+    if (x == "Cough") {
+      common_Cold += 1;
+      influenza += 1;
+      measles += 1;
+      pneumonia += 1;
+      severe_Acute_Respiratory_Syndrome_SARS += 1;
+    }
+    if (x == "Fatigue") {
+      common_Cold += 1;
+      giardiasis += 1;
+      influenza += 1;
+      lyme_Disease += 1;
+    }
+    if (x == "Sneezing") {
+      common_Cold += 1;
+      influenza += 1;
+    }
+    if (x == "Sore Throat") {
+      common_Cold += 1;
+      diptheria += 1;
+      infectious_Mononucleosis += 1;
+      influenza += 1;
+    }
+    if (x == "High Fever") {
+      diptheria += 1;
+      measles += 1;
+      meningitis += 1;
+    }
+    if (x == "Swollen Neck Glands") {
+      diptheria += 1;
+    }
+    if (x == "Difficulty Breathing") {
+      diptheria += 1;
+    }
+    if (x == "Difficulty Swallowing") {
+      diptheria += 1;
+    }
+    if (x == "Stomach Cramps") {
+      escherichia_coli += 1;
+      giardiasis += 1;
+    }
+    if (x == "Diarrhea") {
+      escherichia_coli += 1;
+      giardiasis += 1;
+      malaria += 1;
+      salmonella_Infections += 1;
+    }
+    if (x == "Bloating") {
+      giardiasis += 1;
+    }
+    if (x == "Weight Loss") {
+      giardiasis += 1;
+      hIV_or_Aids += 1;
+    }
+    if (x == "Recurring Fever") {
+      hIV_or_Aids += 1;
+    }
+    if (x == "Sores") {
+      hIV_or_Aids += 1;
+    }
+    if (x == "Extreme Fatigue") {
+      infectious_Mononucleosis += 1;
+    }
+    if (x == "Body Aches") {
+      infectious_Mononucleosis += 1;
+    }
+    if (x == "Swollen Lymph Nodes") {
+      infectious_Mononucleosis += 1;
+    }
+    if (x == "Chills") {
+      influenza += 1;
+      malaria += 1;
+      pneumonia += 1;
+      severe_Acute_Respiratory_Syndrome_SARS += 1;
+      tuberculosis += 1;
+    }
+    if (x == "Muscle Aches") {
+      influenza += 1;
+    }
+    if (x == "Joint Pain") {
+      lyme_Disease += 1;
+      meningitis += 1;
+    }
+    if (x == "Bulls-Eye Rash") {
+      lyme_Disease += 1;
+    }
+    if (x == "Cold Hands") {
+      meningitis += 1;
+    }
+    if (x == "Cold Feet") {
+      meningitis += 1;
+    }
+    if (x == "Watery Eyes") {
+      measles += 1;
+    }
+    if (x == "Muscle Pain") {
+      meningitis += 1;
+    }
+    if (x == "Green/Yellowish Mucus") {
+      pneumonia += 1;
+    }
+    if (x == "Sweating") {
+      pneumonia += 1;
+      tetanus += 1;
+    }
+    if (x == "Chest Pain") {
+      pneumonia += 1;
+    }
+    if (x == "Abdominal Pain") {
+      salmonella_Infections += 1;
+    }
+    if (x == "Shortness of Breath") {
+      severe_Acute_Respiratory_Syndrome_SARS += 1;
+    }
+    if (x == "Genital Sores") {
+      sexually_Transmitted_Disease_STD += 1;
+    }
+    if (x == "Painful Urination") {
+      sexually_Transmitted_Disease_STD += 1;
+    }
+    if (x == "Burning Urination") {
+      sexually_Transmitted_Disease_STD += 1;
+    }
+    if (x == "Discharge from Penis") {
+      sexually_Transmitted_Disease_STD += 1;
+    }
+    if (x == "Unusual Vaginal Discharge") {
+      sexually_Transmitted_Disease_STD += 1;
+    }
+    if (x == "Scab") {
+      shingles += 1;
+    }
+    if (x == "Ulcers") {
+      shingles += 1;
+    }
+    if (x == "Pins and Needles") {
+      shingles += 1;
+    }
+    if (x == "Jaw Cramping") {
+      tetanus += 1;
+    }
+    if (x == "Muscle Spasms") {
+      tetanus += 1;
+    }
+    if (x == "Seizures") {
+      tetanus += 1;
+    }
+    if (x == "Long Lasting Cough") {
+      tuberculosis += 1;
+    }
+    if (x == "Night Sweats") {
+      tuberculosis += 1;
+    }
+  }
+
+  //most likely is the first because its been listed from greatest to least
+  mostLikely = result[0];
+  likely = result[1];
+
+  //match up mostLikely disease nmber to name
   for (var propName in names) {
     if (names[propName] == mostLikely) {
       mostLikelyName = propName;
@@ -397,28 +426,18 @@ function findSymptoms() {
     }
   }
 
+  //clean up variable names for output
   mostLikelyName = mostLikelyName.replace(/[_-]/g, " ");
   likelyName = likelyName.replace(/[_-]/g, " ");
 
+  //output
   if (mostLikely == 0 && likely == 0) {
     Swal.fire({
       title: "Try Again",
-      text: "Please select at least one box to receive a possible condition ",
+      text: "Please enter more symptoms to receive a possible diagnosis",
       icon: "error",
       confirmButtonText: "Continue",
       confirmButtonColor: "#7C8EC8",
-    }).then((result) => {
-      location.reload();
-    });
-  } else if (death == 53) {
-    Swal.fire({
-      title: "Death!",
-      text: "You are going to die!",
-      icon: "error",
-      confirmButtonText: "Continue",
-      confirmButtonColor: "#7C8EC8",
-    }).then((result) => {
-      location.reload();
     });
   } else if (death >= 20) {
     Swal.fire({
@@ -428,8 +447,6 @@ function findSymptoms() {
       icon: "error",
       confirmButtonText: "Continue",
       confirmButtonColor: "#7C8EC8",
-    }).then((result) => {
-      location.reload();
     });
   } else {
     Swal.fire({
@@ -450,16 +467,16 @@ function findSymptoms() {
           icon: "info",
           confirmButtonText: "Continue",
           confirmButtonColor: "#7C8EC8",
-        }).then((result) => {
-          location.reload();
         });
-      } else {
-        location.reload();
       }
     });
   }
 }
 
+/**
+ * Sweet Alert for the Symptoms Test
+ * explanation
+ */
 function testExplain() {
   Swal.fire({
     title: "How Our Test Works",
@@ -471,6 +488,11 @@ function testExplain() {
   });
 }
 
+/**
+ * Changes the production's text and
+ * the pill's/cross' color when the
+ * user presses when one the pills
+ */
 function productionChange(obj) {
   var plan = document.getElementById("planPlus");
   var construct = document.getElementById("constructPlus");
@@ -496,6 +518,11 @@ function productionChange(obj) {
   text.innerText = key[obj.id + "text"];
 }
 
+/**
+ * Changes the medical dashboard's text
+ * when the user presses a tab inside of
+ * the demo
+ */
 function changeDash(obj) {
   var height = document.getElementById("height");
   var weight = document.getElementById("weight");
@@ -604,6 +631,11 @@ function changeDash(obj) {
   }
 }
 
+/**
+ * Changes the navbar to sticky and adds
+ * classes once the user scrolls down
+ * and vice versa
+ */
 function changeNav() {
   window.addEventListener("scroll", function () {
     var nav = document.getElementById("nav");
@@ -619,13 +651,22 @@ function changeNav() {
   });
 }
 
+/**
+ * Adds active to navbar if the user presses
+ * hamburger menu on mobile
+ */
 function changeHam() {
   var nav = document.getElementById("nav");
   nav.classList.add("navActive");
 }
 
-var checkedList = [];
-
+/**
+ * Adds color to the body parts and the buttons
+ * of the SVG on the symptoms test when the user presses
+ * on it. Also adds the symptoms that the user checked
+ * to the global list once they change to a different body
+ * parts. Calls updateCheckBoxes to update the checkboxes
+ */
 function changeOutline(obj) {
   var bodyParts = document.getElementsByClassName("body__part");
   $("#body__general").css({
@@ -653,6 +694,11 @@ function changeOutline(obj) {
   }
 }
 
+/**
+ * Updates the checkboxes with the correct symptoms once the
+ * user changes body part. Also remembers which checkboxes
+ * the user pressed once they go to a different body part
+ */
 function updateCheckBoxes(bodyPart, checkedList) {
   if (bodyPart.id == "body__head") {
     $(".testDemo__title").text("Head Symptoms");
@@ -756,6 +802,10 @@ function updateCheckBoxes(bodyPart, checkedList) {
   }
 }
 
+/**
+ * Changes the color of the General and Skin buttons once
+ * the user presses them
+ */
 function changeColorButton(obj) {
   $("#body__general").css({
     "background-color": "transparent",
@@ -770,6 +820,9 @@ function changeColorButton(obj) {
   }
 }
 
+/**
+ * Calls the functions
+ */
 function main() {
   changeNav();
 }
