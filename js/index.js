@@ -154,37 +154,6 @@ function findSymptoms() {
     tuberculosis,
   ];
 
-  //javascript object to make diseases match up to their respective variables
-  var names = {
-    Concussion: concussion,
-    Chicken_Pox: chicken_Pox,
-    Common_Cold: common_Cold,
-    Diptheria: diptheria,
-    Escherichia_Coli: escherichia_coli,
-    Giardiasis: giardiasis,
-    HIV_or_AIDS: hIV_or_Aids,
-    Infectious_Mononucleosis: infectious_Mononucleosis,
-    Influenza: influenza,
-    Lyme_Disease: lyme_Disease,
-    Malaria: malaria,
-    Measles: measles,
-    Meningitis: meningitis,
-    Pneumonia: pneumonia,
-    Salmonella_Infections: salmonella_Infections,
-    Severe_Acute_Respiratory_Syndrome_SARS: severe_Acute_Respiratory_Syndrome_SARS,
-    Sexually_Transmitted_Disease_STD: sexually_Transmitted_Disease_STD,
-    Shingles: shingles,
-    Tetanus: tetanus,
-    Tuberculosis: tuberculosis,
-  };
-
-  //variables for final results
-  var mostLikely, likely;
-  var mostLikelyName, likelyName;
-
-  //Puts the diseases list in greatest to least order
-  const result = diseases.sort((x, y) => y - x).slice(0, 2);
-
   //Loop through the current page the user is on and add those symptoms
   document.querySelectorAll("input").forEach(function (element) {
     if (element.checked && !checkedList.includes(element.value)) {
@@ -412,11 +381,62 @@ function findSymptoms() {
     }
   }
 
-  //most likely is the first because its been listed from greatest to least
+  //put all disease variable in list
+  var diseases = [
+    concussion,
+    chicken_Pox,
+    common_Cold,
+    diptheria,
+    escherichia_coli,
+    giardiasis,
+    hIV_or_Aids,
+    infectious_Mononucleosis,
+    influenza,
+    lyme_Disease,
+    malaria,
+    measles,
+    meningitis,
+    pneumonia,
+    salmonella_Infections,
+    severe_Acute_Respiratory_Syndrome_SARS,
+    sexually_Transmitted_Disease_STD,
+    shingles,
+    tetanus,
+    tuberculosis,
+  ];
+
+  //match up disease names with variables
+  var names = {
+    Concussion: concussion,
+    Chicken_Pox: chicken_Pox,
+    Common_Cold: common_Cold,
+    Diptheria: diptheria,
+    Escherichia_Coli: escherichia_coli,
+    Giardiasis: giardiasis,
+    HIV_or_AIDS: hIV_or_Aids,
+    Infectious_Mononucleosis: infectious_Mononucleosis,
+    Influenza: influenza,
+    Lyme_Disease: lyme_Disease,
+    Malaria: malaria,
+    Measles: measles,
+    Meningitis: meningitis,
+    Pneumonia: pneumonia,
+    Salmonella_Infections: salmonella_Infections,
+    Severe_Acute_Respiratory_Syndrome_SARS: severe_Acute_Respiratory_Syndrome_SARS,
+    Sexually_Transmitted_Disease_STD: sexually_Transmitted_Disease_STD,
+    Shingles: shingles,
+    Tetanus: tetanus,
+    Tuberculosis: tuberculosis,
+  };
+
+  var mostLikely, likely;
+  var mostLikelyName, likelyName;
+  const result = diseases.sort((x, y) => y - x).slice(0, 2); //sort diseases so its only the top 2 diseases
+
   mostLikely = result[0];
   likely = result[1];
 
-  //match up mostLikely disease nmber to name
+  //match up mostLikely disease number to name
   for (var propName in names) {
     if (names[propName] == mostLikely) {
       mostLikelyName = propName;
@@ -432,6 +452,7 @@ function findSymptoms() {
 
   //output
   if (mostLikely == 0 && likely == 0) {
+    console.log(mostLikely);
     Swal.fire({
       title: "Try Again",
       text: "Please enter more symptoms to receive a possible diagnosis",
@@ -439,7 +460,7 @@ function findSymptoms() {
       confirmButtonText: "Continue",
       confirmButtonColor: "#7C8EC8",
     });
-  } else if (death >= 20) {
+  } else if (checkedList.length >= 20) {
     Swal.fire({
       title: "Error",
       text:
