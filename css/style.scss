@@ -22,7 +22,8 @@ $bold: 700;
 $black: 800;
 
 //Colors
-$light-grey: #f6f6f6;
+$off-white: #f6f6f6;
+$light-grey: #e2e8e8;
 $dark-grey: #505050;
 $light-black: #121212;
 $main-darkerBlue: #27345c;
@@ -277,10 +278,12 @@ p {
 
 // ** Featured ** //
 .featured {
+  margin-bottom: 2rem;
   &__title {
     color: white;
-    font-weight: $medium;
-    margin: 1rem 0;
+    font-weight: $semi-bold;
+    margin: 1rem 0 1.5rem;
+    font-size: 2.4rem;
   }
   .col {
     margin-bottom: 1rem;
@@ -303,13 +306,18 @@ p {
     transition: top ease 0.5s;
   }
   .card-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: white;
     text-decoration: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.35rem;
+    font-weight: $medium;
   }
   .card-text {
-    font-size: 0.85rem;
-    color: white;
+    font-size: calc(max(0.7rem, 14px));
+    color: $light-grey;
+    padding-bottom: 1rem;
+    font-weight: $light;
   }
 
   &__img {
@@ -401,22 +409,22 @@ p {
 .footer {
   margin-top: 1.5rem;
   &__text {
-    color: white;
-    font-size: 1.25rem;
+    color: $light-grey;
+    font-size: 0.8rem;
     font-weight: $regular;
     text-align: center;
     padding-top: 1rem;
   }
   &__insta {
     margin-right: 0.5rem;
-    width: 2rem;
+    width: 1.5rem;
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(142deg)
       brightness(120%) contrast(112%);
     transition: filter 200ms ease-out;
   }
   &__twitter {
     margin-left: 0.5rem;
-    width: 2rem;
+    width: 1.5rem;
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(142deg)
       brightness(120%) contrast(112%);
     transition: filter 200ms ease-out;
@@ -432,14 +440,14 @@ p {
   }
   &__link {
     color: white;
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     text-decoration: underline !important;
     padding-bottom: 0.5rem;
     transition: color 200ms ease-out;
   }
   &__link:hover,
   &__link:focus {
-    color: $light-grey;
+    color: darken($light-grey, 10%);
     transition: color 250ms ease-in;
   }
 }
