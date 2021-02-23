@@ -22,7 +22,7 @@ $bold: 700;
 $black: 800;
 
 //Colors
-$light-grey: #dadada;
+$light-grey: #f6f6f6;
 $dark-grey: #505050;
 $light-black: #121212;
 $main-darkerBlue: #27345c;
@@ -233,17 +233,45 @@ p {
 
 // * Quote * //
 .quote {
-  border-left: 0.3rem solid $light-grey;
-  height: 100%;
-  margin-top: 1vw;
-  margin-bottom: 1rem;
-  &__text {
-    font-style: italic;
-    padding-left: 1rem;
-    color: $light-grey;
-    font-size: 1.75rem;
-    font-weight: $regular;
-    text-align: left;
+  font-size: 1.2rem;
+  width: 80%;
+  margin: 50px auto;
+  font-style: italic;
+  color: $light-grey;
+  padding: 1.4rem 2rem 1.4rem 4rem;
+  border-left: 8px solid $main-lightBlue;
+  line-height: 1.6;
+  position: relative;
+  background: $main-darkerBlue;
+  border-radius: 0.2rem;
+  font-weight: $light;
+}
+
+.quote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: $main-lightBlue;
+  font-size: 4rem;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+.quote::after {
+  content: "";
+}
+
+.quote span {
+  display: block;
+  color: white;
+  font-style: normal;
+  font-weight: $medium;
+  margin-top: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  .quote {
+    width: 100%;
   }
 }
 
@@ -266,6 +294,7 @@ p {
     top: 0;
     transition: top ease 0.5s;
     cursor: pointer;
+    width: 85%;
   }
   .card:hover,
   .card:focus {
