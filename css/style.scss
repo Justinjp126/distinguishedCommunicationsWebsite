@@ -23,7 +23,7 @@ $black: 800;
 
 //Colors
 $off-white: #f6f6f6;
-$light-grey: #e2e8e8;
+$light-grey: #cfcfcf;
 $dark-grey: #505050;
 $light-black: #121212;
 $main-darkerBlue: #27345c;
@@ -235,10 +235,10 @@ p {
 // * Quote * //
 .quote {
   font-size: 1.2rem;
-  width: 80%;
+  width: 100%;
   margin: 50px auto;
   font-style: italic;
-  color: $light-grey;
+  color: white;
   padding: 1.4rem 2rem 1.4rem 4rem;
   border-left: 8px solid $main-lightBlue;
   line-height: 1.6;
@@ -266,14 +266,8 @@ p {
   display: block;
   color: white;
   font-style: normal;
-  font-weight: $medium;
+  font-weight: $regular;
   margin-top: 1em;
-}
-
-@media only screen and (max-width: 768px) {
-  .quote {
-    width: 100%;
-  }
 }
 
 // ** Featured ** //
@@ -321,8 +315,8 @@ p {
   }
 
   &__img {
-    width: 1.75rem;
-    margin-left: 0.5rem;
+    width: 1.65rem;
+    margin-left: 0.75rem;
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(142deg)
       brightness(120%) contrast(112%);
   }
@@ -332,25 +326,72 @@ p {
 .testimonials {
   &__title {
     color: white;
-    font-weight: $medium;
+    font-weight: $semi-bold;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
+    font-size: 2.4rem;
   }
 
   &__text {
-    line-height: normal;
-    font-weight: $regular;
+    line-height: 1.618;
+    font-weight: $light;
     color: white;
-    font-size: 1.25rem;
+    font-size: calc(max(16px, 0.9rem));
     width: 75%;
     margin: 0 auto;
+    align-items: center;
+    justify-content: center;
     &-quote {
-      font-style: italic;
+      color: white;
+    }
+    &-imgContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-img-wrap {
+      width: 6rem;
+      margin: auto;
     }
     &-person {
+      border-radius: 50%;
+      font-style: normal;
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      margin: auto;
+    }
+    &-quotee {
+      font-weight: $light;
       display: flex;
-      flex-direction: row-reverse;
-      padding-right: 0.75rem;
+      justify-content: end;
+      font-style: normal;
+      padding-right: 0.6rem;
+      color: $light-grey;
+      font-size: calc(max(14px, 0.85rem));
+    }
+    .left {
+      justify-content: start;
+    }
+  }
+  .carousel-item {
+    transition: transform 1s ease-in-out !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .testimonials {
+    &__text {
+      &-imgContainer {
+        display: none;
+      }
+      &-quotee {
+        justify-content: start;
+      }
+    }
+    .left {
+      justify-content: start;
     }
   }
 }
