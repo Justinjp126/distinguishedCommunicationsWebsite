@@ -237,7 +237,7 @@ p {
   font-size: 1.2rem;
   width: 100%;
   margin: 50px auto;
-  font-style: italic;
+  font-style: normal;
   color: white;
   padding: 1.4rem 2rem 1.4rem 4rem;
   border-left: 8px solid $main-lightBlue;
@@ -245,16 +245,19 @@ p {
   position: relative;
   background: $main-darkerBlue;
   border-radius: 0.2rem;
-  font-weight: $light;
+  font-weight: $regular;
+  &__text {
+    max-width: 60ch;
+  }
 }
 
 .quote::before {
-  font-family: Arial;
+  font-family: inherit;
   content: "\201C";
   color: $main-lightBlue;
   font-size: 4rem;
   position: absolute;
-  left: 10px;
+  left: 20px;
   top: -10px;
 }
 
@@ -263,10 +266,11 @@ p {
 }
 
 .quote span {
+  font-size: 1.1rem;
   display: block;
-  color: white;
+  color: $light-grey;
   font-style: normal;
-  font-weight: $regular;
+  font-weight: $light;
   margin-top: 1em;
 }
 
@@ -292,6 +296,8 @@ p {
     transition: top ease 0.5s;
     cursor: pointer;
     width: 85%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+      rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   }
   .card:hover,
   .card:focus {
@@ -328,7 +334,7 @@ p {
     color: white;
     font-weight: $semi-bold;
     margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     font-size: 2.4rem;
   }
 
@@ -343,6 +349,9 @@ p {
     justify-content: center;
     &-quote {
       color: white;
+      max-width: 70ch;
+      margin: 0 auto;
+      display: block;
     }
     &-imgContainer {
       display: flex;
@@ -365,7 +374,7 @@ p {
     &-quotee {
       font-weight: $light;
       display: flex;
-      justify-content: end;
+      justify-content: left;
       font-style: normal;
       padding-right: 0.6rem;
       color: $light-grey;
@@ -398,20 +407,20 @@ p {
 
 // ** Briefs ** //
 .darkBackground {
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
   background-color: #171d31;
 }
 .briefs {
   color: white;
 
   &__title {
-    padding-top: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: $medium;
+    padding-top: 2rem;
+    margin-bottom: 1.25rem;
+    font-weight: $regular;
     font-size: 1.75rem;
   }
   &__form {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   &__button {
     display: inline-block;
@@ -427,8 +436,8 @@ p {
     border-radius: 100px;
     padding: 0.05rem 0.5rem;
     transition: background-color 200ms ease-out;
-    justify-content: right;
-    margin-bottom: 1.5rem;
+    justify-content: start;
+    margin-bottom: 2.75rem;
   }
   &__button:hover,
   &__button:focus {
@@ -440,9 +449,10 @@ p {
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
+    padding: 0.3rem 0.75rem;
   }
   &__container {
-    justify-content: right;
+    justify-content: start;
     display: flex;
   }
 }
