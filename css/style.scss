@@ -506,19 +506,20 @@ p {
 // !! About Page !! //
 .about {
   color: white;
-  margin-top: 4rem;
+  margin-top: 5rem;
   &__title {
-    margin-top: 1rem;
-    font-weight: $medium;
-    font-size: 2.25rem;
+    font-weight: $semi-bold;
+    font-size: 4.7rem;
   }
   &__text {
     padding-left: 1rem;
-    font-weight: $regular;
-    font-size: 1.25rem;
+    font-weight: $light;
+    font-size: 1.05rem;
+    line-height: 1.618;
   }
   &__img {
-    max-width: 90%;
+    width: 14rem;
+    max-width: 100%;
     height: auto;
     margin: auto;
   }
@@ -534,9 +535,11 @@ p {
 
 .team {
   color: white;
-  margin-top: 2rem;
+  margin-top: 3rem;
   &__title {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
+    font-weight: $medium;
   }
   .card {
     background-color: transparent !important;
@@ -561,6 +564,7 @@ p {
   &__mainTitle {
     text-align: center;
     margin-top: 1rem;
+    font-size: 3.5rem;
   }
   &__title {
     font-weight: $regular;
@@ -576,9 +580,10 @@ p {
 
 .news {
   color: #ffffff;
-  margin-top: 2rem;
+  margin-top: 3rem;
   &__title {
     text-align: center;
+    font-size: 3.5rem;
   }
   &__articles {
     margin-top: 1rem;
