@@ -506,29 +506,59 @@ p {
 // !! About Page !! //
 .about {
   color: white;
-  margin-top: 5rem;
+  position: relative;
+  margin-top: 6rem;
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-container {
+      align-self: center;
+    }
+  }
   &__title {
-    font-weight: $semi-bold;
-    font-size: 4.7rem;
+    line-height: 1;
+    &-our {
+      margin-bottom: 0;
+      font-size: 5.7rem;
+      font-weight: $bold;
+    }
+    &-story {
+      margin-bottom: 0;
+      font-size: 5.7rem;
+      font-weight: $bold;
+      margin-left: 1.5rem;
+    }
   }
   &__text {
-    padding-left: 1rem;
+    max-width: 75ch;
     font-weight: $light;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     line-height: 1.618;
+    display: block;
+    padding: 2rem;
   }
-  &__img {
-    width: 14rem;
-    max-width: 100%;
-    height: auto;
-    margin: auto;
+  &__blob {
+    position: absolute;
+    top: -5rem;
+    right: 1rem;
+    width: 25rem;
+    z-index: -1;
+    opacity: 0.7;
   }
 }
 
 @media only screen and (max-width: 991px) {
   .about {
-    &__img {
-      display: none;
+    &__blob {
+      top: 0rem;
+    }
+    &__text {
+      padding: 0.5rem;
+    }
+    &__title {
+      line-height: 0.9;
+      margin-bottom: 1rem;
     }
   }
 }
