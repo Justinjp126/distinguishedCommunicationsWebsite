@@ -113,7 +113,7 @@ function findSymptoms() {
    * Variables Here
    */
   var death = 0;
-  var concussion = (chicken_Pox = common_Cold = diptheria = escherichia_coli = giardiasis = hIV_or_Aids = infectious_Mononucleosis = influenza = lyme_Disease = malaria = measles = meningitis = pneumonia = salmonella_Infections = severe_Acute_Respiratory_Syndrome_SARS = sexually_Transmitted_Disease_STD = shingles = tetanus = tuberculosis = 0); //jack u can list out all 20 conditions here and separate them with commas like i did for the first two
+  var concussion = (chicken_Pox = common_Cold = diptheria = escherichia_coli = giardiasis = hIV_or_Aids = infectious_Mononucleosis = influenza = lyme_Disease = malaria = measles = meningitis = pneumonia = salmonella_Infections = severe_Acute_Respiratory_Syndrome_SARS = sexually_Transmitted_Disease_STD = shingles = tetanus = tuberculosis = diabetes = coronary_artery_disease = ankle_sprain = arthritis = peripheral_artery = restless_legs = varicose = tendinitis = 0);
   var commonCold_symptoms = [
     "runny nose",
     "cough",
@@ -129,29 +129,6 @@ function findSymptoms() {
     "sneezing",
     "chills",
     "muscle ache",
-  ];
-  //list out disease variables in a list
-  var diseases = [
-    concussion,
-    chicken_Pox,
-    common_Cold,
-    diptheria,
-    escherichia_coli,
-    giardiasis,
-    hIV_or_Aids,
-    infectious_Mononucleosis,
-    influenza,
-    lyme_Disease,
-    malaria,
-    measles,
-    meningitis,
-    pneumonia,
-    salmonella_Infections,
-    severe_Acute_Respiratory_Syndrome_SARS,
-    sexually_Transmitted_Disease_STD,
-    shingles,
-    tetanus,
-    tuberculosis,
   ];
 
   //Loop through the current page the user is on and add those symptoms
@@ -169,7 +146,77 @@ function findSymptoms() {
    */
   for (var i = 0; i < checkedList.length; i++) {
     x = checkedList[i];
-
+    if (x == "Dry Skin") {
+      diabetes++;
+    }
+    if (x == "Numb Hands") {
+      diabetes++;
+    }
+    if (x == "Numb Feet") {
+      diabetes++;
+    }
+    if (x == "Extreme Thirst") {
+      diabetes++;
+    }
+    if (x == "Heart Attack") {
+      coronary_artery_disease++;
+    }
+    if (x == "Leg Cramps") {
+      coronary_artery_disease++;
+    }
+    if (x == "Difficulty Walking") {
+      ankle_sprain++;
+      arthritis++;
+    }
+    if (x == "Ankle Pain") {
+      ankle_sprain++;
+    }
+    if (x == "Ankle Swelling") {
+      ankle_sprain++;
+    }
+    if (x == "Severe Knee Pain") {
+      ankle_sprain++;
+    }
+    if (x == "Bony Outgrowth in Fingers") {
+      arthritis++;
+    }
+    if (x == "Bony Outgrowth in Toes") {
+      arthritis++;
+    }
+    if (x == "General Body Pain") {
+      arthritis++;
+    }
+    if (x == "Stiffness in Joints") {
+      arthritis++;
+    }
+    if (x == "Decreased Range of Motion") {
+      arthritis++;
+    }
+    if (x == "Leg Pain") {
+      peripheral_artery++;
+      restless_legs++;
+    }
+    if (x == "Hair Loss") {
+      peripheral_artery++;
+    }
+    if (x == "Loss of Blood Flow") {
+      peripheral_artery++;
+    }
+    if (x == "Sleep Deprivation") {
+      restless_legs++;
+    }
+    if (x == "Heavy Feeling Legs") {
+      varicose++;
+    }
+    if (x == "Swollen Legs") {
+      varicose++;
+    }
+    if (x == "Stiff Elbows") {
+      tendinitis++;
+    }
+    if (x == "Stiff Hands/Wrists") {
+      tendinitis++;
+    }
     if (x == "Confusion") {
       concussion += 1;
       meningitis += 1;
@@ -186,6 +233,7 @@ function findSymptoms() {
       concussion += 1;
       giardiasis += 1;
       malaria += 1;
+      coronary_artery_disease++;
     }
     if (x == "Vomiting") {
       concussion += 1;
@@ -238,6 +286,7 @@ function findSymptoms() {
       giardiasis += 1;
       influenza += 1;
       lyme_Disease += 1;
+      restless_legs++;
     }
     if (x == "Sneezing") {
       common_Cold += 1;
@@ -333,12 +382,14 @@ function findSymptoms() {
     }
     if (x == "Chest Pain") {
       pneumonia += 1;
+      coronary_artery_disease++;
     }
     if (x == "Abdominal Pain") {
       salmonella_Infections += 1;
     }
     if (x == "Shortness of Breath") {
       severe_Acute_Respiratory_Syndrome_SARS += 1;
+      coronary_artery_disease++;
     }
     if (x == "Genital Sores") {
       sexually_Transmitted_Disease_STD += 1;
@@ -381,7 +432,7 @@ function findSymptoms() {
     }
   }
 
-  //put all disease variable in list
+  //list out disease variables in a list
   var diseases = [
     concussion,
     chicken_Pox,
@@ -403,8 +454,15 @@ function findSymptoms() {
     shingles,
     tetanus,
     tuberculosis,
+    diabetes,
+    coronary_artery_disease,
+    ankle_sprain,
+    arthritis,
+    peripheral_artery,
+    restless_legs,
+    varicose,
+    tendinitis,
   ];
-
   //match up disease names with variables
   var names = {
     Concussion: concussion,
@@ -427,21 +485,29 @@ function findSymptoms() {
     Shingles: shingles,
     Tetanus: tetanus,
     Tuberculosis: tuberculosis,
+    Diabetes: diabetes,
+    Coronary_Artery_Disease: coronary_artery_disease,
+    Ankle_Sprain_Or_Broken_Ankle: ankle_sprain,
+    Arthritis: arthritis,
+    Peripheral_Artery_Disease: peripheral_artery,
+    Restless_Legs_Syndrome: restless_legs,
+    Varicose_Veins: varicose,
+    Tendinitis: tendinitis,
   };
 
   var mostLikely, likely;
-  var mostLikelyName, likelyName;
+  var mostLikelyName = "";
+  var likelyName = "";
   const result = diseases.sort((x, y) => y - x).slice(0, 2); //sort diseases so its only the top 2 diseases
 
   mostLikely = result[0];
   likely = result[1];
-
   //match up mostLikely disease number to name
   for (var propName in names) {
     if (names[propName] == mostLikely) {
       mostLikelyName = propName;
     }
-    if (names[propName] == likely) {
+    if (names[propName] == likely && names[propName] !== mostLikely) {
       likelyName = propName;
     }
   }
@@ -452,7 +518,6 @@ function findSymptoms() {
 
   //output
   if (mostLikely == 0 && likely == 0) {
-    console.log(mostLikely);
     Swal.fire({
       title: "Try Again",
       text: "Please enter more symptoms to receive a possible diagnosis",
@@ -479,7 +544,7 @@ function findSymptoms() {
       confirmButtonText: "Continue",
       confirmButtonColor: "#7C8EC8",
     }).then((result) => {
-      if (likely > 0 && likelyName !== mostLikelyName) {
+      if (likely > 0 && likelyName !== mostLikelyName && likelyName !== "") {
         Swal.fire({
           title: "Another Possible Diagnosis",
           text:
@@ -739,7 +804,7 @@ function updateCheckBoxes(bodyPart, checkedList) {
   ) {
     $(".testDemo__title").text("Arm Symptoms");
     $(".container .boxes").html(
-      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Cold Hands" id="symptom_0" /> <label class="form-check-label" for="Cold Hands"> Cold Hands </label> </div> </div> </div>'
+      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Cold Hands" id="symptom_0" /> <label class="form-check-label" for="Cold Hands"> Cold Hands </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Bony Outgrowth in Fingers" id="symptom_0" /> <label class="form-check-label" for="Bony Outgrowth in Fingers"> Bony Outgrowth in Fingers </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Stiff Elbows" id="symptom_0" /> <label class="form-check-label" for="Stiff Elbows"> Stiff Elbows </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Stiff Hands/Wrists" id="symptom_0" /> <label class="form-check-label" for="Stiff Hands/Wrists"> Stiff Hands/Wrists </label> </div> </div> </div>'
     );
     document.querySelectorAll("input").forEach(function (element) {
       for (var i = 0; i < checkedList.length; i++) {
@@ -751,7 +816,7 @@ function updateCheckBoxes(bodyPart, checkedList) {
   } else if (bodyPart.id == "body__legs") {
     $(".testDemo__title").text("Leg Symptoms");
     $(".container .boxes").html(
-      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Cold Feet" id="symptom_0" /> <label class="form-check-label" for="Cold Feet"> Cold Feet </label> </div> </div> </div>'
+      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Cold Feet" id="symptom_0" /> <label class="form-check-label" for="Cold Feet"> Cold Feet </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Leg Cramps" id="symptom_0" /> <label class="form-check-label" for="Leg Cramps"> Leg Cramps </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Difficulty Walking" id="symptom_0" /> <label class="form-check-label" for="Difficulty Walking"> Difficulty Walking </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Ankle Pain" id="symptom_0" /> <label class="form-check-label" for="Ankle Pain"> Ankle Pain </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Ankle Swelling" id="symptom_0" /> <label class="form-check-label" for="Ankle Swelling"> Ankle Swelling </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Severe Knee Pain" id="symptom_0" /> <label class="form-check-label" for="Severe Knee Pain"> Severe Knee Pain </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Bony Outgrowth in Toes" id="symptom_0" /> <label class="form-check-label" for="Bony Outgrowth in Toes"> Bony Outgrowth in Toes </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Leg Pain" id="symptom_0" /> <label class="form-check-label" for="Leg Pain"> Leg Pain </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Loss of Blood Flow" id="symptom_0" /> <label class="form-check-label" for="Loss of Blood Flow"> Loss of Blood Flow </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Heavy Feeling Legs" id="symptom_0" /> <label class="form-check-label" for="Heavy Feeling Legs"> Heavy Feeling Legs </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Swollen Legs" id="symptom_0" /> <label class="form-check-label" for="Swollen Legs"> Swollen Legs </label> </div> </div> </div>'
     );
     document.querySelectorAll("input").forEach(function (element) {
       for (var i = 0; i < checkedList.length; i++) {
@@ -799,7 +864,7 @@ function updateCheckBoxes(bodyPart, checkedList) {
   } else if (bodyPart.id == "body__skin") {
     $(".testDemo__title").text("Skin Symptoms");
     $(".container .boxes").html(
-      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Rash" id="symptom_0" /> <label class="form-check-label" for="Rash"> Rash </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Blisters" id="symptom_0" /> <label class="form-check-label" for="Blisters"> Blisters </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Sores" id="symptom_0" /> <label class="form-check-label" for="Sores"> Sores </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Bulls-Eye Rash" id="symptom_0" /> <label class="form-check-label" for="Bulls-Eye Rash"> Bulls-Eye Rash </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Scabs" id="symptom_0" /> <label class="form-check-label" for="Scabs"> Scabs </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Sweating" id="symptom_0" /> <label class="form-check-label" for="Sweating"> Sweating </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Ulcers" id="symptom_0" /> <label class="form-check-label" for="Ulcers"> Ulcers </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Pins and Needles" id="symptom_0" /> <label class="form-check-label" for="Pins and Needles"> Pins and Needles </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Night Sweats" id="symptom_0" /> <label class="form-check-label" for="Night Sweats"> Night Sweats </label> </div> </div> </div>'
+      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Rash" id="symptom_0" /> <label class="form-check-label" for="Rash"> Rash </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Blisters" id="symptom_0" /> <label class="form-check-label" for="Blisters"> Blisters </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Sores" id="symptom_0" /> <label class="form-check-label" for="Sores"> Sores </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Dry Skin" id="symptom_0" /> <label class="form-check-label" for="Dry Skin"> Dry Skin </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Bulls-Eye Rash" id="symptom_0" /> <label class="form-check-label" for="Bulls-Eye Rash"> Bulls-Eye Rash </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Scabs" id="symptom_0" /> <label class="form-check-label" for="Scabs"> Scabs </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Sweating" id="symptom_0" /> <label class="form-check-label" for="Sweating"> Sweating </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Ulcers" id="symptom_0" /> <label class="form-check-label" for="Ulcers"> Ulcers </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Pins and Needles" id="symptom_0" /> <label class="form-check-label" for="Pins and Needles"> Pins and Needles </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Night Sweats" id="symptom_0" /> <label class="form-check-label" for="Night Sweats"> Night Sweats </label> </div> </div> </div>'
     );
     document.querySelectorAll("input").forEach(function (element) {
       for (var i = 0; i < checkedList.length; i++) {
@@ -811,7 +876,7 @@ function updateCheckBoxes(bodyPart, checkedList) {
   } else if (bodyPart.id == "body__general") {
     $(".testDemo__title").text("General Symptoms");
     $(".container .boxes").html(
-      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Tiredness" id="symptom_0" /> <label class="form-check-label" for="Tiredness"> Tiredness </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Loss of Appetite" id="symptom_0" /> <label class="form-check-label" for="Loss of Appetite"> Loss of Appetite </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Weight Loss" id="symptom_0" /> <label class="form-check-label" for="Weight Loss"> Weight Loss </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Body Aches" id="symptom_0" /> <label class="form-check-label" for="Body Aches"> Body Aches </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Chills" id="symptom_0" /> <label class="form-check-label" for="Chills"> Chills </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Muscle Aches" id="symptom_0" /> <label class="form-check-label" for="Muscle Aches"> Muscle Aches </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Joint Pain" id="symptom_0" /> <label class="form-check-label" for="Joint Pain"> Joint Pain </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Muscle Pain" id="symptom_0" /> <label class="form-check-label" for="Muscle Pain"> Muscle Pain </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Green/Yellow Mucus" id="symptom_0" /> <label class="form-check-label" for="Green/Yellow Mucus"> Green/Yellow Mucus </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Muscle Spasms" id="symptom_0" /> <label class="form-check-label" for="Muscle Spasms"> Muscle Spasms </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Seizures" id="symptom_0" /> <label class="form-check-label" for="Seizures"> Seizures </label> </div> </div> </div>'
+      '<div class="row"> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Tiredness" id="symptom_0" /> <label class="form-check-label" for="Tiredness"> Tiredness </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Loss of Appetite" id="symptom_0" /> <label class="form-check-label" for="Loss of Appetite"> Loss of Appetite </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Weight Loss" id="symptom_0" /> <label class="form-check-label" for="Weight Loss"> Weight Loss </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Body Aches" id="symptom_0" /> <label class="form-check-label" for="Body Aches"> Body Aches </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Extreme Thirst" id="symptom_0" /> <label class="form-check-label" for="Extreme Thirst"> Extreme Thirst </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Heart Attack" id="symptom_0" /> <label class="form-check-label" for="Heart Attack"> Heart Attack </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Chills" id="symptom_0" /> <label class="form-check-label" for="Chills"> Chills </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Muscle Aches" id="symptom_0" /> <label class="form-check-label" for="Muscle Aches"> Muscle Aches </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Joint Pain" id="symptom_0" /> <label class="form-check-label" for="Joint Pain"> Joint Pain </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Muscle Pain" id="symptom_0" /> <label class="form-check-label" for="Muscle Pain"> Muscle Pain </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="General Body Pain" id="symptom_0" /> <label class="form-check-label" for="General Body Pain"> General Body Pain </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Stiffness in Joints" id="symptom_0" /> <label class="form-check-label" for="Stiffness in Joints"> Stiffness in Joints </label> </div> </div> <div class="col-4"> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Green/Yellow Mucus" id="symptom_0" /> <label class="form-check-label" for="Green/Yellow Mucus"> Green/Yellow Mucus </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Muscle Spasms" id="symptom_0" /> <label class="form-check-label" for="Muscle Spasms"> Muscle Spasms </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Seizures" id="symptom_0" /> <label class="form-check-label" for="Seizures"> Seizures </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Decreased Range of Motion" id="symptom_0" /> <label class="form-check-label" for="Decreased Range of Motion"> Decreased Range of Motion </label> </div> <div class="form-check"> <input class="form-check-input" type="checkbox" value="Sleep Deprivation" id="symptom_0" /> <label class="form-check-label" for="Sleep Deprivation"> Sleep Deprivation </label> </div> </div> </div>'
     );
     document.querySelectorAll("input").forEach(function (element) {
       for (var i = 0; i < checkedList.length; i++) {

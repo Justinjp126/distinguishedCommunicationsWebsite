@@ -246,6 +246,8 @@ p {
   background: $main-darkerBlue;
   border-radius: 0.2rem;
   font-weight: $regular;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   &__text {
     max-width: 60ch;
   }
@@ -705,7 +707,7 @@ p {
   &__p1,
   &__p2 {
     padding-bottom: 1rem;
-    font-weight: $regular;
+    font-weight: $light;
   }
 
   #nickSVG {
