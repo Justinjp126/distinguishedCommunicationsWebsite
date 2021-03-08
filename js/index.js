@@ -912,9 +912,49 @@ function changeColorButton(obj) {
  */
 
 function addItem(item) {
-  var currentItems = localStorage.getItem("cart");
-  var newItems = currentItems.concat(item);
+  var currentItems, newItems;
+
+  currentItems = localStorage.getItem("cart");
+  newItems = "";
+  if (currentItems !== undefined) {
+    newItems = currentItems.concat(item);
+  }
   localStorage.setItem("cart", newItems);
+
+  setCartNumber();
+}
+
+/**
+ * Shopping Cart Function
+ * Sets value of number next to cart
+ */
+function setCartNumber() {
+  var cartNum, currentItems, currentItemsList;
+  cartNum = document.getElementById("cartNum"); //get the little num next to the cart
+  currentItems = localStorage.getItem("cart"); //get current items string
+
+  if (currentItems !== null) {
+    currentItemsList = currentItems.split(" "); //convert to list based off spaces
+
+    if (currentItemsList.length > 1) {
+      if (
+        currentItemsList[currentItemsList.length - 1] == "" ||
+        currentItemsList[currentItemsList.length - 1] == " "
+      ) {
+        currentItemsList.pop(); //removes the last space as an item
+      }
+
+      cartNum.innerHTML = currentItemsList.length; //set the number of items to the num
+    } else {
+      if (currentItemsList[0] == " " || currentItemsList == "") {
+        cartNum.innerHTML = 0;
+      } else {
+        cartNum.innerHTML = 1;
+      }
+    }
+  } else {
+    cartNum.innerHTML = 0; //set the number of items to the num
+  }
 }
 
 /**
@@ -922,6 +962,9 @@ function addItem(item) {
  */
 function main() {
   changeNav();
+  setCartNumber();
 }
 
-main();
+document.addEventListener("DOMContentLoaded", function () {
+  main();
+});
