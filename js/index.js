@@ -907,6 +907,17 @@ function changeColorButton(obj) {
 }
 
 /**
+ * Shopping Cart Function
+ * Adds value to shopping cart using LocalStorage
+ */
+
+function addItem(item) {
+  var currentItems = localStorage.getItem("cart");
+  var newItems = currentItems.concat(item);
+  localStorage.setItem("cart", newItems);
+}
+
+/**
  * Calls the functions
  */
 function main() {

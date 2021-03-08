@@ -201,13 +201,13 @@ p {
 #icon {
   font-weight: $semi-bold;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   span {
     color: $main-orange;
   }
 }
 .nav-item {
-  font-size: 1.1rem !important;
+  font-size: 1rem !important;
 }
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -218,20 +218,53 @@ p {
 .navbar-dark .navbar-toggler {
   border-color: rgba(255, 255, 255, 0);
 }
+.navbar-nav {
+  padding-top: 0.3rem;
+}
 
 .navActive {
   background-color: $main-darkBlue !important;
-  padding-top: 0.3rem !important;
-  padding-bottom: 0.3rem !important;
+  padding-top: 0.1rem !important;
+  padding-bottom: 0.1rem !important;
+  box-shadow: 0px 5px 23px 0px #16191e !important;
   transition: all 300ms ease-in;
 }
 .navbar {
   background-color: transparent;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  transition: all 250ms ease-out;
+  box-shadow: 0px 0px 0px 0px #16191e;
+  transition: background-color 250ms ease-out, padding-top 250ms ease-out,
+    padding-bottom 250ms ease-out, box-shadow 100ms ease-out;
 }
 
+.nav-cart {
+  width: 1.25rem;
+  padding-bottom: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.circle-container {
+  display: inline-block;
+  vertical-align: sub;
+}
+.num {
+  background: rgba(40, 53, 93, 1);
+  border-radius: 50%;
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  position: relative;
+}
+.num-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.9rem;
+  color: white;
+  font-weight: $medium;
+}
 // * Quote * //
 .quote {
   font-size: 1.2rem;
@@ -388,6 +421,11 @@ p {
   }
   .carousel-item {
     transition: transform 1s ease-in-out !important;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: unset;
+    margin: 0 -1rem;
   }
 }
 
