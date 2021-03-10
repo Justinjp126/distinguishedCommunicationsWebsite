@@ -958,6 +958,51 @@ function setCartNumber() {
 }
 
 /**
+ * Shopping Cart Function
+ * Sets value of number next to cart
+ */
+function addToCart() {
+  var cartButtons = document.querySelectorAll(".cart-check");
+
+  cartButtons.forEach((service) => {
+    service.addEventListener("click", (event) => {
+      if (localStorage.getItem("cart") == null) {
+        localStorage.setItem("cart", []);
+      }
+      if (
+        service.id == "symptomsTestCart" &&
+        !localStorage.getItem("cart").includes("Symptoms_Test")
+      ) {
+        addItem("Symptoms_Test ");
+      }
+      if (
+        service.id == "telemedicineCart" &&
+        !localStorage.getItem("cart").includes("Telemedicine")
+      ) {
+        addItem("Telemedicine ");
+      }
+      if (
+        service.id == "productionCart" &&
+        !localStorage.getItem("cart").includes("Production")
+      ) {
+        addItem("Production ");
+      }
+      if (
+        service.id == "medicalDashboardCart" &&
+        !localStorage.getItem("cart").includes("Medical_Dashboard")
+      ) {
+        addItem("Medical_Dashboard ");
+      }
+      if (
+        service.id == "publicationCart" &&
+        !localStorage.getItem("cart").includes("Publication")
+      ) {
+        addItem("Publication ");
+      }
+    });
+  });
+}
+/**
  * Calls the functions
  */
 function main() {
