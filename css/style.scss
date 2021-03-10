@@ -265,6 +265,31 @@ p {
   color: white;
   font-weight: $medium;
 }
+.cart-check-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+.cart-check {
+  cursor: pointer;
+  width: 1.5rem;
+  vertical-align: initial;
+  transform: scale(1);
+  transition: all 200ms ease;
+}
+.cart-check-lines {
+  fill: $main-lightBlue;
+  transition: all 200ms ease-in;
+}
+.cart-check:hover > .cart-check-lines {
+  fill: darken($main-lightBlue, 5%);
+  transition: all 250ms ease;
+}
+.cart-check:active {
+  transform: scale(0.95);
+  transition: all 150ms ease;
+}
 // * Quote * //
 .quote {
   font-size: 1.2rem;
