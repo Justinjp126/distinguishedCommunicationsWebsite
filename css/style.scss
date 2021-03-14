@@ -630,6 +630,7 @@ p {
 }
 
 .team {
+  width: 75%;
   color: white;
   margin-top: 3rem;
   &__title {
@@ -637,15 +638,77 @@ p {
     font-size: 3.5rem;
     font-weight: $medium;
   }
-  .card {
-    background-color: transparent !important;
-    outline: none;
-    border: none;
-    width: 4rem;
+  &__person {
+    &-title {
+      font-weight: $regular;
+      font-size: 1.5rem;
+    }
+    &-role {
+      font-weight: $light;
+      font-size: 1rem;
+      color: $light-grey;
+    }
+    &-img {
+      padding-right: 2rem;
+      width: 6rem;
+      &-left {
+        padding-left: 2rem;
+        width: 6rem;
+      }
+    }
   }
-  .card-title {
-    font-size: 1.25rem;
-    font-weight: $regular;
+  &__description {
+    font-size: 0.9rem;
+    font-weight: $light;
+    max-width: 60ch;
+    padding-left: 1rem;
+    &-left {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      font-weight: $light;
+      max-width: 60ch;
+    }
+  }
+  .text-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main-section-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+  .main-section {
+    display: flex;
+    align-items: center;
+    &-left {
+      display: flex;
+      justify-content: right;
+    }
+  }
+  .mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .team {
+    width: 85%;
+    .main-section-wrapper {
+      display: block;
+    }
+    .non-mobile {
+      display: none !important;
+    }
+    .mobile {
+      display: initial;
+    }
+    &__description {
+      padding-top: 1.5rem;
+      padding-left: 0rem;
+    }
   }
 }
 
