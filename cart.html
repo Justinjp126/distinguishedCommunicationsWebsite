@@ -104,6 +104,70 @@
     </nav>
 
     <main>
+      <div class="container cart">
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-4 col-md-12 cart-wrapper">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="card-title">Review Order:</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 cart-wrapper">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="card-title">Checkout:</div>
+                <div class="row">
+                  <div class="col-lg-12 cart__name">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Name"
+                      aria-label="name"
+                      required
+                      id="nameCart"
+                      value=""
+                      autocomplete=""
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 cart__email">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email"
+                      aria-label="email"
+                      required
+                      id="emailCart"
+                      value=""
+                      autocomplete=""
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="cart__warning">
+                      We will contact you with further information regarding
+                      payment, implementation, and support. Expect a response in
+                      3-5 business days.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 d-flex justify-content-end">
+                    <a class="cart__button" onclick="checkValidCart()"
+                      >Place Order</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1"></div>
+        </div>
+      </div>
       <div class="footer">
         <div class="row">
           <div class="col-12 text-center">

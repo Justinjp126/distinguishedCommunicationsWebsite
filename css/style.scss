@@ -1641,3 +1641,83 @@ p {
     transition: background-color 250ms ease-in;
   }
 }
+
+// ! Cart Page * //
+.cart {
+  font-family: inherit;
+  margin-top: 6rem;
+  &-wrapper {
+    margin-bottom: 2rem;
+  }
+  .card {
+    background-color: $main-darkerBlue;
+    border-radius: .7rem;
+    color: white;
+    
+    &-title {
+      font-weight: $regular;
+      font-size: 1.25rem;
+    }
+  }
+
+  &__name {
+    margin-top: .5rem;
+  }
+  &__email {
+    margin-top: 1rem;
+  }
+  &__name,
+  &__email {
+    margin-left: .5rem;
+  }
+
+  .form-control {
+    background-color: #374981;
+    border: 1px solid #374981;
+    color: white;
+    border-radius: 2rem;
+    width: 80%;
+    margin: 0;
+    padding: .15rem .65rem;
+    font-size: .9rem;
+    font-weight: $light;
+  }
+  .form-control::placeholder {
+    color: #acacac;
+    opacity: 1;
+  }
+
+  &__warning {
+    color: $light-grey;
+    font-size: calc(max(11px, .60rem));
+    margin-left: 1rem;
+    font-weight: $extra-light;
+    margin-top: 1rem;
+    width: 85%;
+  }
+
+  &__button {
+    font-size: .9rem;
+    font-weight: $light;
+    display: inline-block;
+    width: auto;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: $main-blue;
+    color: white;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    padding: 0.1rem 0.75rem;
+    transition: background-color 200ms ease-out;
+    justify-content: right;
+    margin-top: 1rem;
+  }
+  &__button:hover,
+  &__button:focus {
+    color: white;
+    background-color: darken($main-blue, 5%);
+    transition: background-color 250ms ease-in;
+  }
+}
