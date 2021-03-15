@@ -94,6 +94,45 @@ function checkValidContact() {
 }
 
 /**
+ * Cart validation function
+ */
+function checkValidCart() {
+  var name = document.getElementById("nameCart").value;
+  var email = document.getElementById("emailCart").value;
+
+  if (name !== "" && validateEmail(email)) {
+    Swal.fire({
+      title: "Success!",
+      text: "Expect to see a message in your inbox in 3-5 business days!",
+      icon: "success",
+      confirmButtonText: "Continue",
+      confirmButtonColor: "#7C8EC8",
+    }).then((result) => {
+      document.getElementById("nameCart").value = "";
+      document.getElementById("emailCart").value = "";
+      location.reload();
+    });
+  } else {
+    if (name == "") {
+      Swal.fire({
+        title: "Error!",
+        text: "Please fill out your name",
+        icon: "error",
+        confirmButtonText: "Continue",
+        confirmButtonColor: "#7C8EC8",
+      });
+    } else if (!validateEmail(email)) {
+      Swal.fire({
+        title: "Error!",
+        text: "Please enter valid email address",
+        icon: "error",
+        confirmButtonText: "Continue",
+        confirmButtonColor: "#7C8EC8",
+      });
+    }
+  }
+}
+/**
  * Checks if email is valid
  */
 function validateEmail(email) {

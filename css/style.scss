@@ -1689,7 +1689,13 @@ p {
   .form-control:focus {
     border-color: #324377;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(#324377, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(#324377, 0.25) !important; 
+  }
+  .was-validated .form-control:invalid,
+  .was-validated .form-control:invalid:focus,
+  .form-control:-moz-ui-invalid {
+    box-shadow: none;
+    outline: none;
   }
 
   &__warning {
