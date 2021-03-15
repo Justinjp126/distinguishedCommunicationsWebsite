@@ -1658,6 +1658,35 @@ p {
       font-weight: $regular;
       font-size: 1.25rem;
     }
+    &-text {
+      font-size: 1rem;
+      font-weight: $light;
+      padding-left: .25rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: end;
+    margin-bottom: .2rem;
+    &_name {
+      margin-right: auto;
+    }
+    &_x {
+      color: #ff5858;
+      font-weight: $medium;
+      cursor: pointer;
+      transition: all 200ms ease;
+    }
+    &_x:hover {
+      color: darken(#ff5858, 10%);
+      transition: all 250ms ease;
+    }
+    &_x::-moz-selection,
+    &_x::selection {
+      color: #ff5858;
+      background-color: transparent;
+    }
   }
 
   &__name {

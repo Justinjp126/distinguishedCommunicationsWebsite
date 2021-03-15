@@ -99,8 +99,16 @@ function checkValidContact() {
 function checkValidCart() {
   var name = document.getElementById("nameCart").value;
   var email = document.getElementById("emailCart").value;
+  var items;
 
-  if (name !== "" && validateEmail(email)) {
+  if (localStorage.getItem("cart") == null) {
+    localStorage.setItem("cart", []);
+  }
+
+  items = localStorage.getItem("cart");
+
+  console.log(isBlank(items));
+  if (name !== "" && validateEmail(email) && !isBlank(items)) {
     Swal.fire({
       title: "Success!",
       text: "Expect to see a message in your inbox in 3-5 business days!",
@@ -110,6 +118,7 @@ function checkValidCart() {
     }).then((result) => {
       document.getElementById("nameCart").value = "";
       document.getElementById("emailCart").value = "";
+      localStorage.setItem("cart", "");
       location.reload();
     });
   } else {
@@ -129,6 +138,14 @@ function checkValidCart() {
         confirmButtonText: "Continue",
         confirmButtonColor: "#7C8EC8",
       });
+    } else if (isBlank(items)) {
+      Swal.fire({
+        title: "Error!",
+        text: "Please add items to your cart to checkout",
+        icon: "error",
+        confirmButtonText: "Continue",
+        confirmButtonColor: "#7C8EC8",
+      });
     }
   }
 }
@@ -138,6 +155,13 @@ function checkValidCart() {
 function validateEmail(email) {
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
+}
+
+/**
+ * Checks if string is blank, null, or undefined
+ */
+function isBlank(str) {
+  return !str || /^\s*$/.test(str);
 }
 
 /**
@@ -965,6 +989,36 @@ function addItem(item) {
 
 /**
  * Shopping Cart Function
+ * Removes value from shopping cart frontend/backend
+ */
+function removeItem(item) {
+  var removeItemName;
+  var cartString;
+
+  cartString = localStorage.getItem("cart");
+  removeItemName = item.id;
+
+  console.log(removeItemName);
+  if (removeItemName == "Symptoms Test") {
+    cartString = cartString.replace("Symptoms_Test ", "");
+  } else if (removeItemName == "Medical Dashboard") {
+    cartString = cartString.replace("Medical_Dashboard ", "");
+  } else if (removeItemName == "Production") {
+    cartString = cartString.replace("Production ", "");
+  } else if (removeItemName == "Publication") {
+    cartString = cartString.replace("Publication ", "");
+  } else if (removeItemName == "Telemedicine") {
+    cartString = cartString.replace("Telemedicine ", "");
+  }
+
+  localStorage.setItem("cart", cartString);
+  setCartNumber();
+
+  location.reload();
+}
+
+/**
+ * Shopping Cart Function
  * Sets value of number next to cart
  */
 function setCartNumber() {
@@ -1008,45 +1062,114 @@ function addToCart() {
       if (localStorage.getItem("cart") == null) {
         localStorage.setItem("cart", []);
       }
-      if (
-        service.id == "symptomsTestCart" &&
-        !localStorage.getItem("cart").includes("Symptoms_Test")
-      ) {
-        addItem("Symptoms_Test ");
+      if (service.id == "symptomsTestCart") {
+        if (localStorage.getItem("cart").includes("Symptoms_Test")) {
+          Swal.fire({
+            title: "Alert",
+            text: "Symptoms Test is already in your cart!",
+            icon: "warning",
+            confirmButtonColor: "#7C8EC8",
+          });
+        } else {
+          addItem("Symptoms_Test ");
+        }
       }
-      if (
-        service.id == "telemedicineCart" &&
-        !localStorage.getItem("cart").includes("Telemedicine")
-      ) {
-        addItem("Telemedicine ");
+      if (service.id == "telemedicineCart") {
+        if (localStorage.getItem("cart").includes("Telemedicine")) {
+          Swal.fire({
+            title: "Alert",
+            text: "Telemedicine is already in your cart!",
+            icon: "warning",
+            confirmButtonColor: "#7C8EC8",
+          });
+        } else {
+          addItem("Telemedicine ");
+        }
       }
-      if (
-        service.id == "productionCart" &&
-        !localStorage.getItem("cart").includes("Production")
-      ) {
-        addItem("Production ");
+      if (service.id == "productionCart") {
+        if (localStorage.getItem("cart").includes("Production")) {
+          Swal.fire({
+            title: "Alert",
+            text: "Production is already in your cart!",
+            icon: "warning",
+            confirmButtonColor: "#7C8EC8",
+          });
+        } else {
+          addItem("Production ");
+        }
       }
-      if (
-        service.id == "medicalDashboardCart" &&
-        !localStorage.getItem("cart").includes("Medical_Dashboard")
-      ) {
-        addItem("Medical_Dashboard ");
+      if (service.id == "medicalDashboardCart") {
+        if (localStorage.getItem("cart").includes("Medical_Dashboard")) {
+          Swal.fire({
+            title: "Alert",
+            text: "Medical Dashboard is already in your cart!",
+            icon: "warning",
+            confirmButtonColor: "#7C8EC8",
+          });
+        } else {
+          addItem("Medical_Dashboard ");
+        }
       }
-      if (
-        service.id == "publicationCart" &&
-        !localStorage.getItem("cart").includes("Publication")
-      ) {
-        addItem("Publication ");
+      if (service.id == "publicationCart") {
+        if (localStorage.getItem("cart").includes("Publication")) {
+          Swal.fire({
+            title: "Alert",
+            text: "Publication is already in your cart!",
+            icon: "warning",
+            confirmButtonColor: "#7C8EC8",
+          });
+        } else {
+          addItem("Publication ");
+        }
       }
     });
   });
 }
+
+/**
+ * Add correct item to review items block
+ */
+function reviewItems() {
+  if (!(document.getElementById("items") == null)) {
+    var itemsList = [];
+
+    //make cart if it doesn't exist
+    if (localStorage.getItem("cart") == null) {
+      localStorage.setItem("cart", []);
+    }
+
+    //add the selected items to the list
+    if (localStorage.getItem("cart").includes("Symptoms_Test")) {
+      itemsList.push("Symptoms Test");
+    }
+    if (localStorage.getItem("cart").includes("Medical_Dashboard")) {
+      itemsList.push("Medical Dashboard");
+    }
+    if (localStorage.getItem("cart").includes("Publication")) {
+      itemsList.push("Publication");
+    }
+    if (localStorage.getItem("cart").includes("Production")) {
+      itemsList.push("Production");
+    }
+    if (localStorage.getItem("cart").includes("Telemedicine")) {
+      itemsList.push("Telemedicine");
+    }
+
+    itemsList.forEach((item) => {
+      $("#items").append(
+        `<span class='cart__item' id='${item} item'><span class='cart__item_name'>${item}</span><span class='cart__item_x' onclick='removeItem(this)' id='${item}'> x </span></span>`
+      );
+    });
+  }
+}
+
 /**
  * Calls the functions
  */
 function main() {
   changeNav();
   setCartNumber();
+  reviewItems();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
