@@ -1634,12 +1634,34 @@ p {
   &__message {
     margin-bottom: 1rem;
     &_message {
-      border-radius: 30px !important;
+      border-radius: 15px !important;
     }
   }
   .form-control {
-    width: 93%;
-    border-radius: 100px;
+    background-color: #374981;
+    border: 1px solid #374981;
+    color: white;
+    border-radius: 2rem;
+    width: 90%;
+    margin: 0;
+    padding: .15rem .65rem;
+    font-size: .9rem;
+    font-weight: $light;
+  }
+  .form-control::placeholder {
+    color: #acacac;
+    opacity: 1;
+  }
+  .form-control:focus {
+    border-color: #324377;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(#324377, 0.25) !important; 
+  }
+  .was-validated .form-control:invalid,
+  .was-validated .form-control:invalid:focus,
+  .form-control:-moz-ui-invalid {
+    box-shadow: none;
+    outline: none;
   }
   &__button {
     display: inline-block;
