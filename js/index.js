@@ -107,7 +107,6 @@ function checkValidCart() {
 
   items = localStorage.getItem("cart");
 
-  console.log(isBlank(items));
   if (name !== "" && validateEmail(email) && !isBlank(items)) {
     Swal.fire({
       title: "Success!",
@@ -998,7 +997,6 @@ function removeItem(item) {
   cartString = localStorage.getItem("cart");
   removeItemName = item.id;
 
-  console.log(removeItemName);
   if (removeItemName == "Symptoms Test") {
     cartString = cartString.replace("Symptoms_Test ", "");
   } else if (removeItemName == "Medical Dashboard") {

@@ -679,6 +679,16 @@ p {
     justify-content: center;
     margin: 0 auto;
     margin-bottom: 3rem;
+    position: relative;
+  }
+  &__blobOne {
+    position: absolute;
+    z-index: -1;
+    width: 90%;
+    min-width: 25rem;
+    top: -18rem;
+    left: -10%;
+    opacity: .7;
   }
   .main-section {
     display: flex;
@@ -689,6 +699,9 @@ p {
     }
   }
   .mobile {
+    display: none;
+  }
+  &__blobOneMobile {
     display: none;
   }
 }
@@ -704,6 +717,16 @@ p {
     }
     .mobile {
       display: initial;
+    }
+    &__blobOneMobile {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      opacity: .7;
+      top: -17rem;
+      left: -10%;
+      width: 100%;
+      min-width: 25rem;
     }
     &__description {
       padding-top: 1.5rem;
