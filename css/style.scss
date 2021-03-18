@@ -688,7 +688,7 @@ p {
     min-width: 25rem;
     top: -18rem;
     left: -10%;
-    opacity: .7;
+    opacity: 0.7;
   }
   .main-section {
     display: flex;
@@ -722,7 +722,7 @@ p {
       display: block;
       position: absolute;
       z-index: -1;
-      opacity: .7;
+      opacity: 0.7;
       top: -17rem;
       left: -10%;
       width: 100%;
@@ -924,37 +924,28 @@ p {
 // !! Services Page !! //
 .services {
   color: white;
-  margin-top: 4rem;
+  margin-top: 5rem;
+  padding: 2rem;
+  margin-bottom: 5rem;
+
   &__title {
-    margin-top: 1rem;
-    font-weight: $medium;
-    font-size: 2.25rem;
+    margin-top: 0.5rem;
+    font-weight: $semi-bold;
+    font-size: 5.1rem;
   }
   &__text {
     color: $light-grey;
     padding-left: 1rem;
     font-weight: $regular;
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 1.5;
   }
   &__img {
-    max-width: 85%;
-    width: 100%;
-    height: auto;
-    &-topCircle {
-      transform-origin: 278px 489px;
-      animation: spin 30s infinite linear;
-    }
-
-    @keyframes spin {
-      50% {
-        transform: rotate(180deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 60%;
+    z-index: -1;
   }
 }
 
@@ -1007,11 +998,18 @@ p {
     line-height: 1.6;
   }
 }
-
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1200px) {
   .services {
     &__img {
       display: none;
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  .services {
+    padding: 0.5rem;
+    &__title {
+      font-size: 4.5rem;
     }
   }
   .testSection {
@@ -1644,8 +1642,8 @@ p {
     border-radius: 2rem;
     width: 90%;
     margin: 0;
-    padding: .15rem .65rem;
-    font-size: .9rem;
+    padding: 0.15rem 0.65rem;
+    font-size: 0.9rem;
     font-weight: $light;
   }
   .form-control::placeholder {
@@ -1655,7 +1653,7 @@ p {
   .form-control:focus {
     border-color: #324377;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(#324377, 0.25) !important; 
+    box-shadow: 0 0 0 0.2rem rgba(#324377, 0.25) !important;
   }
   .was-validated .form-control:invalid,
   .was-validated .form-control:invalid:focus,
@@ -1696,9 +1694,9 @@ p {
   }
   .card {
     background-color: $main-darkerBlue;
-    border-radius: .7rem;
+    border-radius: 0.7rem;
     color: white;
-    
+
     &-title {
       font-weight: $regular;
       font-size: 1.25rem;
@@ -1706,14 +1704,14 @@ p {
     &-text {
       font-size: 1rem;
       font-weight: $light;
-      padding-left: .25rem;
+      padding-left: 0.25rem;
     }
   }
 
   &__item {
     display: flex;
     justify-content: end;
-    margin-bottom: .2rem;
+    margin-bottom: 0.2rem;
     &_name {
       margin-right: auto;
     }
@@ -1735,14 +1733,14 @@ p {
   }
 
   &__name {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
   &__email {
     margin-top: 1rem;
   }
   &__name,
   &__email {
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
 
   .form-control {
@@ -1752,8 +1750,8 @@ p {
     border-radius: 2rem;
     width: 80%;
     margin: 0;
-    padding: .15rem .65rem;
-    font-size: .9rem;
+    padding: 0.15rem 0.65rem;
+    font-size: 0.9rem;
     font-weight: $light;
   }
   .form-control::placeholder {
@@ -1763,7 +1761,7 @@ p {
   .form-control:focus {
     border-color: #324377;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(#324377, 0.25) !important; 
+    box-shadow: 0 0 0 0.2rem rgba(#324377, 0.25) !important;
   }
   .was-validated .form-control:invalid,
   .was-validated .form-control:invalid:focus,
@@ -1774,7 +1772,7 @@ p {
 
   &__warning {
     color: $light-grey;
-    font-size: calc(max(11px, .60rem));
+    font-size: calc(max(11px, 0.6rem));
     margin-left: 1rem;
     font-weight: $extra-light;
     margin-top: 1rem;
@@ -1782,7 +1780,7 @@ p {
   }
 
   &__button {
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: $light;
     display: inline-block;
     width: auto;
