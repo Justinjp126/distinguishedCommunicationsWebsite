@@ -1129,6 +1129,8 @@ function addToCart() {
  */
 function reviewItems() {
   if (!(document.getElementById("items") == null)) {
+    setCartNumber();
+
     var itemsList = [];
 
     //make cart if it doesn't exist
