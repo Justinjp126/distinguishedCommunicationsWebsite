@@ -1087,6 +1087,14 @@ p {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .testSection {
+    .addToCart {
+      margin-top: 1.25rem;
+    }
+  }
+}
+
 .teleMed {
   color: white;
   text-align: center;
