@@ -1060,64 +1060,42 @@ p {
       display: none;
     }
   }
-}
-@media only screen and (max-width: 991px) {
-  .services {
-    padding: 0.5rem;
-    &__title {
-      font-size: 4.5rem;
-    }
-  }
-  .testSection {
-    padding: 3rem 1rem 3.5rem 1rem;
-    &__button {
-      margin: 1.5rem 0 1.75rem;
-    }
-    &__title {
-      font-size: 3rem;
-    }
-    &__textTwo {
-      margin-top: 0;
-    }
-  }
   .teleMed {
+    .row {
+      .col-lg-6 {
+        width: 100%;
+      }
+    }
     &__img {
       display: none;
     }
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .testSection {
-    .addToCart {
-      margin-top: 1.25rem;
-    }
-  }
-}
-
 .teleMed {
   color: white;
-  text-align: center;
-  margin-top: 2rem;
+  padding: 3rem 3rem 3.5rem 3rem;
   &__title {
-    margin-top: 1rem;
     font-weight: $medium;
-    font-size: 2.25rem;
+    font-size: 3.2rem;
+    line-height: 1;
   }
   &__text {
     color: white;
-    font-weight: $regular;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    background-color: $main-darkerBlue;
-    padding: 1rem;
-    border-radius: 1rem;
+    font-weight: $light;
+    font-size: 0.9rem;
+    line-height: 1.6;
     margin-bottom: 1rem;
+    padding-left: 0.75rem;
   }
   &__img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     margin: auto;
+  }
+  #telemedicineCart {
+    margin-top: 1rem;
+    margin-left: 0.75rem;
   }
 }
 
@@ -1675,6 +1653,39 @@ p {
     border-color: #324377;
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(#324377, 0.25);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .services {
+    padding: 0.5rem;
+    &__title {
+      font-size: 4.5rem;
+    }
+  }
+  .testSection {
+    padding: 3rem 1rem 3.5rem 1rem;
+    &__button {
+      margin: 1.5rem 0 1.75rem;
+    }
+    &__title {
+      font-size: 3rem;
+    }
+    &__textTwo {
+      margin-top: 0;
+    }
+  }
+
+  .teleMed {
+    padding: 3rem 1rem 3.5rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .testSection {
+    .addToCart {
+      margin-top: 1.25rem;
+    }
   }
 }
 
