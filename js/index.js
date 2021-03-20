@@ -1053,9 +1053,11 @@ function setCartNumber() {
  * Sets value of number next to cart
  */
 function addToCart() {
-  var cartButtons = document.querySelectorAll(".cart-check");
+  var cartButtons = document.querySelectorAll(".cart-check-container");
 
   cartButtons.forEach((service) => {
+    console.log(service);
+
     service.addEventListener("click", (event) => {
       if (localStorage.getItem("cart") == null) {
         localStorage.setItem("cart", []);

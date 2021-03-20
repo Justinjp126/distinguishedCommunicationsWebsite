@@ -269,6 +269,47 @@ p {
   display: inline-block;
   vertical-align: sub;
 }
+
+.addToCart {
+  display: inline-flex;
+  width: auto !important;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  color: #7c8ec8;
+  text-align: center;
+  outline: none;
+  border: 0.1rem #7c8ec8 solid;
+  border-radius: 100px;
+  padding: 0.2rem 0.75rem;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1rem;
+  transition: background-color 200ms ease, color 200ms ease;
+  &__before {
+    font-weight: $light;
+    font-size: 1rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.addToCart:hover {
+  background-color: #7c8ec8;
+  color: white;
+  transition: background-color 250ms ease, color 250ms ease;
+}
+.addToCart:hover > .cart-check > .cart-check-lines {
+  fill: white;
+  transition: all 250ms ease;
+}
+.cart-check-lines {
+  fill: $main-lightBlue;
+  transition: all 200ms ease;
+}
+.cart-check {
+  width: 1.2rem;
+}
 .num {
   background: rgba(40, 53, 93, 1);
   border-radius: 50%;
@@ -286,31 +327,7 @@ p {
   color: white;
   font-weight: $medium;
 }
-.cart-check-container {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 0.5rem;
-}
-.cart-check {
-  cursor: pointer;
-  width: 1.5rem;
-  vertical-align: initial;
-  transform: scale(1);
-  transition: all 200ms ease;
-}
-.cart-check-lines {
-  fill: $main-lightBlue;
-  transition: all 200ms ease-in;
-}
-.cart-check:hover > .cart-check-lines {
-  fill: darken($main-lightBlue, 5%);
-  transition: all 250ms ease;
-}
-.cart-check:active {
-  transform: scale(0.95);
-  transition: all 150ms ease;
-}
+
 // * Quote * //
 .quote {
   font-size: 1.2rem;
