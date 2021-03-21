@@ -1101,31 +1101,34 @@ p {
 
 .production {
   color: white;
-  margin-top: 2rem;
+  padding: 3rem 3rem 3.5rem 3rem;
+
   .prodContainer {
     display: flex;
     justify-content: center;
   }
   &__title {
     font-weight: $medium;
-    font-size: 2.25rem;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    line-height: 1;
   }
-  &__plan {
+  &__plan,
+  &__construct,
+  &__share {
     position: relative;
     background-color: $main-blue;
-    font-size: 1.5rem;
-    width: 100%;
+    font-size: 1.15rem;
+    width: 80%;
+    margin: auto;
     display: inline-block;
     border-radius: 5rem;
-    margin-bottom: 1.25rem;
     padding: 0 0.7rem;
     text-align: left;
     cursor: pointer;
     transition: background-color 200ms ease-out;
-    font-weight: $regular;
+    font-weight: $light;
     max-width: 12rem;
-
+    min-width: 5.5rem;
     &-plus {
       position: absolute;
       right: 0.5rem;
@@ -1133,48 +1136,11 @@ p {
       transition: color 750ms ease-out;
     }
   }
-
   &__construct {
-    position: relative;
-    background-color: $main-blue;
-    font-size: 1.5rem;
-    width: 100%;
-    display: inline-block;
-    border-radius: 5rem;
-    margin-bottom: 1.25rem;
-    padding: 0 0.7rem;
-    cursor: pointer;
-    transition: background-color 200ms ease-out;
-    font-weight: $regular;
-    max-width: 12rem;
-
-    &-plus {
-      position: absolute;
-      right: 0.5rem;
-      color: white;
-      transition: color 750ms ease-out;
-    }
+    margin: 1.5rem 0;
   }
-
-  &__share {
-    position: relative;
-    background-color: $main-blue;
-    font-size: 1.5rem;
-    width: 100%;
-    display: inline-block;
-    border-radius: 5rem;
-    padding: 0 0.7rem;
-    cursor: pointer;
-    transition: background-color 200ms ease-out;
-    font-weight: $regular;
-    max-width: 12rem;
-
-    &-plus {
-      position: absolute;
-      right: 0.5rem;
-      color: white;
-      transition: color 750ms ease-out;
-    }
+  &__textContainer {
+    margin-top: 1.5rem;
   }
 
   &__plan:hover,
@@ -1194,11 +1160,11 @@ p {
 
   &__text {
     color: white;
-    font-weight: $regular;
-    font-size: 1.2rem;
-    line-height: 1.5;
+    font-weight: $light;
+    font-size: 0.95rem;
+    line-height: 1.6;
     background-color: $main-darkerBlue;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 1rem;
   }
 }
@@ -1209,12 +1175,16 @@ p {
       display: flex;
       justify-content: space-evenly;
     }
-
-    &__share {
-      margin-bottom: 1.25rem;
-    }
     .prodContainer {
       flex-grow: 0.2;
+    }
+    &__textContainer {
+      margin-top: 0;
+    }
+    &__share,
+    &__construct,
+    &__plan {
+      margin: 1rem 0 1.5rem;
     }
   }
 }
@@ -1679,12 +1649,21 @@ p {
   .teleMed {
     padding: 3rem 1rem 3.5rem 1rem;
   }
+
+  .production {
+    padding: 3rem 1rem 3.5rem 1rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .testSection {
     .addToCart {
       margin-top: 1.25rem;
+    }
+  }
+  .production {
+    .addToCart {
+      margin-top: 1rem;
     }
   }
 }

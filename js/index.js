@@ -647,11 +647,11 @@ function productionChange(obj) {
   var share = document.getElementById("sharePlus");
   var text = document.getElementById("prodText");
   var planText =
-    "We first work alongside our clients to help decide how their topic will be best conveyed. We then select a format of presentation accordingly, such as powerpoint or webinar. We work cohesively with the client to organize the information in a logical manner.";
+    "We first work alongside you to help decide the best medium for your project. We then select a format of presentation accordingly, such as a PowerPoint or a webinar. We are always open to making a nonconventional format or experimenting with a new type of media.";
   var constructText =
-    "Using the organized information and format from the planning phase, the project is then put together. We have experienced writers and experts on staff who can help the client produce the best presentation possible for any topic.";
+    "After the first step, we create your project using the information gathered during the planning phase. We have experienced writers and experts on staff who can help the client produce the best presentation possible for any topic. You can expect daily or weekly updates from our team, depending on the project's size.";
   var shareText =
-    "We aim to not only help our clients create their presentations, but also help them bring their work to the medical community. We work with our clients to show them the best possible media outlets for their projects.";
+    "After completing the project, we will work with you to show you the best possible media outlets for the project or the best way to present the project. We will guide you throughout the process, and our team will be available for any of your questions. ";
   var key = {
     plantext: planText,
     constructtext: constructText,
