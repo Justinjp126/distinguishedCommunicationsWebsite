@@ -273,6 +273,8 @@ p {
 
 .addToCart {
   display: inline-flex;
+  overflow: hidden;
+  position: relative;
   width: auto !important;
   cursor: pointer;
   text-decoration: none;
@@ -304,6 +306,22 @@ p {
   fill: white;
   transition: all 250ms ease;
 }
+
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(darken(#7c8ec8, 10%), 0.5);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
 .cart-check-lines {
   fill: $main-lightBlue;
   transition: all 200ms ease;
