@@ -76,6 +76,7 @@ body {
   background-color: $main-darkBlue;
   overflow-x: hidden;
 }
+
 main {
   animation: transitionIn 0.75s;
 }
@@ -848,7 +849,7 @@ p {
     border: none;
     font-size: 0.9rem;
     width: auto;
-    padding: 0.1rem 0.4rem;
+    padding: 0.1rem 0.7rem;
     margin-top: 1rem;
     transition: background-color 200ms ease-out;
   }
@@ -1081,7 +1082,7 @@ p {
     line-height: 1;
   }
   &__text {
-    color: white;
+    color: $off-white;
     font-weight: $light;
     font-size: 0.9rem;
     line-height: 1.6;
@@ -1159,7 +1160,7 @@ p {
   }
 
   &__text {
-    color: white;
+    color: $off-white;
     font-weight: $light;
     font-size: 0.95rem;
     line-height: 1.6;
@@ -1186,27 +1187,31 @@ p {
     &__plan {
       margin: 1rem 0 1.5rem;
     }
+    #productionCart {
+      margin-left: 0;
+    }
   }
 }
 
 .dashboard {
   color: white;
-  margin-top: 2rem;
+  padding: 3rem 3rem 3.5rem 3rem;
   &__title {
-    margin-top: 1rem;
     font-weight: $medium;
-    font-size: 2.25rem;
-    line-height: 1.5;
+    font-size: 3.5rem;
+    line-height: 1;
   }
   &__text {
-    color: white;
-    font-weight: $regular;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    background-color: $main-darkerBlue;
-    padding: 1rem;
+    color: $off-white;
+    font-weight: $light;
+    font-size: 0.9rem;
+    line-height: 1.6;
     border-radius: 1rem;
     margin-bottom: 1rem;
+  }
+  #medicalDashboardCart {
+    margin-left: 0;
+    margin-top: 1rem;
   }
   &__demo {
     background-color: #7c8ec8;
@@ -1219,6 +1224,8 @@ p {
       color: rgba(#fff, 0.3);
       bottom: 3%;
       left: 1rem;
+      font-weight: $regular;
+      letter-spacing: 0.5px;
     }
   }
   &__info {
@@ -1243,14 +1250,15 @@ p {
     justify-content: right;
   }
   .dash-bg {
-    background-color: #8198e3;
+    background-color: #7185c5;
     border-radius: 0.3rem;
     padding: 0 0.25rem;
   }
   &__nav {
-    font-size: 1rem;
+    font-size: 0.95rem;
     display: inline;
-    padding: 0 0.25rem;
+    padding: 0 0.2rem;
+    font-weight: $regular;
   }
   #general {
     cursor: pointer;
@@ -1275,15 +1283,15 @@ p {
   }
   .personalInfo {
     padding: 0.75rem;
-    background-color: #8198e3;
+    background-color: #7185c5;
     border-radius: 0.5rem;
     &__title {
       font-size: 1rem;
-      font-weight: $medium;
+      font-weight: $regular;
     }
     &__text {
       font-size: 0.8rem;
-      font-weight: $regular;
+      font-weight: $light;
       margin-bottom: 0;
       &_text {
         margin-left: 0.25rem;
@@ -1300,6 +1308,11 @@ p {
   }
   .personalInfo {
     margin-bottom: 1rem;
+  }
+  .dashboard {
+    &__text {
+      padding-left: 0.75rem;
+    }
   }
 }
 
@@ -1653,17 +1666,35 @@ p {
   .production {
     padding: 3rem 1rem 3.5rem 1rem;
   }
+
+  .dashboard {
+    padding: 3rem 1rem 3.5rem 1rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .testSection {
+    &__title {
+      font-size: 3.2rem;
+    }
     .addToCart {
       margin-top: 1.25rem;
     }
   }
   .production {
+    &__title {
+      font-size: 3.2rem;
+    }
     .addToCart {
       margin-top: 1rem;
+    }
+  }
+  .dashboard {
+    &__title {
+      font-size: 3.2rem;
+    }
+    .addToCart {
+      margin-left: 0.75rem !important;
     }
   }
 }
