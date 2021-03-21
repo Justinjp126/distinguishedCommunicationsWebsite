@@ -917,21 +917,25 @@ p {
 
 // ! References Page ! //
 .documents {
+  width: 40rem;
+  max-width: 100%;
+  padding: 0 auto;
   color: white;
   margin-top: 4rem;
   &__title {
     font-weight: $bold;
     padding-top: 1rem;
+    font-size: 3rem;
   }
   &__link {
     color: white;
     font-weight: $medium;
     text-decoration: underline !important;
     display: block;
-    font-size: 1.25rem;
+    font-size: 0.9rem;
     transition: color 200ms ease-out;
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-left: 0.25rem;
+    padding-bottom: 0.25rem;
   }
   &__link:hover,
   &__link:focus {
@@ -940,25 +944,31 @@ p {
   }
 }
 .sources {
+  width: 40rem;
+  max-width: 100%;
   color: white;
   background-color: $main-darkBlue;
   padding-bottom: 1rem;
   &__title {
     font-weight: $bold;
     padding-top: 1rem;
+    font-size: 3rem;
   }
   &__subtitle {
+    font-size: 1.5rem;
     font-weight: $medium;
-    margin-left: 0.5rem;
+    margin-left: 0.25rem;
   }
   &__subtext {
     font-weight: $regular;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+    font-size: 1.25rem;
   }
   &__text {
     font-weight: $light;
-    margin-left: 1.5rem;
+    margin-left: 0.75rem;
     padding-bottom: 0.5rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -1043,7 +1053,7 @@ p {
     font-weight: $extra-light;
     font-size: 0.9rem;
     background-color: $main-darkerBlue;
-    padding: 1.5rem;
+    padding: 1.5rem 2rem;
     border-radius: 1rem;
     margin-top: 1.5rem;
     line-height: 1.6;
@@ -1334,6 +1344,7 @@ p {
     line-height: 1.6;
     margin-left: 0.5rem;
     padding-bottom: 1rem;
+    max-width: 75ch;
   }
   &__textTwo {
     color: $off-white;
@@ -1684,6 +1695,9 @@ p {
   .testSection {
     &__title {
       font-size: 3.2rem;
+    }
+    &__textTwo {
+      padding: 1.5rem;
     }
     .addToCart {
       margin-top: 1.25rem;
