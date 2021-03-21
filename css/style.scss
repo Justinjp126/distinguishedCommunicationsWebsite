@@ -564,12 +564,14 @@ p {
 .footer {
   margin-top: 1.5rem;
   &__text {
-    color: $light-grey;
+    color: $off-white;
     font-size: 0.8rem;
-    font-weight: $regular;
+    font-weight: $light;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 0.75rem;
+    margin-bottom: 0;
   }
+
   &__insta {
     margin-right: 0.5rem;
     width: 1.5rem;
@@ -597,7 +599,7 @@ p {
     color: white;
     font-size: 0.85rem;
     text-decoration: underline !important;
-    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
     transition: color 200ms ease-out;
   }
   &__link:hover,
@@ -1318,24 +1320,26 @@ p {
 
 .publication {
   color: white;
+  padding: 3rem 3rem 3.5rem 3rem;
+
   &__title {
     font-weight: $medium;
-    font-size: 2.25rem;
-    margin-top: 2rem;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
   }
   &__text {
-    color: white;
-    font-weight: $regular;
-    font-size: 1.2rem;
-    line-height: 1.5;
+    color: $off-white;
+    font-weight: $light;
+    font-size: 0.9rem;
+    line-height: 1.6;
     margin-left: 0.5rem;
     padding-bottom: 1rem;
   }
   &__textTwo {
-    color: white;
-    font-weight: $regular;
-    font-size: 1.2rem;
-    line-height: 1.5;
+    color: $off-white;
+    font-weight: $light;
+    font-size: 0.9rem;
+    line-height: 1.6;
     margin-left: 0.5rem;
   }
   &__points {
@@ -1349,8 +1353,8 @@ p {
   &__posterContainer {
     margin: 1rem 0;
     &-text {
-      font-size: 1.375rem;
-      font-weight: $medium;
+      font-size: 1.1rem;
+      font-weight: $regular;
       margin-bottom: 0.5rem;
     }
     &-img {
@@ -1363,7 +1367,7 @@ p {
       border-radius: 0.75rem;
     }
     &-button {
-      font-weight: $medium;
+      font-weight: $light;
       border-radius: 100px;
       display: inline-block;
       cursor: pointer;
@@ -1394,8 +1398,8 @@ p {
     margin: 1rem 0;
 
     &-text {
-      font-size: 1.375rem;
-      font-weight: $medium;
+      font-size: 1.1rem;
+      font-weight: $regular;
       margin-bottom: 0.5rem;
     }
     &-img {
@@ -1408,7 +1412,7 @@ p {
       border-radius: 0.75rem;
     }
     &-button {
-      font-weight: $medium;
+      font-weight: $light;
       border-radius: 100px;
       display: inline-block;
       cursor: pointer;
@@ -1439,8 +1443,8 @@ p {
     margin: 1rem 0;
 
     &-text {
-      font-size: 1.375rem;
-      font-weight: $medium;
+      font-size: 1.1rem;
+      font-weight: $regular;
       margin-bottom: 0.5rem;
     }
     &-img {
@@ -1453,7 +1457,7 @@ p {
       border-radius: 0.75rem;
     }
     &-button {
-      font-weight: $medium;
+      font-weight: $light;
       border-radius: 100px;
       display: inline-block;
       cursor: pointer;
@@ -1670,6 +1674,10 @@ p {
   .dashboard {
     padding: 3rem 1rem 3.5rem 1rem;
   }
+
+  .publication {
+    padding: 3rem 1rem 3.5rem 1rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1695,6 +1703,16 @@ p {
     }
     .addToCart {
       margin-left: 0.75rem !important;
+    }
+  }
+  .publication {
+    &__title {
+      font-size: 3.2rem;
+    }
+    .addToCart {
+      margin-top: 0.25rem;
+      margin-left: 0.5rem;
+      margin-bottom: 0.5rem;
     }
   }
 }
