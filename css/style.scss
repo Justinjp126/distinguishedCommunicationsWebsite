@@ -754,7 +754,7 @@ span.ripple {
     align-items: center;
     &-left {
       display: flex;
-      justify-content: right;
+      justify-content: flex-end;
     }
   }
   .mobile {
@@ -1289,7 +1289,7 @@ span.ripple {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
   }
   .dash-bg {
     background-color: #7185c5;
@@ -1828,7 +1828,7 @@ span.ripple {
     border-radius: 100px;
     padding: 0.05rem 0.5rem;
     transition: background-color 200ms ease-out;
-    justify-content: right;
+    justify-content: flex-end;
   }
   &__button:hover,
   &__button:focus {
@@ -1863,7 +1863,7 @@ span.ripple {
 
   &__item {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-bottom: 0.2rem;
     &_name {
       margin-right: auto;
@@ -1947,7 +1947,7 @@ span.ripple {
     border-radius: 100px;
     padding: 0.1rem 0.75rem;
     transition: background-color 200ms ease-out;
-    justify-content: right;
+    justify-content: flex-end;
     margin-top: 1rem;
   }
   &__button:hover,
