@@ -77,9 +77,9 @@ body {
   overflow-x: hidden;
 }
 
-main {
-  animation: transitionIn 0.75s;
-}
+// main {
+//   animation: transitionIn 0.75s;
+// }
 
 @keyframes transitionIn {
   from {
@@ -143,6 +143,9 @@ p {
     font-size: 4rem;
     margin-top: 6rem;
     letter-spacing: -1px;
+    &_word {
+      display:block;
+    }
   }
   &__button {
     text-transform: capitalize;
